@@ -1,9 +1,9 @@
 <?php
 function OpenCon()
  {
- $sname = "localhost";
- $uname = "root";
- $psw = "";
+ $sname = "database";
+ $uname = "db_user";
+ $psw = "1234";
  $db_name = "cloud_quest_db";
  $conn = new mysqli($sname, $uname, $psw,$db_name) or die("Connection failed: %s\n". $conn -> error);
  
