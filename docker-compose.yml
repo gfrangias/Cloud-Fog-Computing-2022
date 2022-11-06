@@ -1,34 +1,57 @@
 version: '3.8'
 services:
-  php_apache_server:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    container_name: php_apache_server
-    depends_on:
-      - database
-    volumes:
-      - ./src:/var/www/html
-    ports:
-      - 8000:80
-  database:
-    container_name: mysql_db
+  sql_db:
+    container_name: sql_db
     image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: cloud_quest_db
       MYSQL_USER: db_user
-      MYSQL_PASSWORD: 1234
-    ports:
-      - 6033:3306
-  phpmyadmin:
+      MYSQL_PASSWORD: "1234"
+    ports: 
+      - "6033:3306"
+  php_my_admin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - '8080:80'
+      - "8080:80"
     restart: always
     environment:
-      PMA_HOST: database
+      PMA_HOST: sql_db
     depends_on:
-      - database
+      - sql_db
+  php_apache_server:
+    container_name: php_apache_server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    links:
+      - mongo_db
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "80:80"
+      - "8000:80"
+  mongo_db:
+    container_name: mongo_db
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+      MONGO_INITDB_DATABASE: cloud_quest_db
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - "27018:27017"
+    expose:
+      - "27017"
+  data_storage:
+    container_name: data_storage
+    build:
+      context: ./
+      dockerfile: Dockerfile2
+    ports:
+      - "27017:80"
+    expose:
+      - "80"

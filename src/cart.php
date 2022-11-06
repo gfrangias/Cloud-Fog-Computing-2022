@@ -46,13 +46,18 @@
 
     $conn = OpenCon();  
 
-    $id = $_SESSION['id'];
-    $sql = "SELECT c.ID, p.NAME, p.PRICE, p.DATEOFWITHDRAWAL, p.SELLERNAME, p.CATEGORY 
-    FROM products p 
-    INNER JOIN (SELECT carts.* FROM carts WHERE carts.USERID = '$id') c ON p.ID = c.PRODUCTID;";
-    $result = mysqli_query($conn, $sql) or die("Bad query: $sql");
+    $url = "http://172.23.0.1:27017/display_cart.php?user_id=".$_SESSION['id'];   
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $enc_result = curl_exec($ch);
+    curl_close($ch);
+    $result = json_decode($enc_result,true);
 
-    if(mysqli_num_rows($result) == 0){
+    $id = $_SESSION['id'];
+
+    if(count($result) < 1){
       echo "<div class=\"no_cart_head\">
               <b>No cart items yet. Add from products page:</b>
             </div> 
@@ -61,12 +66,16 @@
 
     echo"<table>";
     echo"<tr><th>Name</th><th>Price</th><th>Withdrawal</th><th>Seller</th><th>Category</th><th></th></tr>\n";
-    while($row = mysqli_fetch_assoc($result)) { ?>
+    foreach($result as $row) { ?>
         <tr id="remove<?php echo $row['ID']?>">
         <?php 
+        $withdrawal = $row['DATEOFWITHDRAWAL'];
+        $date = $withdrawal['$date'];
+        $long = $date['$numberLong'] / 1000;
+        $time_stamp = date( "Y-m-d H:i:s", $long);
         echo "<td data-input=\"name\">{$row['NAME']}</td>
         <td data-input=\"price\">{$row['PRICE']}€</td>
-        <td data-input=\"withdrawal\">{$row['DATEOFWITHDRAWAL']}</td>
+        <td data-input=\"withdrawal\">{$time_stamp}</td>
         <td data-input=\"seller\">{$row['SELLERNAME']}</td>
         <td data-input=\"category\">{$row['CATEGORY']}</td>"?>
         <td>

@@ -1,6 +1,8 @@
 <?php 
+
+include 'php_files/db_connect.php';
+
 session_start();
-//print_r($_SESSION);
 
 if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)){
     header("Location: not_connected.php");

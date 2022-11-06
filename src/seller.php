@@ -45,27 +45,33 @@
 
 <?php
 
-    $conn = OpenCon();
+    $url = "http://172.23.0.1:27017/display_seller.php?seller_id=".$_SESSION['id'];   
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $enc_result = curl_exec($ch);
+    curl_close($ch);
+    $result = json_decode($enc_result,true);
 
-    $id = $_SESSION['id'];
-    $sql = "SELECT products.* FROM products WHERE products.SELLERID = '$id'";
-    $result = mysqli_query($conn, $sql) or die("Bad query: $sql");
-
-    if(mysqli_num_rows($result) == 0){
+    if(count($result) < 1){
       echo "<div class=\"no_products_head\">
               <b>No products yet.</b>
             </div> ";
     }
     echo"<table>";
     echo"<tr><th>Name</th><th>Code</th><th>Price</th><th>Withdrawal</th><th>Category</th><th></th><th></th></tr>\n";
-    while($row = mysqli_fetch_assoc($result)) {
-        $product_id = $row['ID'];?>
+    foreach($result as $row) {
+        $product_id = $row['ID'];
+        $withdrawal = $row['DATEOFWITHDRAWAL'];
+        $date = $withdrawal['$date'];
+        $long = $date['$numberLong'] / 1000;
+        $time_stamp = date( "Y-m-d H:i:s", $long);?>
         <tr id="remove<?php echo $row['ID']?>">
-         
           <td><input type = "text" id="edit_name<?php echo $row['ID']; ?>" value =" <?php echo $row['NAME']; ?>"></input></td>
           <td><input type = "text" id="edit_code<?php echo $row['ID']; ?>" value =" <?php echo $row['PRODUCTCODE']; ?>"></input></td>
           <td><input type = "text" id="edit_price<?php echo $row['ID']; ?>" value = "<?php echo $row['PRICE']; ?>"></input></td>
-          <td><input type = "text" id="edit_withdrawal<?php echo $row['ID']; ?>" value = "<?php echo $row['DATEOFWITHDRAWAL']; ?>"></input></td>
+          <td><input type = "text" id="edit_withdrawal<?php echo $row['ID']; ?>" value = "<?php echo $time_stamp; ?>"></input></td>
           <td><input type = "text" id="edit_category<?php echo $row['ID']; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
           <td><button onclick="edit_product(<?php echo $row['ID'];  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
           <td><button onclick="remove_product(<?php echo $row['ID'];  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>

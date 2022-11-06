@@ -3,7 +3,7 @@
     include 'php_files/db_connect.php';
 
     session_start();
-    
+  
     if(!($_SESSION['role'] === "USER")){
         
         header("Location: no_access.php");
@@ -72,35 +72,51 @@
 
 <?php
 
-$conn = OpenCon();  
+  $url = "http://172.23.0.1:27017/display_products.php";   
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  $enc_result = curl_exec($ch);
+  curl_close($ch);
+  $result = json_decode($enc_result,true);
 
-$id = $_SESSION['id'];
-$sql = "SELECT products.*, CASE
-WHEN EXISTS (SELECT *
-             FROM carts 
-             WHERE carts.PRODUCTID = products.ID AND carts.USERID = '$id')
-THEN '1'
-ELSE '0'
-END as CART 
-        FROM products";
-$result = mysqli_query($conn, $sql) or die("Bad query: $sql");
+  echo"<table id=\"products_search\" >";
+  echo"<tr><th>Name</th><th>Price</th><th>Withdrawal</th><th>Seller</th><th>Category</th><th></th></tr>\n";
+  foreach($result as $row) {
+    //echo json_encode($row,true);
+    $product_id = $row['ID'];
+    $user_id = $_SESSION['id'];
+    $url = "http://172.23.0.1:27017/check_cart.php?product_id=".$product_id."&user_id=".$user_id;   
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $enc_result = curl_exec($ch);
+    curl_close($ch);
+    $cart_result = json_decode($enc_result,true);
+    if(is_null($cart_result) || count($cart_result) < 1){
+      $cart = 0;
+    }else{
+      $cart = 1;
+    }
 
-    echo"<table id=\"products_search\" >";
-    echo"<tr><th>Name</th><th>Price</th><th>Withdrawal</th><th>Seller</th><th>Category</th><th></th></tr>\n";
-    while($row = mysqli_fetch_assoc($result)) {
-        $product_id = $row['ID'];?>
-        <tr>
-        <?php 
-        echo "<td data-input=\"name\">{$row['NAME']}</td>
+    $withdrawal = $row['DATEOFWITHDRAWAL'];
+    $date = $withdrawal['$date'];
+    $long = $date['$numberLong'] / 1000;
+    $time_stamp = date( "Y-m-d H:i:s", $long);?>
+    <tr>
+    <?php 
+    echo "<td data-input=\"name\">{$row['NAME']}</td>
           <td data-input=\"price\">{$row['PRICE']}€</td>
-          <td data-input=\"withdrawal\">{$row['DATEOFWITHDRAWAL']}</td>
+          <td data-input=\"withdrawal\">{$time_stamp}</td>
           <td data-input=\"seller\">{$row['SELLERNAME']}</td>
           <td data-input=\"category\">{$row['CATEGORY']}</td>"?>
           <td>
-                <input type="checkbox" onclick="edit_cart(<?php echo $row['ID'];  ?>)" 
-                <?php echo ($row['CART'] == '1' ? 'checked' : '');?> id = "heart(<?php echo $row['ID'];  ?> )"/>
-                <label for="heart(<?php echo $row['ID'];  ?> )"></label>
-        </td>
+            <input type="checkbox" onclick="edit_cart(<?php echo $row['ID'];  ?>)" 
+              <?php echo ($cart == '1' ? 'checked' : '');?> id = "heart(<?php echo $row['ID'];  ?> )"/>
+            <label for="heart(<?php echo $row['ID'];  ?> )"></label>
+          </td>
           
           <?php echo "</tr>\n";
     } 
@@ -145,10 +161,6 @@ window.onload = function(){
 
   }); 
 }
-</script>
-
-<script>
-
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
