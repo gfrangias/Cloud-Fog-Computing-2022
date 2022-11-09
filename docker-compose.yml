@@ -9,6 +9,9 @@ services:
       MYSQL_DATABASE: cloud_quest_db
       MYSQL_USER: db_user
       MYSQL_PASSWORD: "1234"
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.2
     ports: 
       - "6033:3306"
   php_my_admin:
@@ -20,6 +23,9 @@ services:
       PMA_HOST: sql_db
     depends_on:
       - sql_db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.3
   php_apache_server:
     container_name: php_apache_server
     build:
@@ -29,6 +35,9 @@ services:
       - mongo_db
     volumes:
       - ./src:/var/www/html
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.4
     ports:
       - "80:80"
       - "8000:80"
@@ -42,6 +51,9 @@ services:
       MONGO_INITDB_DATABASE: cloud_quest_db
     volumes:
       - ./mongo:/data/db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.5
     ports:
       - "27018:27017"
     expose:
@@ -51,7 +63,15 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile2
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.6
     ports:
       - "27017:80"
     expose:
       - "80"
+networks:
+  cloud_quest_network:
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24

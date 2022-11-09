@@ -9,7 +9,7 @@
         exit();
     }
 
-    $url = "http://172.23.0.1:27017/remove_cart_item.php?product_id=".$_POST['remove_id']."&user_id=".$_SESSION['id'];   
+    $url = "http://172.16.0.1:27017/remove_cart_item.php?product_id=".$_POST['remove_id']."&user_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

@@ -2,6 +2,8 @@
 
     include 'db_connect.php';
 
+    //$_SESSION['id'] = 12;
+    //$_SESSION['role'] = "PRODUCTSELLER";
     session_start();
     
     if(!($_SESSION['role'] === "PRODUCTSELLER")){
@@ -10,16 +12,18 @@
         exit();
     }
 
-    $conn = OpenCon();
 
-    $seller_id = $_SESSION['ID'];
-    $id = $_POST['remove_id'];
-
-    $check_product_ownership = mysqli_query($conn, "SELECT count(*) FROM products 
-    WHERE products.SELLERID= '$seller_id' AND products.ID = '$id'");
-
-    if($check_product_ownership >=1){
-    mysqli_query($conn, "DELETE FROM products where products.ID = '$id'");
-    }
+    $seller_id = $_SESSION['id'];
+    $product_id = $_POST['remove_id'];
     
+    $url = "http://172.16.0.1:27017/remove_product.php?seller_id=".$seller_id."&product_id=".$product_id;
+
+    echo $url;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
 ?>

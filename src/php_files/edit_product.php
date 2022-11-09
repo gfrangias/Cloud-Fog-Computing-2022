@@ -12,22 +12,24 @@
 
     $conn = OpenCon();
 
-    $seller_id = $_SESSION['ID'];
-    $id = $_POST['id'];
 
-    $check_product_ownership = mysqli_query($conn, "SELECT count(*) FROM products 
-    WHERE products.SELLERID= '$seller_id' AND products.ID = '$id'");
+    $product_id = $_POST['id'];
+    $name = $_POST['name'];
+    $code = $_POST['code'];
+    $price = $_POST['price'];
+    $withdrawal = $_POST['withdrawal'];
+    $category = $_POST['category'];
+    $seller_id = $_SESSION['id'];
 
-    if($check_product_ownership >=1){
-        
-        $name = $_POST['name'];
-        $code = $_POST['code'];
-        $price = $_POST['price'];
-        $withdrawal = $_POST['withdrawal']; 
-        $category = $_POST['category'];
+    $url = "http://172.16.0.1:27017/edit_product.php?seller_id=".$seller_id."&product_id=".$product_id."&name=".$name."&code=".$code.
+    "&price=".$price."&withdrawal=".$withdrawal."&category=".$category;
+    $url = str_replace(' ','%20',$url);
 
-        mysqli_query($conn, "UPDATE products SET NAME = '$name', PRODUCTCODE = '$code', PRICE = '$price', 
-        DATEOFWITHDRAWAL = '$withdrawal', CATEGORY = '$category' WHERE ID = '$id'");
-    
-    }
+    echo $url;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $result = curl_exec($ch);
+    curl_close($ch);
 ?>

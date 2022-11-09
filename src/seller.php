@@ -45,7 +45,7 @@
 
 <?php
 
-    $url = "http://172.23.0.1:27017/display_seller.php?seller_id=".$_SESSION['id'];   
+    $url = "http://172.16.0.1:27017/display_seller.php?seller_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -64,14 +64,16 @@
     foreach($result as $row) {
         $product_id = $row['ID'];
         $withdrawal = $row['DATEOFWITHDRAWAL'];
-        $date = $withdrawal['$date'];
-        $long = $date['$numberLong'] / 1000;
-        $time_stamp = date( "Y-m-d H:i:s", $long);?>
+        $withdrawal = $withdrawal['$date'];
+        $withdrawal = $withdrawal['$numberLong'] / 1000;
+        $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
+        $price = $row['PRICE'];
+        $price = $price['$numberDecimal'];?>
         <tr id="remove<?php echo $row['ID']?>">
           <td><input type = "text" id="edit_name<?php echo $row['ID']; ?>" value =" <?php echo $row['NAME']; ?>"></input></td>
           <td><input type = "text" id="edit_code<?php echo $row['ID']; ?>" value =" <?php echo $row['PRODUCTCODE']; ?>"></input></td>
-          <td><input type = "text" id="edit_price<?php echo $row['ID']; ?>" value = "<?php echo $row['PRICE']; ?>"></input></td>
-          <td><input type = "text" id="edit_withdrawal<?php echo $row['ID']; ?>" value = "<?php echo $time_stamp; ?>"></input></td>
+          <td><input type = "text" id="edit_price<?php echo $row['ID']; ?>" value = "<?php echo $price; ?>"></input></td>
+          <td><input type = "text" id="edit_withdrawal<?php echo $row['ID']; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
           <td><input type = "text" id="edit_category<?php echo $row['ID']; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
           <td><button onclick="edit_product(<?php echo $row['ID'];  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
           <td><button onclick="remove_product(<?php echo $row['ID'];  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>

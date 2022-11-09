@@ -46,7 +46,7 @@
 
     $conn = OpenCon();  
 
-    $url = "http://172.23.0.1:27017/display_cart.php?user_id=".$_SESSION['id'];   
+    $url = "http://172.16.0.1:27017/display_cart.php?user_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -70,12 +70,14 @@
         <tr id="remove<?php echo $row['ID']?>">
         <?php 
         $withdrawal = $row['DATEOFWITHDRAWAL'];
-        $date = $withdrawal['$date'];
-        $long = $date['$numberLong'] / 1000;
-        $time_stamp = date( "Y-m-d H:i:s", $long);
+        $withdrawal = $withdrawal['$date'];
+        $withdrawal = $withdrawal['$numberLong'] / 1000;
+        $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
+        $price = $row['PRICE'];
+        $price = $price['$numberDecimal'];
         echo "<td data-input=\"name\">{$row['NAME']}</td>
-        <td data-input=\"price\">{$row['PRICE']}€</td>
-        <td data-input=\"withdrawal\">{$time_stamp}</td>
+        <td data-input=\"price\">{$price}€</td>
+        <td data-input=\"withdrawal\">{$withdrawal}</td>
         <td data-input=\"seller\">{$row['SELLERNAME']}</td>
         <td data-input=\"category\">{$row['CATEGORY']}</td>"?>
         <td>

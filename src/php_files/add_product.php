@@ -10,7 +10,32 @@
         exit();
     }
 
-    
+    $name = $_POST['name'];
+    $code = $_POST['code'];
+    $price = $_POST['price'];
+    $withdrawal = $_POST['withdrawal'];
+    $category = $_POST['category'];
+    $id = $_SESSION['id'];
 
-location.replace("../seller.php")
+    $conn = OpenCon();
+    $answer = mysqli_query($conn, "SELECT users.NAME, users.SURNAME FROM users WHERE users.ID = '$id'");
+    $answer = mysqli_fetch_row($answer);
+    echo json_encode($answer, JSON_PRETTY_PRINT);
+    CloseCon($conn);
+    
+    $seller_name = $answer[0]." ".$answer[1];
+    echo $seller_name;
+
+    $url = "http://172.16.0.1:27017/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
+    "&price=".$price."&withdrawal=".$withdrawal."&seller_name=".$seller_name."&category=".$category;
+    $url = str_replace(' ','%20',$url);
+
+    echo $url;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
 ?>
