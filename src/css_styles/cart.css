@@ -1,4 +1,4 @@
-body {font-family: Trebuchet MS;}
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
 
 body {
     margin: 30px;
@@ -6,7 +6,7 @@ body {
   }
 
 table {
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   border-collapse: separate;
   border-spacing: 0;
   width: 80%;

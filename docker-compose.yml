@@ -2,18 +2,19 @@ version: '3.8'
 services:
   sql_db:
     container_name: sql_db
-    image: mysql:8.0
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: cloud_quest_db
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: "1234"
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.2
-    ports: 
-      - "6033:3306"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./sql_db_data:/var/lib/mysql
   php_my_admin:
     image: phpmyadmin/phpmyadmin
     ports:
@@ -54,8 +55,6 @@ services:
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.5
-    ports:
-      - "27018:27017"
     expose:
       - "27017"
   data_storage:
@@ -66,10 +65,31 @@ services:
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.6
-    ports:
-      - "27017:80"
     expose:
       - "80"
+  keyrock:
+    image: fiware/idm:7.6.0
+    container_name: fiware-keyrock
+    hostname: keyrock
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.7
+    depends_on:
+      - sql_db
+    ports:
+      - "3005:3005"
+    expose:
+      - "3005"
+    environment:
+      - IDM_DB_HOST=sql_db
+      - IDM_HOST=http:/localhost:3005
+      - IDM_PORT=3005
+      - IDM_DB_PASS=keyrock
+      - IDM_DB_USER=keyrock
+      - IDM_ADMIN_USER=gfrangias
+      - IDM_ADMIN_EMAIL=gfrangias@tuc.gr
+      - IDM_ADMIN_PASS=1234
+      - IDM_HTTPS_ENABLED=FALSE
 networks:
   cloud_quest_network:
     ipam:

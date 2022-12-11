@@ -16,7 +16,7 @@
     $seller_id = $_SESSION['id'];
     $product_id = $_POST['remove_id'];
     
-    $url = "http://172.16.0.1:27017/remove_product.php?seller_id=".$seller_id."&product_id=".$product_id;
+    $url = "http://data_storage:80/remove_product.php?seller_id=".$seller_id."&product_id=".$product_id;
 
     echo $url;
     $ch = curl_init();

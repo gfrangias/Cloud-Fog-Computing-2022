@@ -34,7 +34,7 @@ if (isset($_POST['logout_user'])){
 </div>
 
 <div class="user_name">
-    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s %s", $_SESSION['name'], $_SESSION['surname']); ?></b>    
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s", $_SESSION['name']); ?></b>    
 </div>
 
 <form action="welcome.php" method="post">
@@ -44,11 +44,23 @@ if (isset($_POST['logout_user'])){
 <div class="dropdown">
   <button class="dropdownbutton"><b>Menu <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></b></button>
   <div class="dropdown-content">
+  <?php if ($_SESSION['role'] === "USER"){?>
     <a href="products.php"><i class="fa fa-shopping-bag" aria-hidden="true"></i><b> Products</b></a>
     <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><b> Cart</b></a>
-    <a href="seller.php"><i class="fa fa-users" aria-hidden="true"></i><b> Seller</b></a>
-    <a href="administration.php"><i class="fa fa-lock" aria-hidden="true"></i><b> Administration</b></a>
+    <data><i class="fa fa-users" aria-hidden="true"></i><b> Seller</b></a></data>
+    <data><i class="fa fa-lock" aria-hidden="true"></i><b> Administration</b></a></data>
   </div>
+  <?php }elseif($_SESSION['role'] === "PRODUCTSELLER"){?>
+    <data><i class="fa fa-shopping-bag" aria-hidden="true"></i><b> Products</b></a></data>
+    <data><i class="fa fa-shopping-cart" aria-hidden="true"></i><b> Cart</b></a></data>
+    <a href="seller.php"><i class="fa fa-users" aria-hidden="true"></i><b> Seller</b></a>
+    <data><i class="fa fa-lock" aria-hidden="true"></i><b> Administration</b></a></data>
+  <?php }elseif($_SESSION['role'] === "ADMIN"){?>
+    <data><i class="fa fa-shopping-bag" aria-hidden="true"></i><b> Products</b></a></data>
+    <data><i class="fa fa-shopping-cart" aria-hidden="true"></i><b> Cart</b></a></data>
+    <data><i class="fa fa-users" aria-hidden="true"></i><b> Seller</b></a></data>
+    <a href="administration.php"><i class="fa fa-lock" aria-hidden="true"></i><b> Administration</b></a>
+  <?php }?>
 </div></br>
 
 </body>

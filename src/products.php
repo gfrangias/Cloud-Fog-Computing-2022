@@ -4,14 +4,19 @@
 
     session_start();
   
-    if(!($_SESSION['role'] === "USER")){
-        
-        header("Location: no_access.php");
-        exit();
-    }
+    if(!$_SESSION){
+
+      header("Location: not_connected.php");
+      exit();
+
+    }elseif(!($_SESSION['role'] === "USER")){
+      
+      header("Location: no_access.php");
+      exit();
+
+  }
 
     $conn = OpenCon();
-
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +77,7 @@
 
 <?php
 
-  $url = "http://172.16.0.1:27017/display_products.php";   
+  $url = "http://data_storage:80/display_products.php";   
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -87,7 +92,7 @@
     //echo json_encode($row,true);
     $product_id = $row['ID'];
     $user_id = $_SESSION['id'];
-    $url = "http://172.16.0.1:27017/check_cart.php?product_id=".$product_id."&user_id=".$user_id;   
+    $url = "http://data_storage:80/check_cart.php?product_id=".$product_id."&user_id=".$user_id;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -100,7 +105,6 @@
     }else{
       $cart = 1;
     }
-
     $withdrawal = $row['DATEOFWITHDRAWAL'];
     $withdrawal = $withdrawal['$date'];
     $withdrawal = $withdrawal['$numberLong'] / 1000;

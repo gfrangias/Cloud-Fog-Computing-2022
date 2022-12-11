@@ -20,7 +20,7 @@
 
     $insert_filter = array('ID'=>intval($new_id), 'NAME'=>strval($name), 'PRODUCTCODE'=>strval($code),
     'PRICE'=>new MongoDB\BSON\Decimal128($price), 'DATEOFWITHDRAWAL'=>new MongoDB\BSON\UTCDateTime($timestamp), 'SELLERNAME'=>strval($seller_name),
-    'SELLERID'=>intval($seller_id), 'CATEGORY'=>strval($category));
+    'SELLERID'=>strval($seller_id), 'CATEGORY'=>strval($category));
 
     $products->insertOne($insert_filter);
     die;

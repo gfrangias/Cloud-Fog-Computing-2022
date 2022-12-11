@@ -26,7 +26,7 @@
     $seller_name = $answer[0]." ".$answer[1];
     echo $seller_name;
 
-    $url = "http://172.16.0.1:27017/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
+    $url = "http://data_storage:80/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
     "&price=".$price."&withdrawal=".$withdrawal."&seller_name=".$seller_name."&category=".$category;
     $url = str_replace(' ','%20',$url);
 

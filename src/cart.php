@@ -4,10 +4,16 @@
 
     session_start();
     
-    if(!($_SESSION['role'] === "USER")){
+    if(!$_SESSION){
+
+        header("Location: not_connected.php");
+        exit();
+
+    }elseif(!($_SESSION['role'] === "USER")){
         
         header("Location: no_access.php");
         exit();
+
     }
 
     $conn = OpenCon();
@@ -46,7 +52,7 @@
 
     $conn = OpenCon();  
 
-    $url = "http://172.16.0.1:27017/display_cart.php?user_id=".$_SESSION['id'];   
+    $url = "http://data_storage:80/display_cart.php?user_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -54,10 +60,9 @@
     $enc_result = curl_exec($ch);
     curl_close($ch);
     $result = json_decode($enc_result,true);
-
     $id = $_SESSION['id'];
 
-    if(count($result) < 1){
+    if(count($result) < 1 || is_null($result)){
       echo "<div class=\"no_cart_head\">
               <b>No cart items yet. Add from products page:</b>
             </div> 

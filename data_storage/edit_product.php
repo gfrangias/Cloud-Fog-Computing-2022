@@ -2,7 +2,6 @@
 
     include("access_mongo.php");
 
-    echo "I'm in!";
     $seller_id = $_GET['seller_id'];
     $product_id = $_GET['product_id'];
     $name = $_GET['name'];
@@ -17,7 +16,7 @@
 
     echo $timestamp;
 
-    $filter = array('ID' => intval($product_id), 'SELLERID' => intval($seller_id));
+    $filter = array('ID' => intval($product_id), 'SELLERID' => strval($seller_id));
     $query = $products->find($filter)->toArray();
     if(is_null($query) || count($query) < 1 ){
         die;
@@ -26,7 +25,7 @@
         $options = array('$set' => array('NAME'=>strval($name), 'PRODUCTCODE'=>strval($code), 
         'PRICE'=>new MongoDB\BSON\Decimal128($price), 'DATEOFWITHDRAWAL'=>new MongoDB\BSON\UTCDateTime($timestamp), 'CATEGORY'=>strval($category)));
         
-        $edit_filter = array('ID' => intval($product_id), 'SELLERID' => intval($seller_id));
+        $edit_filter = array('ID' => intval($product_id), 'SELLERID' => strval($seller_id));
 
         $answer = $products->updateOne($edit_filter,$options);
         echo json_encode($answer);

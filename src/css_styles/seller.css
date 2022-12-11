@@ -1,11 +1,11 @@
-body {font-family: Trebuchet MS;}
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
 
 body {
   margin: 30px;
 }
 
 input[type=text]{
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;;
   width: 100%;
   padding: none;
   margin: 0px 0;
@@ -24,7 +24,7 @@ input[type=text]{
 }
 
 table {
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   border-collapse: separate;
   border-spacing: 0;
   width: 95%;
@@ -128,7 +128,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 
@@ -146,7 +146,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 

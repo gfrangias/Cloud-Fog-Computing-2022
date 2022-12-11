@@ -9,7 +9,7 @@
 
 </head>
 
-<link rel="icon" href="images/logos/logo.png" />
+<link rel="icon" href="images/logos/logo_w.png" />
 <title>Cloud Quest | Not connected</title>
 
 <body style="background-color: white;">

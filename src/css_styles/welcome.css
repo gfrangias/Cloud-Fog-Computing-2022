@@ -1,4 +1,4 @@
-body {font-family: Trebuchet MS;
+body {font-family: 'Helvetica', 'Arial', sans-serif;
     background-image: url("../images/welcome.jpg");
     min-height: 100%;
     background-size: cover;}
@@ -9,16 +9,12 @@ body {font-family: Trebuchet MS;
  opacity: 0.4;
 }
 
-input[type=text], input[type=password] {
- width: 25%;
- padding: 12px 20px;
- margin: 8px 0;
- display: inline-block;
- border: 2px solid #696968;
- box-sizing: border-box;
- background-color: #696969;
- color: white;
- border-radius: 12px;
+data-input[type=text]{
+   color: white;
+   padding: 0px 16px;
+   text-decoration: none;
+   display: block;
+   border-radius: 12px;
 }
 
 .button_menu2 {
@@ -118,7 +114,7 @@ span.psw {
  border: 2px solid #ffbd00;
  border-radius: 12px;
  font-size: 20px;
- width: 170%;
+ width: 175%;
  z-index: 1;
 }
 
@@ -131,12 +127,22 @@ span.psw {
  color: black;
 }
 
+.dropdown-content data {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   border-radius: 12px;
+   cursor: not-allowed;
+}
+
 .button_menu:hover {
  background-color: #B7B748;
  color: white;
 }
 
 .dropdown-content a:hover {background-color: #ffbd00; color: white;}
+.dropdown-content data:hover {background-color: #8b8b8b; color: white;}
 
 .dropdown:hover .dropdown-content { background-color: transparent;
                                     display: block;}

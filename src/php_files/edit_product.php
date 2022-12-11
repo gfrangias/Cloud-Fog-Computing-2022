@@ -21,7 +21,7 @@
     $category = $_POST['category'];
     $seller_id = $_SESSION['id'];
 
-    $url = "http://172.16.0.1:27017/edit_product.php?seller_id=".$seller_id."&product_id=".$product_id."&name=".$name."&code=".$code.
+    $url = "http://data_storage:80/edit_product.php?seller_id=".$seller_id."&product_id=".$product_id."&name=".$name."&code=".$code.
     "&price=".$price."&withdrawal=".$withdrawal."&category=".$category;
     $url = str_replace(' ','%20',$url);
 

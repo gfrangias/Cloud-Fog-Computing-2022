@@ -4,10 +4,16 @@
 
     session_start();
     
-    if(!($_SESSION['role'] === "PRODUCTSELLER")){
+    if(!$_SESSION){
+
+        header("Location: not_connected.php");
+        exit();
+
+    }elseif(!($_SESSION['role'] === "PRODUCTSELLER")){
         
         header("Location: no_access.php");
         exit();
+
     }
 
     $conn = OpenCon();
@@ -45,7 +51,7 @@
 
 <?php
 
-    $url = "http://172.16.0.1:27017/display_seller.php?seller_id=".$_SESSION['id'];   
+    $url = "http://data_storage:80/display_seller.php?seller_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
