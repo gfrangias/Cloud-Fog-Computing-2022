@@ -82,6 +82,19 @@ table tr:nth-child(odd):hover{
   margin: 24px 0 12px 0;
 }
 
+.total {
+  background-color: #ffbd00;
+  padding: 14px 20px;
+  border: none;
+  text-align: center;
+  width: 8%;
+  height: 50px;
+  border-radius: 12px;
+  font-size: 20px;
+  
+  margin: auto;
+}
+
 img.logo{
     width: 10%;
 }
@@ -203,4 +216,19 @@ input[type="checkbox"]{
   
   input:checked + label:after {
     content: "🛒";
+  }
+
+  input[type=text]{
+    font-family: 'Helvetica', 'Arial', sans-serif;;
+    width: 100%;
+    padding: none;
+    margin: 0px 0;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: black;
+    border-radius: 12px;
+    font-size: 22px;
+    text-align: center;  
   }

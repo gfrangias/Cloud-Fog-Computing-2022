@@ -50,8 +50,6 @@
 <div class="container">
 <?php
 
-    $conn = OpenCon();  
-
     $url = "http://data_storage:80/display_cart.php?user_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -61,7 +59,8 @@
     curl_close($ch);
     $result = json_decode($enc_result,true);
     $id = $_SESSION['id'];
-
+    $ind = 0;
+    $total = 0;
     if(count($result) < 1 || is_null($result)){
       echo "<div class=\"no_cart_head\">
               <b>No cart items yet. Add from products page:</b>
@@ -70,45 +69,57 @@
     }else{
 
     echo"<table>";
-    echo"<tr><th>Name</th><th>Price</th><th>Withdrawal</th><th>Seller</th><th>Category</th><th></th></tr>\n";
-    foreach($result as $row) { ?>
-        <tr id="remove<?php echo $row['ID']?>">
-        <?php 
-        $withdrawal = $row['DATEOFWITHDRAWAL'];
-        $withdrawal = $withdrawal['$date'];
-        $withdrawal = $withdrawal['$numberLong'] / 1000;
-        $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
+    echo"<tr><th>Name</th><th>Price</th><th>Added at</th><th>Seller</th><th>Category</th><th></th></tr>\n";
+    foreach($result as $row) { 
+        $ind = $ind+1;
+        ?>
+        <tr id="remove<?php echo $ind?>">
+        <?php
+        //print_r($row);
         $price = $row['PRICE'];
-        $price = $price['$numberDecimal'];
-        echo "<td data-input=\"name\">{$row['NAME']}</td>
-        <td data-input=\"price\">{$price}€</td>
-        <td data-input=\"withdrawal\">{$withdrawal}</td>
-        <td data-input=\"seller\">{$row['SELLERNAME']}</td>
-        <td data-input=\"category\">{$row['CATEGORY']}</td>"?>
+        $price = $price['$numberDecimal'];?>
+        <td data-input="name"><?php echo $row['NAME']?></td>
+        <td> <input type = "text" id="price<?php echo $ind; ?>" value =" <?php echo $price; ?>€" disabled></input></td>
+        <td data-input="withdrawal"><?php echo $row['DATEOFINSERTION']?></td>
+        <td data-input="seller"><?php echo $row['SELLERNAME']?></td>
+        <td data-input="category"><?php echo $row['CATEGORY']?></td>
         <td>
             <input type="checkbox" onclick="remove_cart_item(
-                <?php echo $row['ID'];  ?>)" checked id = "heart(<?php echo $row['ID'];  ?> )"/>
-                <label for="heart(<?php echo $row['ID'];  ?> )"></label>
+                <?php echo $ind;  ?> , <?php echo $row['ID'];  ?>)" checked id = "heart(<?php echo $ind;  ?> )"/>
+                <label for="heart(<?php echo $ind;  ?> )"></label>
         </td>
           
           <?php echo "</td>
         </tr>\n";
-    } 
+        $total += floatval($price);
+    } ?>
     
-    echo "</table>";
-  }
-?>
+    </table>
+    <br><br><br><br>
+    <div class="total">
+        <b>Total:</b><br>
+        <input type = "text" id="total" value="<?php echo $total;  ?>€" disabled/>
+    </div>
+<?php
+  }?>
+
 
 <script type="text/javascript">
 	 
-	 function remove_cart_item(id){
+	 function remove_cart_item(ind,id){
 
          $.ajax({
               type:'post',
               url:'php_files/remove_cart_item.php',
               data:{remove_id:id},
               success:function(data){
-                   $('#remove'+id).hide(1300);
+                   $('#remove'+ind).hide(1300);
+                   var total = document.getElementById('total').value;
+                   total = total.substring(0, total.length - 1);
+                   var subtract = document.getElementById('price'+ind).value;
+                   subtract = subtract.substring(0, subtract.length - 1);
+                   var result = (parseFloat(total) - parseFloat(subtract)).toFixed(2);
+                   document.getElementById('total').value = result+'€';
               }
          });
 	 }

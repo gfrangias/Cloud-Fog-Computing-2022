@@ -65,42 +65,49 @@
               <b>No products yet.</b>
             </div> ";
     }
-    echo"<table>";
+    echo"<table id=\"table\">";
     echo"<tr><th>Name</th><th>Code</th><th>Price</th><th>Withdrawal</th><th>Category</th><th></th><th></th></tr>\n";
+    $ind = 0;
     foreach($result as $row) {
+        $ind = $ind + 1;
         $product_id = $row['ID'];
         $withdrawal = $row['DATEOFWITHDRAWAL'];
         $withdrawal = $withdrawal['$date'];
         $withdrawal = $withdrawal['$numberLong'] / 1000;
         $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
         $price = $row['PRICE'];
-        $price = $price['$numberDecimal'];?>
-        <tr id="remove<?php echo $row['ID']?>">
-          <td><input type = "text" id="edit_name<?php echo $row['ID']; ?>" value =" <?php echo $row['NAME']; ?>"></input></td>
-          <td><input type = "text" id="edit_code<?php echo $row['ID']; ?>" value =" <?php echo $row['PRODUCTCODE']; ?>"></input></td>
-          <td><input type = "text" id="edit_price<?php echo $row['ID']; ?>" value = "<?php echo $price; ?>"></input></td>
-          <td><input type = "text" id="edit_withdrawal<?php echo $row['ID']; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
-          <td><input type = "text" id="edit_category<?php echo $row['ID']; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
-          <td><button onclick="edit_product(<?php echo $row['ID'];  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
-          <td><button onclick="remove_product(<?php echo $row['ID'];  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>
+        $price = $price['$numberDecimal'];
+        ?>
+        <tr id="remove<?php echo $ind?>">
+          <td><input type = "text" id="edit_name<?php echo $ind; ?>" value =" <?php echo $row['NAME']; ?>"></input></td>
+          <td><input type = "text" id="edit_code<?php echo $ind; ?>" value =" <?php echo $row['PRODUCTCODE']; ?>"></input></td>
+          <td><input type = "text" id="edit_price<?php echo $ind; ?>" value = "<?php echo $price; ?>"></input></td>
+          <td><input type = "text" id="edit_withdrawal<?php echo $ind; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
+          <td><input type = "text" id="edit_category<?php echo $ind; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
+          <td><button onclick="edit_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
+          <td><button onclick="remove_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>
           <?php echo "</td>
         </tr>\n";
     } 
     ?>
-    <tr>
+</table>
+<br>
+<br>
+<table id="table2">
+<tr>
     <td><input type = "text" id="add_name" placeholder="Insert name"></input></td>
     <td><input type = "text" id="add_code" placeholder="Insert code"></input></td>
     <td><input type = "text" id="add_price" placeholder="Insert price"></input></td>
     <td><input type = "text" id="add_withdrawal" placeholder="Insert withdrawal date"></input></td>
     <td><input type = "text" id="add_category" placeholder="Insert category"></input></td>
-    <td colspan="2"&nbsp;><button onclick="add_product()"  class="btn add_button"><i class="fa fa-plus-square-o" aria-hidden="true"></i><b> Add new product</b></button></td>
-
+    <td colspan="2"&nbsp;><button onclick="add_product(<?php echo $ind;  ?>)"  class="btn add_button"><i class="fa fa-plus-square-o" aria-hidden="true"></i><b> Add new product</b></button></td>
 </table>
+
 </div>
 
 <script type="text/javascript">
 	 
-	 function remove_product(id){
+	 function remove_product(ind, id){
 
        if(confirm('Are you sure you want to remove product?')){
          
@@ -110,24 +117,24 @@
               url:'php_files/remove_product.php',
               data:{remove_id:id},
               success:function(data){
-                   $('#remove'+id).hide('slow');
+                   $('#remove'+ind).hide('slow');
               }
          });
        }
 	 }
 
-     function edit_product(id){
+     function edit_product(ind, id){
 
-        if(isValidDate($('#edit_withdrawal'+id).val())){
-            if(isValidPrice($('#edit_price'+id).val())){
+        if(isValidDate($('#edit_withdrawal'+ind).val())){
+            if(isValidPrice($('#edit_price'+ind).val())){
                 if(confirm('Are you sure you want to edit product?')){
                 
                     $.ajax({
 
                         type:'post',
                         url:'php_files/edit_product.php',
-                        data:{id:id, name:$('#edit_name'+id).val(), code:$('#edit_code'+id).val(), price:$('#edit_price'+id).val(),
-                        withdrawal:$('#edit_withdrawal'+id).val(), category:$('#edit_category'+id).val()}
+                        data:{id:id, name:$('#edit_name'+ind).val(), code:$('#edit_code'+ind).val(), price:$('#edit_price'+ind).val(),
+                        withdrawal:$('#edit_withdrawal'+ind).val(), category:$('#edit_category'+ind).val()}
                     });
                 }
             }else{
@@ -143,7 +150,7 @@
      }
 
 
-    function add_product(){
+    function add_product(ind){
         if(isValidDate($('#add_withdrawal').val())){
             if(isValidPrice($('#add_price').val())){
                 if(confirm('Are you sure you want to add product?')){
@@ -153,9 +160,48 @@
                         url:'php_files/add_product.php',
                         data:{name:$('#add_name').val(), code:$('#add_code').val(), price:$('#add_price').val(),
                         withdrawal:$('#add_withdrawal').val(), category:$('#add_category').val()}
-                });
-                location.reload();      
-            }
+                    });
+
+                    $.ajax({
+                        url: 'php_files/new_id.php',
+                        type: 'get',
+                        dataType: 'json',
+                        success: function(res) {
+                            var table = document.getElementById('table');
+                            var ind = table.rows.length;
+                            var row = table.insertRow();
+                            var name=document.getElementById('add_name').value;
+                            var code=document.getElementById('add_code').value;
+                            var price=document.getElementById('add_price').value;
+                            var withdrawal=document.getElementById('add_withdrawal').value;
+                            var category=document.getElementById('add_category').value;
+                            var id = res;
+                            row.id = 'remove'+ind;
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            var cell3 = row.insertCell(2);
+                            var cell4 = row.insertCell(3);
+                            var cell5 = row.insertCell(4);
+                            var cell6 = row.insertCell(5);
+                            var cell7 = row.insertCell(6);
+
+
+                            cell1.innerHTML = '<td><input type = \"text\" id=\"edit_name'+ind+'\" value =\"'+name+'\"></input></td>';
+                            cell2.innerHTML = '<td><input type = \"text\" id=\"edit_code'+ind+'\" value =\"'+code+'\"></input></td>';
+                            cell3.innerHTML = '<td><input type = \"text\" id=\"edit_price'+ind+'\" value =\"'+price+'\"></input></td>';
+                            cell4.innerHTML = '<td><input type = \"text\" id=\"edit_withdrawal'+ind+'\" value =\"'+withdrawal+'\"></input></td>';
+                            cell5.innerHTML = '<td><input type = \"text\" id=\"edit_category'+ind+'\" value =\"'+category+'\"></input></td>';
+                            cell6.innerHTML = '<td><button onclick=\"edit_product('+ind+','+id+')\"  class=\"btn button_edit\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i><b>Edit</b></button></td>';
+                            cell7.innerHTML = '<td><button onclick=\"remove_product('+ind+','+id+')\"  class=\"btn button_remove\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i><b>Remove</b></button></td>';
+
+                            document.getElementById('add_name').value = "";
+                            document.getElementById('add_code').value = "";
+                            document.getElementById('add_price').value = "";
+                            document.getElementById('add_withdrawal').value = "";
+                            document.getElementById('add_category').value = "";
+                        }
+                    });
+            }   
             }else{
 
                 alert("Invalid price!");
