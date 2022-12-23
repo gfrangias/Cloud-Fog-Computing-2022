@@ -1,0 +1,30 @@
+  # PEP Proxy for Orion
+  wilma_data_storage:
+    image: fiware/pep-proxy
+    container_name: wilma_data_storage
+    hostname: wilma_data_storage
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.8
+    depends_on:
+      - keyrock
+    ports:
+      - "1027":"1027"
+    expose:
+      - "1027"
+    environment:
+      - DEBUG=pep-proxy:*
+      - PEP_PROXY_DEBUG=true
+      - PEP_PROXY_APP_HOST=data_storage
+      - PEP_PROXY_APP_PORT=80
+      - PEP_PROXY_PORT=1027
+      - PEP_PROXY_IDM_HOST=keyrock
+      - PEP_PROXY_HTTPS_ENABLED=false
+      - PEP_PROXY_AUTH_ENABLED=false
+      - PEP_PROXY_IDM_SSL_ENABLED=false
+      - PEP_PROXY_IDM_PORT=3005
+      - PEP_PROXY_APP_ID=258c4571-aeaa-4194-9984-b22e73c7f869
+      - PEP_PROXY_USERNAME=pep_proxy_9e2fc9b2-2aac-4f12-a737-8a8eb60b9331
+      - PEP_PASSWORD=test
+      - PEP_PROXY_PDP=idm
+      - PEP_PROXY_MAGIC_KEY=1234

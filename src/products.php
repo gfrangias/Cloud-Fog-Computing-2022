@@ -1,6 +1,7 @@
 <?php
     
     include 'php_files/db_connect.php';
+    include 'php_files/http_parse_headers.php';
 
     session_start();
   
@@ -77,11 +78,11 @@
 
 <?php
 
-  $url = "http://data_storage:80/display_products.php";   
+  $url = "http://wilma_data_storage:1027/display_products.php";   
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
   $enc_result = curl_exec($ch);
   curl_close($ch);
   $result = json_decode($enc_result,true);
@@ -92,11 +93,11 @@
     //echo json_encode($row,true);
     $product_id = $row['ID'];
     $user_id = $_SESSION['id'];
-    $url = "http://data_storage:80/check_cart.php?product_id=".$product_id."&user_id=".$user_id;
+    $url = "http://wilma_data_storage:1027/check_cart.php?product_id=".$product_id."&user_id=".$user_id;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
     $enc_result = curl_exec($ch);
     curl_close($ch);
     $cart_result = json_decode($enc_result,true);

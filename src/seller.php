@@ -51,11 +51,11 @@
 
 <?php
 
-    $url = "http://data_storage:80/display_seller.php?seller_id=".$_SESSION['id'];   
+    $url = "http://wilma_data_storage:1027/display_seller.php?seller_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
     $enc_result = curl_exec($ch);
     curl_close($ch);
     $result = json_decode($enc_result,true);
@@ -79,8 +79,8 @@
         $price = $price['$numberDecimal'];
         ?>
         <tr id="remove<?php echo $ind?>">
-          <td><input type = "text" id="edit_name<?php echo $ind; ?>" value =" <?php echo $row['NAME']; ?>"></input></td>
-          <td><input type = "text" id="edit_code<?php echo $ind; ?>" value =" <?php echo $row['PRODUCTCODE']; ?>"></input></td>
+          <td><input type = "text" id="edit_name<?php echo $ind; ?>" value ="<?php echo $row['NAME']; ?>"></input></td>
+          <td><input type = "text" id="edit_code<?php echo $ind; ?>" value ="<?php echo $row['PRODUCTCODE']; ?>"></input></td>
           <td><input type = "text" id="edit_price<?php echo $ind; ?>" value = "<?php echo $price; ?>"></input></td>
           <td><input type = "text" id="edit_withdrawal<?php echo $ind; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
           <td><input type = "text" id="edit_category<?php echo $ind; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
@@ -167,6 +167,7 @@
                         type: 'get',
                         dataType: 'json',
                         success: function(res) {
+                            alert("OK");
                             var table = document.getElementById('table');
                             var ind = table.rows.length;
                             var row = table.insertRow();

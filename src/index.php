@@ -83,8 +83,12 @@ if (isset($_POST['login_user'])) {
         
     $admin_token = $parsed_header_admin['X-Subject-Token'];
 
-    $curl_session = curl_init();
+    $client_id = '258c4571-aeaa-4194-9984-b22e73c7f869';
+    $client_secret  = '7f8a86a9-2da8-4f52-a1dc-e8918cd88887';
 
+    $authorization = base64_encode(''.$client_id.':'.$client_secret.'');
+
+    $curl_session = curl_init();
     # Keyrock authorization 
     curl_setopt_array($curl_session, array(
       CURLOPT_URL => 'http://keyrock:3005/oauth2/token',
@@ -99,7 +103,7 @@ if (isset($_POST['login_user'])) {
       CURLOPT_HTTPHEADER => array(
         'Content-Type: application/x-www-form-urlencoded',
         # base64 (client_id:client_secret)
-        'Authorization: Basic MjU4YzQ1NzEtYWVhYS00MTk0LTk5ODQtYjIyZTczYzdmODY5OjdmOGE4NmE5LTJkYTgtNGY1Mi1hMWRjLWU4OTE4Y2Q4ODg4NwoK'
+        'Authorization: Basic '.$authorization.''
       ),
     ));
 
@@ -131,12 +135,11 @@ if (isset($_POST['login_user'])) {
           $_SESSION['name'] = $user['description'];
           $_SESSION['enabled'] = $user['enabled'];
           $_SESSION['loggedin'] = true;
+          $_SESSION['oauth_token'] = $oauth_token;
         }
       }
     }
     
-    //echo $_SESSION['oauth_token'];
-    //die;
     if(!$user_found){
       session_unset();
       $login_err = true;

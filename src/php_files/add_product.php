@@ -15,6 +15,7 @@
     $price = $_POST['price'];
     $withdrawal = $_POST['withdrawal'];
     $category = $_POST['category'];
+    $category = str_replace('&','%26',$category);
     $id = $_SESSION['id'];
 
     $conn = OpenCon();
@@ -26,7 +27,7 @@
     $seller_name = $answer[0]." ".$answer[1];
     echo $seller_name;
 
-    $url = "http://data_storage:80/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
+    $url = "http://wilma_data_storage:1027/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
     "&price=".$price."&withdrawal=".$withdrawal."&seller_name=".$seller_name."&category=".$category;
     $url = str_replace(' ','%20',$url);
 
@@ -34,7 +35,7 @@
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
     $result = curl_exec($ch);
     curl_close($ch);
 
