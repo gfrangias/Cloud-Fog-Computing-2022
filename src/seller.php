@@ -50,7 +50,6 @@
 <div class="container">
 
 <?php
-
     $url = "http://wilma_data_storage:1027/display_seller.php?seller_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -66,27 +65,39 @@
             </div> ";
     }
     echo"<table id=\"table\">";
-    echo"<tr><th>Name</th><th>Code</th><th>Price</th><th>Withdrawal</th><th>Category</th><th></th><th></th></tr>\n";
+    echo"<tr><th>Name</th><th>Code</th><th>Price</th><th>Available on</th><th>Withdrawal on</th><th>Category</th><th>Sold Out</th><th></th><th></th></tr>\n";
     $ind = 0;
     foreach($result as $row) {
         $ind = $ind + 1;
         $product_id = $row['ID'];
         $withdrawal = $row['DATEOFWITHDRAWAL'];
+        $availability = $row['DATEOFAVAILABILITY'];
         $withdrawal = $withdrawal['$date'];
+        $availability = $availability['$date'];
         $withdrawal = $withdrawal['$numberLong'] / 1000;
+        $availability = $availability['$numberLong'] / 1000;
         $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
+        $availability = date( "Y-m-d H:i:s", $availability);
         $price = $row['PRICE'];
         $price = $price['$numberDecimal'];
+        $soldout = $row['SOLDOUT'];
         ?>
         <tr id="remove<?php echo $ind?>">
-          <td><input type = "text" id="edit_name<?php echo $ind; ?>" value ="<?php echo $row['NAME']; ?>"></input></td>
-          <td><input type = "text" id="edit_code<?php echo $ind; ?>" value ="<?php echo $row['PRODUCTCODE']; ?>"></input></td>
-          <td><input type = "text" id="edit_price<?php echo $ind; ?>" value = "<?php echo $price; ?>"></input></td>
-          <td><input type = "text" id="edit_withdrawal<?php echo $ind; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
-          <td><input type = "text" id="edit_category<?php echo $ind; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
-          <td><button onclick="edit_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
-          <td><button onclick="remove_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>
-          <?php echo "</td>
+            <td><input type = "text" id="edit_name<?php echo $ind; ?>" value ="<?php echo $row['NAME']; ?>"></input></td>
+            <td><input type = "text" id="edit_code<?php echo $ind; ?>" value ="<?php echo $row['PRODUCTCODE']; ?>"></input></td>
+            <td><input type = "text" id="edit_price<?php echo $ind; ?>" value = "<?php echo $price; ?>"></input></td>
+            <td><input type = "text" id="edit_availability<?php echo $ind; ?>" value = "<?php echo $availability; ?>"></input></td>
+            <td><input type = "text" id="edit_withdrawal<?php echo $ind; ?>" value = "<?php echo $withdrawal; ?>"></input></td>
+            <td><input type = "text" id="edit_category<?php echo $ind; ?>" value = "<?php echo $row['CATEGORY']; ?>"></input></td>
+            <td>
+            <label class="toggle">
+                <input class="toggle-checkbox" type="checkbox" id="edit_soldout<?php echo $ind; ?>" value="1" <?php echo ($soldout ? 'checked' : '');?> />
+                <div class="toggle-switch"></div>
+            </label>                
+            </td>
+            <td><button onclick="edit_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
+            <td><button onclick="remove_product(<?php echo $ind;  ?>, <?php echo $product_id;  ?>)"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>
+            <?php echo "</td>
         </tr>\n";
     } 
     ?>
@@ -98,6 +109,7 @@
     <td><input type = "text" id="add_name" placeholder="Insert name"></input></td>
     <td><input type = "text" id="add_code" placeholder="Insert code"></input></td>
     <td><input type = "text" id="add_price" placeholder="Insert price"></input></td>
+    <td><input type = "text" id="add_availability" placeholder="Insert availability date"></input></td>
     <td><input type = "text" id="add_withdrawal" placeholder="Insert withdrawal date"></input></td>
     <td><input type = "text" id="add_category" placeholder="Insert category"></input></td>
     <td colspan="2"&nbsp;><button onclick="add_product(<?php echo $ind;  ?>)"  class="btn add_button"><i class="fa fa-plus-square-o" aria-hidden="true"></i><b> Add new product</b></button></td>
@@ -125,23 +137,36 @@
 
      function edit_product(ind, id){
 
-        if(isValidDate($('#edit_withdrawal'+ind).val())){
-            if(isValidPrice($('#edit_price'+ind).val())){
-                if(confirm('Are you sure you want to edit product?')){
-                
-                    $.ajax({
+        if(isValidDate($('#edit_withdrawal'+ind).val()) && isValidDate($('#edit_availability'+ind).val())){
+            if(compareDates($('#edit_availability'+ind).val(), $('#edit_withdrawal'+ind).val())) {
+                if(isValidPrice($('#edit_price'+ind).val())){
+                    if(confirm('Are you sure you want to edit product?')){
 
-                        type:'post',
-                        url:'php_files/edit_product.php',
-                        data:{id:id, name:$('#edit_name'+ind).val(), code:$('#edit_code'+ind).val(), price:$('#edit_price'+ind).val(),
-                        withdrawal:$('#edit_withdrawal'+ind).val(), category:$('#edit_category'+ind).val()}
-                    });
-                }
+                        if($('#edit_soldout'+ind).is(":checked")){
+                            var $soldout = '1';
+                        }else{
+                            var $soldout = '0';
+                        }
+                    
+                        $.ajax({
+
+                            type:'post',
+                            url:'php_files/edit_product.php',
+                            data:{id:id, name:$('#edit_name'+ind).val(), code:$('#edit_code'+ind).val(), price:$('#edit_price'+ind).val(),
+                            availability:$('#edit_availability'+ind).val(), withdrawal:$('#edit_withdrawal'+ind).val(),
+                            soldout:$soldout, category:$('#edit_category'+ind).val()}
+                        });
+                    }
+                }else{
+
+                    alert("Invalid price!");
+
+                } 
             }else{
 
-                alert("Invalid price!");
+                alert("You can't have availability date after withdrawal!");
 
-            }  
+            } 
         }else{
 
             alert("Invalid date or date format! Please use YYYY-MM-DD HH:MM:SS.");
@@ -151,7 +176,7 @@
 
 
     function add_product(ind){
-        if(isValidDate($('#add_withdrawal').val())){
+        if(isValidDate($('#add_withdrawal').val()) && isValidDate($('#add_availability').val())){
             if(isValidPrice($('#add_price').val())){
                 if(confirm('Are you sure you want to add product?')){
                     $.ajax({
@@ -159,7 +184,7 @@
                         type:'post',
                         url:'php_files/add_product.php',
                         data:{name:$('#add_name').val(), code:$('#add_code').val(), price:$('#add_price').val(),
-                        withdrawal:$('#add_withdrawal').val(), category:$('#add_category').val()}
+                        availability:$('#add_availability').val(), withdrawal:$('#add_withdrawal').val(), category:$('#add_category').val()}
                     });
 
                     $.ajax({
@@ -167,16 +192,16 @@
                         type: 'get',
                         dataType: 'json',
                         success: function(res) {
-                            alert("OK");
                             var table = document.getElementById('table');
                             var ind = table.rows.length;
                             var row = table.insertRow();
                             var name=document.getElementById('add_name').value;
                             var code=document.getElementById('add_code').value;
                             var price=document.getElementById('add_price').value;
+                            var availability=document.getElementById('add_availability').value;
                             var withdrawal=document.getElementById('add_withdrawal').value;
                             var category=document.getElementById('add_category').value;
-                            var id = res;
+                            var id = res-1;
                             row.id = 'remove'+ind;
                             var cell1 = row.insertCell(0);
                             var cell2 = row.insertCell(1);
@@ -185,19 +210,24 @@
                             var cell5 = row.insertCell(4);
                             var cell6 = row.insertCell(5);
                             var cell7 = row.insertCell(6);
+                            var cell8 = row.insertCell(7);
+                            var cell9 = row.insertCell(8);
 
 
                             cell1.innerHTML = '<td><input type = \"text\" id=\"edit_name'+ind+'\" value =\"'+name+'\"></input></td>';
                             cell2.innerHTML = '<td><input type = \"text\" id=\"edit_code'+ind+'\" value =\"'+code+'\"></input></td>';
                             cell3.innerHTML = '<td><input type = \"text\" id=\"edit_price'+ind+'\" value =\"'+price+'\"></input></td>';
-                            cell4.innerHTML = '<td><input type = \"text\" id=\"edit_withdrawal'+ind+'\" value =\"'+withdrawal+'\"></input></td>';
-                            cell5.innerHTML = '<td><input type = \"text\" id=\"edit_category'+ind+'\" value =\"'+category+'\"></input></td>';
-                            cell6.innerHTML = '<td><button onclick=\"edit_product('+ind+','+id+')\"  class=\"btn button_edit\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i><b>Edit</b></button></td>';
-                            cell7.innerHTML = '<td><button onclick=\"remove_product('+ind+','+id+')\"  class=\"btn button_remove\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i><b>Remove</b></button></td>';
+                            cell4.innerHTML = '<td><input type = \"text\" id=\"edit_availability'+ind+'\" value =\"'+availability+'\"></input></td>';
+                            cell5.innerHTML = '<td><input type = \"text\" id=\"edit_withdrawal'+ind+'\" value =\"'+withdrawal+'\"></input></td>';
+                            cell6.innerHTML = '<td><input type = \"text\" id=\"edit_category'+ind+'\" value =\"'+category+'\"></input></td>';
+                            cell7.innerHTML = '<td> <label class=\"toggle\"><input class=\"toggle-checkbox\" type="checkbox" id=\"edit_soldout'+ind+'\"value=\"1\"/><div class=\"toggle-switch\"></div></label></td>'
+                            cell8.innerHTML = '<td><button onclick=\"edit_product('+ind+','+id+')\"  class=\"btn button_edit\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i><b>Edit</b></button></td>';
+                            cell9.innerHTML = '<td><button onclick=\"remove_product('+ind+','+id+')\"  class=\"btn button_remove\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i><b>Remove</b></button></td>';
 
                             document.getElementById('add_name').value = "";
                             document.getElementById('add_code').value = "";
                             document.getElementById('add_price').value = "";
+                            document.getElementById('add_availability').value = "";
                             document.getElementById('add_withdrawal').value = "";
                             document.getElementById('add_category').value = "";
                         }
@@ -223,6 +253,20 @@
         var dNum = d.getTime();
         if(!dNum && dNum !== 0) return false; // NaN value, Invalid date
         return d;
+    }
+
+    function compareDates(availability, withdrawal) {
+
+        // convert the strings to Date objects
+        const availabilityObj = new Date(availability);
+        const withdrawalObj = new Date(withdrawal);
+
+        // compare the dates
+        if (availabilityObj < withdrawalObj) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function isValidPrice(priceString) {

@@ -54,6 +54,8 @@ services:
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.5
+    ports:
+      - "27017:27017"
     expose:
       - "27017"
   data_storage:
@@ -61,11 +63,11 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile2
+    expose:
+      - "80"
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.6
-    expose:
-      - "80"
   keyrock:
     image: fiware/idm:7.6.0
     container_name: fiware-keyrock
@@ -103,8 +105,8 @@ services:
     expose:
       - "1027"
     environment:
-      - DEBUG=pep-proxy:*
-      - PEP_PROXY_DEBUG=true
+      #- DEBUG=pep-proxy:*
+      #- PEP_PROXY_DEBUG=false
       - PEP_PROXY_APP_HOST=data_storage
       - PEP_PROXY_APP_PORT=80
       - PEP_PROXY_PORT=1027
@@ -117,6 +119,33 @@ services:
       - PEP_PROXY_USERNAME=pep_proxy_9e2fc9b2-2aac-4f12-a737-8a8eb60b9331
       - PEP_PASSWORD=pep_proxy_dfe50e94-3b36-46c3-b43b-9a2b39b7d81b
       - PEP_PROXY_PDP=idm
+  mongo_db_orion:
+    container_name: mongo_db_orion
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+      MONGO_INITDB_DATABASE: cloud_quest_db_orion
+    volumes:
+      - ./mongo_orion:/data/db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.9
+    ports:
+      - "27018:27017"
+    expose:
+      - "27017"
+  orion:
+    image: fiware/orion
+    expose:
+      - "1026"
+    depends_on:
+      - mongo_db_orion
+    command: -dbhost mongo_db_orion -dbuser root -dbpwd 1234
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.10
 networks:
   cloud_quest_network:
     ipam:

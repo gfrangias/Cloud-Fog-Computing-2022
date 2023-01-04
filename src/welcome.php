@@ -34,7 +34,7 @@ if (isset($_POST['logout_user'])){
 </div>
 
 <div class="user_name">
-    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s", $_SESSION['name']); ?></b>    
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']); echo $_SESSION['oauth_token']; ?></b>    
 </div>
 
 <form action="welcome.php" method="post">

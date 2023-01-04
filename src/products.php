@@ -61,6 +61,11 @@
 </div>
 
 <div class="search_container">
+  <label class = "search_label"><b>Availability Date</b></label><br>
+  <input type="text" id="availability" class="search-key" placeholder="Availability Date" >
+</div>
+
+<div class="search_container">
   <label class = "search_label"><b>Withdrawal Date</b></label><br>
   <input type="text" id="withdrawal" class="search-key" placeholder="Withdrawal Date" >
 </div>
@@ -88,9 +93,8 @@
   $result = json_decode($enc_result,true);
 
   echo"<table id=\"products_search\" >";
-  echo"<tr><th>Name</th><th>Price</th><th>Withdrawal</th><th>Seller</th><th>Category</th><th></th></tr>\n";
+  echo"<tr><th>Name</th><th>Price</th><th>Available</th><th>Withdrawal</th><th>Seller</th><th style=\"border-top-right-radius: 12px;\">Category</th><th style=\"background: white; border: none;\"></th></tr>\n";
   foreach($result as $row) {
-    //echo json_encode($row,true);
     $product_id = $row['ID'];
     $user_id = $_SESSION['id'];
     $url = "http://wilma_data_storage:1027/check_cart.php?product_id=".$product_id."&user_id=".$user_id;
@@ -101,13 +105,36 @@
     $enc_result = curl_exec($ch);
     curl_close($ch);
     $cart_result = json_decode($enc_result,true);
+
     if(is_null($cart_result) || count($cart_result) < 1){
       $cart = 0;
     }else{
       $cart = 1;
     }
+
+    $url = "http://wilma_data_storage:1027/check_subscription.php?product_id=".$product_id."&user_id=".$user_id;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
+    $enc_result = curl_exec($ch);
+    curl_close($ch);
+    $subscription_result = json_decode($enc_result,true);
+
+    if(is_null($subscription_result) || count($subscription_result) < 1){
+      $subscription = 0;
+    }else{
+      $subscription = 1;
+    }
+
+    $availability = $row['DATEOFAVAILABILITY'];
+    $availability = $availability['$date'];
+    $availability_timestamp = $availability['$numberLong'];
+    $availability = $availability['$numberLong'] / 1000;
+    $availability = date( "Y-m-d H:i:s", $availability);
     $withdrawal = $row['DATEOFWITHDRAWAL'];
     $withdrawal = $withdrawal['$date'];
+    $withdrawal_timestamp = $withdrawal['$numberLong'];
     $withdrawal = $withdrawal['$numberLong'] / 1000;
     $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
     $price = $row['PRICE'];
@@ -116,18 +143,34 @@
     <?php 
     echo "<td data-input=\"name\">{$row['NAME']}</td>
           <td data-input=\"price\">{$price}€</td>
+          <td data-input=\"availability\">{$availability}</td>
           <td data-input=\"withdrawal\">{$withdrawal}</td>
           <td data-input=\"seller\">{$row['SELLERNAME']}</td>
           <td data-input=\"category\">{$row['CATEGORY']}</td>"?>
-          <td>
-            <input type="checkbox" onclick="edit_cart(<?php echo $row['ID'];  ?>)" 
-              <?php echo ($cart == '1' ? 'checked' : '');?> id = "heart(<?php echo $row['ID'];  ?> )"/>
-            <label for="heart(<?php echo $row['ID'];  ?> )"></label>
+          <td style="background:white; border:none;">
+            <?php 
+            if($row['SOLDOUT'] == true){
+              $sold_out = '1'; 
+            ?>
+              <div class="container_sold_out">SOLD OUT</div>
+            <?php
+            }else{
+              $sold_out = '0'; 
+            ?>
+              <div class="container_available">AVAILABLE</div>
+            <?php
+            }
+            ?>  
+            <input type="checkbox" class="cart" onclick="edit_cart(<?php echo $row['ID'];  ?>)" 
+              <?php echo ($cart == '1' ? 'checked' : '');?> id = "cart(<?php echo $row['ID'];  ?> )"/>
+            <label for="cart(<?php echo $row['ID'];  ?> )"></label>
+            <input type="checkbox" class="subscription" onclick="edit_subscription(<?php echo $row['ID'];  ?>, <?php echo $row['NAME']; ?>, 
+            <?php echo $_SESSION['id']; ?>, <?php echo $availability_timestamp;  ?>, <?php echo $withdrawal_timestamp;  ?>, <?php echo $sold_out;  ?>)" 
+              <?php echo ($subscription == '1' ? 'checked' : '');?> id = "subscription(<?php echo $row['ID'];  ?> )"/>
+            <label for="subscription(<?php echo $row['ID'];  ?> )"></label>
           </td>
-          
-          <?php echo "</tr>\n";
-    } 
-    
+        <?php echo "</tr>\n";
+      } 
     echo "</table>";
 ?>
 
@@ -146,6 +189,45 @@
       });
 	 }
 
+	function edit_subscription(product_id, user_id, product_name, availability, withdrawal, sold_out){
+        var checkbox = document.getElementById("subscription("+product_id+" )");
+        var subscribe = '0';
+
+        if(checkbox.checked){
+          subscribe = '1';
+        }
+
+        $.ajax({
+        
+          type:'post',
+          url:'php_files/edit_subscription.php',
+          data:{product_id:product_id, product_name:product_name, availability:availability, withdrawal:withdrawal, sold_out:sold_out}
+   
+        });
+
+        if($subscribe = '1'){
+
+          $.ajax({
+          
+          type:'post',
+          url:'orion/add_subscription.php',
+          data:{product_id:product_id, user_id:user_id}
+  
+          });
+
+        }else{
+
+          $.ajax({
+          
+          type:'post',
+          url:'orion/delete_subscription.php',
+          data:{product_id:product_id, user_id:user_id}
+        
+        });
+
+        }
+  }
+
 </script>
 
 <script type="text/javascript">
@@ -156,7 +238,7 @@ window.onload = function(){
   $inputs.on('input', function() {
 
     $filterableRows.hide().filter(function() {
-      return $(this).find('td').not(':nth-child(6)').filter(function() {
+      return $(this).find('td').not(':nth-child(7)').filter(function() {
         
         var tdText = $(this).text().toLowerCase(),
             inputValue = $('#' + $(this).data('input')).val().toLowerCase();

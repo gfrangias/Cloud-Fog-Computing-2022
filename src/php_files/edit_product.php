@@ -17,13 +17,15 @@
     $name = $_POST['name'];
     $code = $_POST['code'];
     $price = $_POST['price'];
+    $availability = $_POST['availability'];
     $withdrawal = $_POST['withdrawal'];
+    $soldout = $_POST['soldout'];
     $category = $_POST['category'];
     $category = str_replace('&','%26',$category);
     $seller_id = $_SESSION['id'];
 
     $url = "http://wilma_data_storage:1027/edit_product.php?seller_id=".$seller_id."&product_id=".$product_id."&name=".$name."&code=".$code.
-    "&price=".$price."&withdrawal=".$withdrawal."&category=".$category;
+    "&price=".$price."&availability=".$availability."&withdrawal=".$withdrawal."&soldout=".$soldout."&category=".$category;
     $url = str_replace(' ','%20',$url);
 
     echo $url;

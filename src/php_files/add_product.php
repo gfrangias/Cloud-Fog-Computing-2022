@@ -13,6 +13,7 @@
     $name = $_POST['name'];
     $code = $_POST['code'];
     $price = $_POST['price'];
+    $availability = $_POST['availability'];
     $withdrawal = $_POST['withdrawal'];
     $category = $_POST['category'];
     $category = str_replace('&','%26',$category);
@@ -28,7 +29,7 @@
     echo $seller_name;
 
     $url = "http://wilma_data_storage:1027/add_product.php?seller_id=".$id."&name=".$name."&code=".$code.
-    "&price=".$price."&withdrawal=".$withdrawal."&seller_name=".$seller_name."&category=".$category;
+    "&price=".$price."&availability=".$availability."&withdrawal=".$withdrawal."&seller_name=".$seller_name."&category=".$category;
     $url = str_replace(' ','%20',$url);
 
     echo $url;

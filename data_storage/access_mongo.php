@@ -9,6 +9,8 @@
 
         $products = $db->products;
         $carts = $db->carts;
+        $subscriptions = $db->subscriptions;
+        $notifications = $db->notifications;
         
     } catch (MongoConnectionException $e){
         var_dump($e);

@@ -73,7 +73,6 @@ if (isset($_POST['login_user'])) {
     $header = substr($result, 0, $header_size);
     $parsed_header_admin = http_parse_headers($header);
     curl_close($curl_session);
-    //echo $parsed_header_admin['X-Subject-Token'];
   }else{
 
     $login_err = true;
@@ -136,6 +135,7 @@ if (isset($_POST['login_user'])) {
           $_SESSION['enabled'] = $user['enabled'];
           $_SESSION['loggedin'] = true;
           $_SESSION['oauth_token'] = $oauth_token;
+          $_SESSION['x_token'] = $admin_token;
         }
       }
     }
