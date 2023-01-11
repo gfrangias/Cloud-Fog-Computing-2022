@@ -7,7 +7,7 @@
     
     if(!($_SESSION['role'] === "ADMIN")){
         
-        header("Location: no_access.php");
+        header("Location: ../redirections/no_access.php");
         exit();
     }
 
@@ -18,6 +18,7 @@
     $role = $_POST['role'];
     $confirmed = $_POST['confirmed'];
 
+    // Administator login to get X-Auth-Token
     $admin_login = array("name"=>"gfrangias@tuc.gr","password"=>"1234");
 
     $curl_session = curl_init();
@@ -37,6 +38,7 @@
 
     $admin_token = $parsed_header_admin['X-Subject-Token'];
 
+    // Edit user through Keyrock request
     $curl_session = curl_init();
 
     curl_setopt($curl_session, CURLOPT_URL, "http://keyrock:3005/v1/users/".$user_id);
@@ -61,6 +63,8 @@
 
     $keyrock_conn = OpenKeyrock();
 
+    // Fields "enabled" and "admin" cannot be edited through Keyrock
+    // So they are edited directly from Keyrock SQL database
     if($confirmed==='1'){
 
         mysqli_query($keyrock_conn, "UPDATE user SET enabled = 1 WHERE id= '$user_id'");

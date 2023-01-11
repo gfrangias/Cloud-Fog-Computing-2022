@@ -106,7 +106,7 @@ services:
       - "1027"
     environment:
       #- DEBUG=pep-proxy:*
-      #- PEP_PROXY_DEBUG=false
+      #- PEP_PROXY_DEBUG=true
       - PEP_PROXY_APP_HOST=data_storage
       - PEP_PROXY_APP_PORT=80
       - PEP_PROXY_PORT=1027
@@ -137,6 +137,7 @@ services:
     expose:
       - "27017"
   orion:
+    container_name: orion
     image: fiware/orion
     expose:
       - "1026"
@@ -146,6 +147,34 @@ services:
     networks:
       cloud_quest_network:
         ipv4_address: 172.16.0.10
+  wilma_orion:
+    image: fiware/pep-proxy
+    container_name: wilma_orion
+    hostname: wilma_orion
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.11
+    depends_on:
+      - keyrock
+    ports:
+      - "1028:1028"
+    expose:
+      - "1028"
+    environment:
+      #- DEBUG=pep-proxy:*
+      #- PEP_PROXY_DEBUG=true
+      - PEP_PROXY_APP_HOST=orion
+      - PEP_PROXY_APP_PORT=1026
+      - PEP_PROXY_PORT=1028
+      - PEP_PROXY_IDM_HOST=keyrock
+      - PEP_PROXY_HTTPS_ENABLED=false
+      - PEP_PROXY_AUTH_ENABLED=false
+      - PEP_PROXY_IDM_SSL_ENABLED=false
+      - PEP_PROXY_IDM_PORT=3005
+      - PEP_PROXY_APP_ID=258c4571-aeaa-4194-9984-b22e73c7f869
+      - PEP_PROXY_USERNAME=pep_proxy_9e2fc9b2-2aac-4f12-a737-8a8eb60b9331
+      - PEP_PASSWORD=pep_proxy_dfe50e94-3b36-46c3-b43b-9a2b39b7d81b
+      - PEP_PROXY_PDP=idm
 networks:
   cloud_quest_network:
     ipam:

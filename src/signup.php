@@ -7,18 +7,20 @@ include 'php_files/keyrock_connect.php';
 $id = $name = $surname = $username = $password = $repassword = $email = $role = "";
 $username_error = $email_error = $password_error = false;
 
+// If the form is posted
 if (isset($_POST['signup_user'])) {
-#echo "OK";
-$name = $_POST['name'];
-$surname = $_POST['surname'];
-$username = $_POST['username'];
-$password = $_POST['password'];
-$repassword = $_POST['repassword'];
-$email = $_POST['email'];
-$role = $_POST['role'];
+  $name = $_POST['name'];
+  $surname = $_POST['surname'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $repassword = $_POST['repassword'];
+  $email = $_POST['email'];
+  $role = $_POST['role'];
 
+  // If password is typed correctly the second time
   if($password === $repassword){
 
+    // Administator login to get X-Auth-Token
     $admin_login = array("name"=>"gfrangias@tuc.gr","password"=>"1234");
 
     $curl_session = curl_init();
@@ -38,9 +40,10 @@ $role = $_POST['role'];
 
     $admin_token = $parsed_header['X-Subject-Token'];
 
+    // If administrator login is successful
     if(isset($admin_token)){
-      //echo $admin_token;
 
+      // Get all users
       $curl_session = curl_init();
 
       curl_setopt($curl_session, CURLOPT_URL, "http://keyrock:3005/v1/users");
@@ -52,6 +55,7 @@ $role = $_POST['role'];
       $users_json = json_decode($result, true);
       curl_close($curl_session);
       
+      // Check if the potential new user has a unique email and username
       foreach($users_json as $row){
         foreach($row as $user){
           if($user['email'] == $email){
@@ -63,7 +67,10 @@ $role = $_POST['role'];
       }
     }
 
+    // If email and username are unique
     if(isset($admin_token) && $email_error == false && $username_error == false){
+
+      // Create new Keyrock user
       $curl_session = curl_init();
     
       $new_user_info = array("user"=>array("description"=>"$name"." "."$surname", "username"=> $username, 
@@ -80,8 +87,12 @@ $role = $_POST['role'];
 
       $keyrock_conn = OpenKeyrock();
 
+      // --- It is impossible for both "enabled" and "admin" to be edited using Keyrock requests --- //
+
+      // Set "enabled" to 0 via SQL query, because "enabled" is initially 1 by default
       mysqli_query($keyrock_conn, "UPDATE user SET enabled = 0 WHERE username= '$username'");
 
+      // If the role is ADMIN set "admin" to 1 via SQL query
       if($role === "ADMIN"){
         
         mysqli_query($keyrock_conn, "UPDATE user SET admin = 1 WHERE username= '$username'");
@@ -89,8 +100,9 @@ $role = $_POST['role'];
       }
 
       CloseKeyrock($keyrock_conn);
-
-      header("Location: signed_up.php");
+      
+      // Now that the user is created redirect to signed_up page
+      header("Location: redirections/signed_up.php");
 
     }else{
 

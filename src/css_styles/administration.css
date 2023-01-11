@@ -4,7 +4,7 @@ body {
   margin: 30px;
 }
 
-input[type=text]{
+input[type=text], [type=email]{
   font-family: 'Helvetica', 'Arial', sans-serif;
   width: 100%;
   padding: none;
@@ -248,3 +248,39 @@ EDIT ON
   position: relative;
   top: 2px;
 }
+
+.button_logout{
+  margin: 5px;
+  background-color: #3194d6; 
+  color: white; 
+  border: 2px solid #007ebe;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+ }
+ 
+ .user_name{
+  display:inline-block;
+  margin: 5px;
+  color: black; 
+  position: absolute;
+  top: 30px;
+  right: 180px;
+  font-size: 15px;
+ }
+ 
+ .button_logout:hover {
+  background-color: transparent;
+  color: black;
+ }
+
+ .button {
+  padding: 14px 10px;
+  margin: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  width: 6.8%;
+  border-radius: 12px;
+  justify-content: center;
+  font-size: 15px;
+ }

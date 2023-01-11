@@ -2,22 +2,39 @@
     
     include 'php_files/db_connect.php';
     include 'php_files/http_parse_headers.php';
+    include 'php_files/transform_dates.php';
 
     session_start();
-  
+
+    // If there is no active session
     if(!$_SESSION){
 
-      header("Location: not_connected.php");
+      header("Location: redirections/not_connected.php");
       exit();
 
+    // If the role isn't USER
     }elseif(!($_SESSION['role'] === "USER")){
       
-      header("Location: no_access.php");
+      header("Location: redirections/no_access.php");
       exit();
 
   }
 
-    $conn = OpenCon();
+  $conn = OpenCon();
+
+  // If the expiration time of the OAuth token has passed
+  if(time() >= $_SESSION['expiration']){
+    session_destroy();
+    header("Location: redirections/session_expired.php");
+    exit();
+  }
+  
+  // If log out button is pressed
+  if (isset($_POST['logout_user'])){
+    session_destroy();
+    header("Location: index.php");
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +55,15 @@
   <a href="welcome.php"> 
     <img src="images/logos/logo+name.png" alt="logo" class="logo">
   </a>
-</div><br>
+</div>
+
+<div class="user_name">
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']);?></b>    
+</div>
+
+<form action="products.php" method="post">
+<button class="button button_logout" type="submit" name="logout_user"><i class="fa fa-sign-out" aria-hidden="true"></i><b> Log out</b></button></br>
+</form><br>
 
 <button onclick="location.href='welcome.php'" class="btn home_button"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
 <button onclick="location.href='cart.php'" class="btn cart_button_right"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Your Cart</button>
@@ -83,6 +108,7 @@
 
 <?php
 
+  // Get all products
   $url = "http://wilma_data_storage:1027/display_products.php";   
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
@@ -92,53 +118,50 @@
   curl_close($ch);
   $result = json_decode($enc_result,true);
 
+  // Get cart items
+  $url = "http://wilma_data_storage:1027/get_cart_items.php?user_id=".$_SESSION['id'];   
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
+  $enc_result = curl_exec($ch);
+  curl_close($ch);
+  $cart_items = json_decode($enc_result,true);
+
+  // Get subscription items
+  $url = "http://wilma_data_storage:1027/get_subscription_items.php?user_id=".$_SESSION['id'];   
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
+  $enc_result = curl_exec($ch);
+  curl_close($ch);
+  $subscription_items = json_decode($enc_result,true);
+
   echo"<table id=\"products_search\" >";
   echo"<tr><th>Name</th><th>Price</th><th>Available</th><th>Withdrawal</th><th>Seller</th><th style=\"border-top-right-radius: 12px;\">Category</th><th style=\"background: white; border: none;\"></th></tr>\n";
   foreach($result as $row) {
     $product_id = $row['ID'];
     $user_id = $_SESSION['id'];
-    $url = "http://wilma_data_storage:1027/check_cart.php?product_id=".$product_id."&user_id=".$user_id;
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
-    $enc_result = curl_exec($ch);
-    curl_close($ch);
-    $cart_result = json_decode($enc_result,true);
 
-    if(is_null($cart_result) || count($cart_result) < 1){
-      $cart = 0;
-    }else{
+    // If the item is in the cart
+    if (in_array($product_id, $cart_items)){
       $cart = 1;
-    }
-
-    $url = "http://wilma_data_storage:1027/check_subscription.php?product_id=".$product_id."&user_id=".$user_id;
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
-    $enc_result = curl_exec($ch);
-    curl_close($ch);
-    $subscription_result = json_decode($enc_result,true);
-
-    if(is_null($subscription_result) || count($subscription_result) < 1){
-      $subscription = 0;
     }else{
-      $subscription = 1;
+      $cart = 0;
     }
 
-    $availability = $row['DATEOFAVAILABILITY'];
-    $availability = $availability['$date'];
-    $availability_timestamp = $availability['$numberLong'];
-    $availability = $availability['$numberLong'] / 1000;
-    $availability = date( "Y-m-d H:i:s", $availability);
-    $withdrawal = $row['DATEOFWITHDRAWAL'];
-    $withdrawal = $withdrawal['$date'];
-    $withdrawal_timestamp = $withdrawal['$numberLong'];
-    $withdrawal = $withdrawal['$numberLong'] / 1000;
-    $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
-    $price = $row['PRICE'];
-    $price = $price['$numberDecimal'];?>
+    // If there is a subscription to the product
+    if (in_array($product_id, $subscription_items)){
+      $subscription = 1;
+    }else{
+      $subscription = 0;
+    }
+
+    // Transform dates to YYYY-MM-DD HH:MM:SS
+    $availability = timestamp_to_date($row['DATEOFAVAILABILITY']['$date']['$numberLong']);
+    $withdrawal = timestamp_to_date($row['DATEOFWITHDRAWAL']['$date']['$numberLong']);
+    $price = $row['PRICE']['$numberDecimal'];?>
     <tr>
     <?php 
     echo "<td data-input=\"name\">{$row['NAME']}</td>
@@ -164,14 +187,13 @@
             <input type="checkbox" class="cart" onclick="edit_cart(<?php echo $row['ID'];  ?>)" 
               <?php echo ($cart == '1' ? 'checked' : '');?> id = "cart(<?php echo $row['ID'];  ?> )"/>
             <label for="cart(<?php echo $row['ID'];  ?> )"></label>
-            <input type="checkbox" class="subscription" onclick="edit_subscription(<?php echo $row['ID'];  ?>, <?php echo $row['NAME']; ?>, 
-            <?php echo $_SESSION['id']; ?>, <?php echo $availability_timestamp;  ?>, <?php echo $withdrawal_timestamp;  ?>, <?php echo $sold_out;  ?>)" 
+            <input type="checkbox" class="subscription" onclick='edit_subscription(<?php echo $row["ID"];  ?>)'
               <?php echo ($subscription == '1' ? 'checked' : '');?> id = "subscription(<?php echo $row['ID'];  ?> )"/>
             <label for="subscription(<?php echo $row['ID'];  ?> )"></label>
           </td>
         <?php echo "</tr>\n";
       } 
-    echo "</table>";
+    echo "</table><br /><br />";
 ?>
 
 </div>
@@ -179,7 +201,7 @@
 <script type="text/javascript">
 	 
 	 function edit_cart(id){
-         
+      
       $.ajax({
 
         type:'post',
@@ -189,43 +211,16 @@
       });
 	 }
 
-	function edit_subscription(product_id, user_id, product_name, availability, withdrawal, sold_out){
-        var checkbox = document.getElementById("subscription("+product_id+" )");
-        var subscribe = '0';
-
-        if(checkbox.checked){
-          subscribe = '1';
-        }
+	function edit_subscription(product_id){
 
         $.ajax({
         
           type:'post',
           url:'php_files/edit_subscription.php',
-          data:{product_id:product_id, product_name:product_name, availability:availability, withdrawal:withdrawal, sold_out:sold_out}
+          data:{product_id:product_id}
    
         });
 
-        if($subscribe = '1'){
-
-          $.ajax({
-          
-          type:'post',
-          url:'orion/add_subscription.php',
-          data:{product_id:product_id, user_id:user_id}
-  
-          });
-
-        }else{
-
-          $.ajax({
-          
-          type:'post',
-          url:'orion/delete_subscription.php',
-          data:{product_id:product_id, user_id:user_id}
-        
-        });
-
-        }
   }
 
 </script>

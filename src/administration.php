@@ -4,19 +4,35 @@
     include 'php_files/http_parse_headers.php';
 
     session_start();
+
+    // If there is no active session
     if(!$_SESSION){
 
-        header("Location: not_connected.php");
+        header("Location: redirections/not_connected.php");
         exit();
-
+    
+    // If the role isn't ADMIN
     }elseif(!($_SESSION['role'] === "ADMIN")){
         
-        header("Location: no_access.php");
+        header("Location: redirections/no_access.php");
         exit();
 
     }
 
+    // If the expiration time of the OAuth token has passed
+    if(time() >= $_SESSION['expiration']){
+        session_destroy();
+        header("Location: redirections/session_expired.php");
+        exit();
+    }
+
     $conn = OpenCon();
+
+    // If log out button is pressed
+    if (isset($_POST['logout_user'])){
+        session_destroy();
+        header("Location: index.php");
+    }
 
 ?>
 
@@ -38,7 +54,15 @@
     <a href="welcome.php"> 
         <img src="images/logos/logo+name.png" alt="logo" class="logo">
     </a>
-</div><br>
+</div>
+
+<div class="user_name">
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']);?></b>    
+</div>
+
+<form action="administration.php" method="post">
+<button class="button button_logout" type="submit" name="logout_user"><i class="fa fa-sign-out" aria-hidden="true"></i><b> Log out</b></button></br>
+</form><br>
 
 <button onclick="location.href='welcome.php'" class="btn home_button"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
 
@@ -50,7 +74,7 @@
 
 <?php
 
-    # Admin login for keyrock access
+    // Administator login to get X-Auth-Token
     $admin_login = array("name"=>"gfrangias@tuc.gr","password"=>"1234");
 
     $curl_session = curl_init();
@@ -71,6 +95,7 @@
     $admin_token = $parsed_header_admin['X-Subject-Token'];
     //echo $admin_token;
 
+    // Get all users
     $curl_session = curl_init();
 
     curl_setopt($curl_session, CURLOPT_URL, "http://keyrock:3005/v1/users");
@@ -96,7 +121,7 @@
         
         <td><input type = "text" id="edit_name<?php echo $ind; ?>" value ="<?php echo $user['description']; ?>"></input></td>
         <td><input type = "text" id="edit_username<?php echo $ind; ?>" value = "<?php echo $user['username']; ?>"></input></td>
-        <td><input type = "text" id="edit_email<?php echo $ind; ?>" value = "<?php echo $user['email']; ?>"></input></td>
+        <td><input type = "email" id="edit_email<?php echo $ind; ?>" value = "<?php echo $user['email']; ?>"></input></td>
         <td>
         <div>
             <select id="edit_role<?php echo $ind; ?>">
@@ -126,8 +151,9 @@
 
         <td><button onclick="edit_user(<?php echo $ind;  ?>, '<?php echo $user['id'];?>')"  class="btn button_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Edit</b></button></td>
         <td><button onclick="remove_user(<?php echo $ind;  ?>, '<?php echo $user['id'];?>')"  class="btn button_remove"><i class="fa fa-minus-circle" aria-hidden="true"></i><b>Remove</b></button></td>
-        <?php echo "</td>
-        </tr>\n";
+        </td>
+        </tr>
+        <?php
                 }
         } 
     }
@@ -159,6 +185,7 @@
 
             if(confirm('Are you sure you want to edit user?')){
             
+            // Get the confirmed input
             if($('#edit_confirmed'+ind).is(":checked")){
                 var $confirmed = '1';
             }else{

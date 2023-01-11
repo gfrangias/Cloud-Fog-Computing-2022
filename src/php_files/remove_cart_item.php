@@ -5,7 +5,7 @@
 
     if(!($_SESSION['role'] === "USER")){
         
-        header("Location: no_access.php");
+        header("Location: ../redirections/no_access.php");
         exit();
     }
 

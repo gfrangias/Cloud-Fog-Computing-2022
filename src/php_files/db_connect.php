@@ -1,4 +1,6 @@
 <?php
+
+    // Connect to Keyrock SQL database
     function OpenCon(){
         $sname = "sql_db";
         $uname = "keyrock";

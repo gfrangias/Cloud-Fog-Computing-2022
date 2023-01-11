@@ -1,6 +1,7 @@
 <?php
 
     include("access_mongo.php");
+    include("transform_dates.php");
 
     $seller_id = $_GET['seller_id'];
     $product_id = $_GET['product_id'];
@@ -12,15 +13,19 @@
     $category = $_GET['category'];
     $soldout = $_GET['soldout'];
 
-    $withdrawal_obj = DateTime::createFromFormat('Y-m-d H:i:s', $withdrawal);
-    $withdrawal_obj = $withdrawal_obj->getTimestamp()*1000;
-    $availability_obj = DateTime::createFromFormat('Y-m-d H:i:s', $availability);
-    $availability_obj = $availability_obj->getTimestamp()*1000;
+    // Transform dates to timestamps in order to store in MongoDB
+    $withdrawal_obj = date_to_timestamp($withdrawal);
+    $availability_obj = date_to_timestamp($availability);
 
+    // Check if the product already exists
     $filter = array('ID' => intval($product_id), 'SELLERID' => strval($seller_id));
     $query = $products->find($filter)->toArray();
+
+    // If it doesn't exist do nothing
     if(is_null($query) || count($query) < 1 ){
         die;
+
+    // If it exists edit it
     }else{
 
         $options = array('$set' => array('NAME'=>strval($name), 'PRODUCTCODE'=>strval($code), 

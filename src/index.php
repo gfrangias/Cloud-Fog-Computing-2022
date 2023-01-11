@@ -26,7 +26,7 @@ function validate($data){
 
 }
 
-# Search for the user in keyrock database
+// Search for the user in keyrock database
 if (isset($_POST['login_user'])) {
 
   $email = $_POST['email'];
@@ -50,13 +50,13 @@ if (isset($_POST['login_user'])) {
   $parsed_header = http_parse_headers($header);
   curl_close($curl_session);
 
-  # If the user exists in the database
+  // If the user exists in the database
   if(isset($parsed_header['X-Subject-Token'])){
 
     $user_token = $parsed_header['X-Subject-Token'];
     //echo $user_token;
 
-    # Admin login for keyrock access
+    // Administator login to get X-Auth-Token
     $admin_login = array("name"=>"gfrangias@tuc.gr","password"=>"1234");
 
     $curl_session = curl_init();
@@ -82,13 +82,14 @@ if (isset($_POST['login_user'])) {
         
     $admin_token = $parsed_header_admin['X-Subject-Token'];
 
+    // IDs acquired from Keyrock Application
     $client_id = '258c4571-aeaa-4194-9984-b22e73c7f869';
     $client_secret  = '7f8a86a9-2da8-4f52-a1dc-e8918cd88887';
 
     $authorization = base64_encode(''.$client_id.':'.$client_secret.'');
 
     $curl_session = curl_init();
-    # Keyrock authorization 
+    // Keyrock authorization token creation
     curl_setopt_array($curl_session, array(
       CURLOPT_URL => 'http://keyrock:3005/oauth2/token',
       CURLOPT_RETURNTRANSFER => true,
@@ -110,8 +111,10 @@ if (isset($_POST['login_user'])) {
     curl_close($curl_session);
     $result = json_decode($result);
 
-    $oauth_token = $result->access_token;
+    $oauth_token = $result->access_token; // OAuth token
+    $expiration = time()+3599;            // Time when OAuthntoken will expire
 
+    // Get all Keyrock users
     $curl_session = curl_init();
 
     curl_setopt($curl_session, CURLOPT_URL, "http://keyrock:3005/v1/users");
@@ -122,7 +125,8 @@ if (isset($_POST['login_user'])) {
     $result = curl_exec($curl_session);
     $users_json = json_decode($result, true);
     curl_close($curl_session);
-    
+
+    // Find the user with this email and create $_SESSION array
     foreach($users_json as $row){
       foreach($row as $user){
         if($user['email'] == $email){
@@ -133,16 +137,17 @@ if (isset($_POST['login_user'])) {
           $_SESSION['role'] = $user['website'];
           $_SESSION['name'] = $user['description'];
           $_SESSION['enabled'] = $user['enabled'];
-          $_SESSION['loggedin'] = true;
           $_SESSION['oauth_token'] = $oauth_token;
-          $_SESSION['x_token'] = $admin_token;
+          $_SESSION['expiration'] = $expiration;
         }
       }
     }
     
+    // If no user is found error occured
     if(!$user_found){
       session_unset();
       $login_err = true;
+    // If user found move to welcome page
     }else{
       header("Location: welcome.php");
     }
@@ -193,10 +198,6 @@ if (isset($_POST['login_user'])) {
     if($login_err){
 
       echo '<b class="error">Wrong email or password. Try again.</b><br><br>';
-      echo '<b class="error">If you\'ve recently signed up, your sign up form is being reviewed by our admins. Please try again later.</b>';
-
-    }elseif($confirm_err){
-
       echo '<b class="error">If you\'ve recently signed up, your sign up form is being reviewed by our admins. Please try again later.</b>';
 
     }

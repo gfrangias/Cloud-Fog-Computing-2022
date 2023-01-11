@@ -3,10 +3,13 @@
 include("access_mongo.php");
 
 $user_id = $_GET['user_id'];
+
+// Find all the cart items that belong to this user
 $filter = array('USERID' => strval($user_id));
 $answer = $carts->find($filter)->toArray();
 $find_products = array();
 
+// For each of these items find in the products collection their info
 foreach($answer as $row){
     $products_filter = array('ID'=>intval($row['PRODUCTID']));
     $products_aggr = ['projection' => ['ID'=>1, 'SELLERNAME'=>1, 'NAME'=>1, 'PRICE'=>1, 'CATEGORY'=>1]];

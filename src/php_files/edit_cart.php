@@ -6,7 +6,7 @@
     
     if(!($_SESSION['role'] === "USER")){
         
-        header("Location: no_access.php");
+        header("Location: ../redirections/no_access.php");
         exit();
     }
     $url = "http://wilma_data_storage:1027/edit_cart.php?product_id=".$_POST['product_id']."&user_id=".$_SESSION['id'];

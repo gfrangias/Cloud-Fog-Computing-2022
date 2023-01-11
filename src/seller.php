@@ -1,22 +1,38 @@
 <?php
 
     include 'php_files/db_connect.php';
+    include 'php_files/transform_dates.php';
 
     session_start();
-    
+
+    // If there is no active session
     if(!$_SESSION){
 
-        header("Location: not_connected.php");
+        header("Location: redirections/not_connected.php");
         exit();
 
+    // If the role isn't PRODUCTSELLER
     }elseif(!($_SESSION['role'] === "PRODUCTSELLER")){
         
-        header("Location: no_access.php");
+        header("Location: redirections/no_access.php");
         exit();
 
     }
 
+    // If the expiration time of the OAuth token has passed
+    if(time() >= $_SESSION['expiration']){
+        session_destroy();
+        header("Location: redirections/session_expired.php");
+        exit();
+    }
+
     $conn = OpenCon();
+
+    // If log out button is pressed
+    if (isset($_POST['logout_user'])){
+        session_destroy();
+        header("Location: index.php");
+    }
 
 ?>
 
@@ -39,7 +55,15 @@
     <a href="welcome.php"> 
         <img src="images/logos/logo+name.png" alt="logo" class="logo">
     </a>
-</div><br>
+</div>
+
+<div class="user_name">
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']);?></b>    
+</div>
+
+<form action="seller.php" method="post">
+<button class="button button_logout" type="submit" name="logout_user"><i class="fa fa-sign-out" aria-hidden="true"></i><b> Log out</b></button></br>
+</form><br>
 
 <button onclick="location.href='welcome.php'" class="btn home_button"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
 
@@ -50,6 +74,8 @@
 <div class="container">
 
 <?php
+
+    // Get all the products of this seller
     $url = "http://wilma_data_storage:1027/display_seller.php?seller_id=".$_SESSION['id'];   
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -59,28 +85,26 @@
     curl_close($ch);
     $result = json_decode($enc_result,true);
 
+    // If the seller has no products yet
     if(count($result) < 1){
       echo "<div class=\"no_products_head\">
               <b>No products yet.</b>
             </div> ";
     }
+
     echo"<table id=\"table\">";
     echo"<tr><th>Name</th><th>Code</th><th>Price</th><th>Available on</th><th>Withdrawal on</th><th>Category</th><th>Sold Out</th><th></th><th></th></tr>\n";
     $ind = 0;
     foreach($result as $row) {
         $ind = $ind + 1;
+
+        // Transform dates to YYYY-MM-DD HH:MM:SS
+        $availability = timestamp_to_date($row['DATEOFAVAILABILITY']['$date']['$numberLong']);
+        $withdrawal = timestamp_to_date($row['DATEOFWITHDRAWAL']['$date']['$numberLong']);
         $product_id = $row['ID'];
-        $withdrawal = $row['DATEOFWITHDRAWAL'];
-        $availability = $row['DATEOFAVAILABILITY'];
-        $withdrawal = $withdrawal['$date'];
-        $availability = $availability['$date'];
-        $withdrawal = $withdrawal['$numberLong'] / 1000;
-        $availability = $availability['$numberLong'] / 1000;
-        $withdrawal = date( "Y-m-d H:i:s", $withdrawal);
-        $availability = date( "Y-m-d H:i:s", $availability);
-        $price = $row['PRICE'];
-        $price = $price['$numberDecimal'];
+        $price = $row['PRICE']['$numberDecimal'];
         $soldout = $row['SOLDOUT'];
+
         ?>
         <tr id="remove<?php echo $ind?>">
             <td><input type = "text" id="edit_name<?php echo $ind; ?>" value ="<?php echo $row['NAME']; ?>"></input></td>
@@ -104,6 +128,7 @@
 </table>
 <br>
 <br>
+<!-- INPUT TABLE -->
 <table id="table2">
 <tr>
     <td><input type = "text" id="add_name" placeholder="Insert name"></input></td>
@@ -120,19 +145,20 @@
 <script type="text/javascript">
 	 
 	 function remove_product(ind, id){
+        var name=document.getElementById('edit_name'+ind).value;
 
-       if(confirm('Are you sure you want to remove product?')){
-         
-         $.ajax({
+        if(confirm('Are you sure you want to remove product?')){
+            
+            $.ajax({
 
-              type:'post',
-              url:'php_files/remove_product.php',
-              data:{remove_id:id},
-              success:function(data){
-                   $('#remove'+ind).hide('slow');
-              }
-         });
-       }
+                type:'post',
+                url:'php_files/remove_product.php',
+                data:{remove_id:id, product_name:name},
+                success:function(data){
+                    $('#remove'+ind).hide('slow');
+                }
+            });
+        }
 	 }
 
      function edit_product(ind, id){
@@ -141,7 +167,8 @@
             if(compareDates($('#edit_availability'+ind).val(), $('#edit_withdrawal'+ind).val())) {
                 if(isValidPrice($('#edit_price'+ind).val())){
                     if(confirm('Are you sure you want to edit product?')){
-
+                        
+                        // Check soldout toggle
                         if($('#edit_soldout'+ind).is(":checked")){
                             var $soldout = '1';
                         }else{
@@ -187,6 +214,7 @@
                         availability:$('#add_availability').val(), withdrawal:$('#add_withdrawal').val(), category:$('#add_category').val()}
                     });
 
+                    // Find the new products ID
                     $.ajax({
                         url: 'php_files/new_id.php',
                         type: 'get',
@@ -195,15 +223,19 @@
                             var table = document.getElementById('table');
                             var ind = table.rows.length;
                             var row = table.insertRow();
+                            
+                            // Get all the inputed data
                             var name=document.getElementById('add_name').value;
                             var code=document.getElementById('add_code').value;
                             var price=document.getElementById('add_price').value;
                             var availability=document.getElementById('add_availability').value;
                             var withdrawal=document.getElementById('add_withdrawal').value;
                             var category=document.getElementById('add_category').value;
-                            var id = res-1;
-                            row.id = 'remove'+ind;
-                            var cell1 = row.insertCell(0);
+                            var id = res;   //New ID
+                            row.id = 'remove'+ind;  //New table index
+
+                            //New table row cells
+                            var cell1 = row.insertCell(0);  
                             var cell2 = row.insertCell(1);
                             var cell3 = row.insertCell(2);
                             var cell4 = row.insertCell(3);
@@ -213,7 +245,7 @@
                             var cell8 = row.insertCell(7);
                             var cell9 = row.insertCell(8);
 
-
+                            // Stuff the new row's cells
                             cell1.innerHTML = '<td><input type = \"text\" id=\"edit_name'+ind+'\" value =\"'+name+'\"></input></td>';
                             cell2.innerHTML = '<td><input type = \"text\" id=\"edit_code'+ind+'\" value =\"'+code+'\"></input></td>';
                             cell3.innerHTML = '<td><input type = \"text\" id=\"edit_price'+ind+'\" value =\"'+price+'\"></input></td>';
@@ -224,6 +256,7 @@
                             cell8.innerHTML = '<td><button onclick=\"edit_product('+ind+','+id+')\"  class=\"btn button_edit\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i><b>Edit</b></button></td>';
                             cell9.innerHTML = '<td><button onclick=\"remove_product('+ind+','+id+')\"  class=\"btn button_remove\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i><b>Remove</b></button></td>';
 
+                            // Empty the input table
                             document.getElementById('add_name').value = "";
                             document.getElementById('add_code').value = "";
                             document.getElementById('add_price').value = "";
@@ -245,7 +278,7 @@
         }
     }
 
-
+    // Check validity of the date string added/edited
     function isValidDate(dateString) {
         var regEx = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/i;
         if(!dateString.match(regEx)) return false;  // Invalid format
@@ -255,6 +288,8 @@
         return d;
     }
 
+    // Compare two dates
+    // Availability date should be prior to withdrawal date
     function compareDates(availability, withdrawal) {
 
         // convert the strings to Date objects
@@ -269,6 +304,7 @@
         }
     }
 
+    // Check the validity of the price added/edited
     function isValidPrice(priceString) {
         var regEx = /^\d+(?:[.,]\d{1,2})*$/gm;
         if(!priceString.match(regEx)) return false; // Invalid price

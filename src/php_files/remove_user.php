@@ -6,12 +6,13 @@
     
     if(!($_SESSION['role'] === "ADMIN")){
         
-        header("Location: no_access.php");
+        header("Location: ../redirections/no_access.php");
         exit();
     }
 
     $user_id = $_POST['remove_id'];
 
+    // Administator login to get X-Auth-Token
     $admin_login = array("name"=>"gfrangias@tuc.gr","password"=>"1234");
 
     $curl_session = curl_init();
@@ -31,6 +32,7 @@
 
     $admin_token = $parsed_header_admin['X-Subject-Token'];
     
+    // Remove user using Keyrock request
     $curl_session = curl_init();
 
     curl_setopt($curl_session, CURLOPT_URL, "http://keyrock:3005/v1/users/".$user_id);
