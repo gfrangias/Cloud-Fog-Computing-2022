@@ -1,7 +1,5 @@
 <?php
 
-    include 'php_files/db_connect.php';
-
     session_start();
     
     // If there is no active session
@@ -24,8 +22,6 @@
         header("Location: redirections/session_expired.php");
         exit();
     }
-
-    $conn = OpenCon();
     
     // If log out button is pressed
     if (isset($_POST['logout_user'])){

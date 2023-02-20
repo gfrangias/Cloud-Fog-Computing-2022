@@ -1,6 +1,5 @@
 <?php
 
-    include 'php_files/db_connect.php';
     include 'php_files/http_parse_headers.php';
 
     session_start();
@@ -25,8 +24,6 @@
         header("Location: redirections/session_expired.php");
         exit();
     }
-
-    $conn = OpenCon();
 
     // If log out button is pressed
     if (isset($_POST['logout_user'])){

@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    include 'db_connect.php';
+
     include 'http_parse_headers.php';
 
     session_start();
@@ -16,6 +15,8 @@
     $product_name = $_POST['product_name'];
     $notification_url = "http://172.16.0.8:1027/add_subscription_notification.php";
 
+
+    //Check if this subscription already exists
     $url = "http://wilma_data_storage:1027/check_subscription.php?product_id=".$product_id."&user_id=".$user_id;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -35,7 +36,7 @@
         $curl = curl_init();
         // set the POST request body and parameters
         curl_setopt_array($curl, array(
-          CURLOPT_URL => 'http://orion:1026/v2/subscriptions/', // use orion-proxy (PEP Proxy for Orion CB) IP address and port instead of Orion CB's 
+          CURLOPT_URL => 'http://wilma_orion:1028/v2/subscriptions/', // use orion-proxy (PEP Proxy for Orion CB) IP address and port instead of Orion CB's 
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_POST => true,
           CURLOPT_HEADER => true,
@@ -95,7 +96,8 @@
         $headerStr = substr( $response , 0 , $headerSize );
         $bodyStr = substr( $response , $headerSize );
         $header = http_parse_headers($headerStr);
-        $subscription_id = ltrim($header['Location'],"/v2/subscriptions/");
+        print_r($header);
+        $subscription_id = ltrim($header['location'],"/v2/subscriptions/");
 
         // Create a subscription in Data Storage
         $url = "http://wilma_data_storage:1027/add_subscription.php?product_id=".$product_id."&user_id=".

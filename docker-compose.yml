@@ -55,7 +55,7 @@ services:
       cloud_quest_network:
         ipv4_address: 172.16.0.5
     ports:
-      - "27017:27017"
+      - "27018:27017"
     expose:
       - "27017"
   data_storage:
@@ -92,7 +92,7 @@ services:
       - IDM_ADMIN_PASS=1234
       - IDM_HTTPS_ENABLED=FALSE
   wilma_data_storage:
-    image: fiware/pep-proxy
+    image: fiware/pep-proxy:8.0.0
     container_name: wilma_data_storage
     hostname: wilma_data_storage
     networks:
@@ -133,7 +133,7 @@ services:
       cloud_quest_network:
         ipv4_address: 172.16.0.9
     ports:
-      - "27018:27017"
+      - "27017:27017"
     expose:
       - "27017"
   orion:
@@ -148,7 +148,7 @@ services:
       cloud_quest_network:
         ipv4_address: 172.16.0.10
   wilma_orion:
-    image: fiware/pep-proxy
+    image: fiware/pep-proxy:8.0.0
     container_name: wilma_orion
     hostname: wilma_orion
     networks:

@@ -1,0 +1,4801 @@
+[{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fa8"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721259749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722123749000"
+    }
+  },
+  "ID": 1,
+  "NAME": "60CMX4M Kitchen countertops cabinets waterproof Furniture Facelift sticker",
+  "PRICE": {
+    "$numberDecimal": "24.5"
+  },
+  "PRODUCTCODE": "ers1925574Go",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fa9"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721432549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722296549000"
+    }
+  },
+  "ID": 2,
+  "NAME": "Carters 2Piece Babysoft Bodysuit Dress  Cardigan Set",
+  "PRICE": {
+    "$numberDecimal": "17"
+  },
+  "PRODUCTCODE": "ers1925617Go",
+  "SOLDOUT": false,
+  "SELLERID": "4e826db6-509d-4ec3-9e04-67716e248331",
+  "SELLERNAME": "Victoria Bradley"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4faa"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721518949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722382949000"
+    }
+  },
+  "ID": 3,
+  "NAME": "Swimsuit 2 Pieces Long Sleeves Padded Beach Bathing Swimwear  SLE1732",
+  "PRICE": {
+    "$numberDecimal": "18.12"
+  },
+  "PRODUCTCODE": "ers943600Go",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fab"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721605349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722469349000"
+    }
+  },
+  "ID": 4,
+  "NAME": "Mds Frilly Ruffle Top",
+  "PRICE": {
+    "$numberDecimal": "38"
+  },
+  "PRODUCTCODE": "ers1064405Go",
+  "SOLDOUT": false,
+  "SELLERID": "b1cf6ffa-48d8-47aa-b784-7fc1571e100a",
+  "SELLERNAME": "Bethany David"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fac"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721691749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722555749000"
+    }
+  },
+  "ID": 5,
+  "NAME": "Summer Women Batwing Short Sleeved Loose Top BigSize Tshirt",
+  "PRICE": {
+    "$numberDecimal": "3.65"
+  },
+  "PRODUCTCODE": "APS2004662010",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fad"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721778149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722642149000"
+    }
+  },
+  "ID": 6,
+  "NAME": "Linen Storage Box Holder Jewelry Cosmetic Stationery Organizer Case Bag  Laundry",
+  "PRICE": {
+    "$numberDecimal": "11.99"
+  },
+  "PRODUCTCODE": "APS2004712810",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fae"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721864549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722728549000"
+    }
+  },
+  "ID": 7,
+  "NAME": "Graphics Decals Hood Decals Full Size DieCut Vinyl Sticker",
+  "PRICE": {
+    "$numberDecimal": "2.76"
+  },
+  "PRODUCTCODE": "80g78419076Ha",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4faf"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1721950949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722814949000"
+    }
+  },
+  "ID": 8,
+  "NAME": "12Pcs tree Charms Pendant For DIY Jewelry Necklace Making",
+  "PRICE": {
+    "$numberDecimal": "2.99"
+  },
+  "PRODUCTCODE": "80g252736983Ha",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb0"
+  },
+  "CATEGORY": "Design & Crafts",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722037349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722901349000"
+    }
+  },
+  "ID": 9,
+  "NAME": "Metal DIY Cutting Dies Stencil Scrapbook Album Paper Card Embossing Craft",
+  "PRICE": {
+    "$numberDecimal": "1.96"
+  },
+  "PRODUCTCODE": "Bra793229430Wo",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb1"
+  },
+  "CATEGORY": "Games & Hobbies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722123749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1722987749000"
+    }
+  },
+  "ID": 10,
+  "NAME": "Xiaomi Yi II WiFi 4K 2.19 Touch Sports Camera 2  32GB TF CN Version",
+  "PRICE": {
+    "$numberDecimal": "276.1"
+  },
+  "PRODUCTCODE": "Bra809446063Wo",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb2"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722210149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723074149000"
+    }
+  },
+  "ID": 11,
+  "NAME": "Car Seat Protector Seat Back Cover Pet Mat FullLength Padded Waterproof",
+  "PRICE": {
+    "$numberDecimal": "15"
+  },
+  "PRODUCTCODE": "Bra809446145Wo",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb3"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722296549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723160549000"
+    }
+  },
+  "ID": 12,
+  "NAME": "The summer couples house slippers indoors and indoors",
+  "PRICE": {
+    "$numberDecimal": "4.5"
+  },
+  "PRODUCTCODE": "Bag809427287Wo",
+  "SOLDOUT": false,
+  "SELLERID": "93d914e7-89eb-485b-90b4-4383c0a5fdd5",
+  "SELLERNAME": "Corey Pugh"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb4"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722382949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723246949000"
+    }
+  },
+  "ID": 13,
+  "NAME": "Japanese style Curtain Doorway Window Treatment Curtains Cotton Linen Curtain",
+  "PRICE": {
+    "$numberDecimal": "20"
+  },
+  "PRODUCTCODE": "Bag809427305Wo",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb5"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722469349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723333349000"
+    }
+  },
+  "ID": 14,
+  "NAME": "DARTH MAUL character Tshirt cotton Lycra top Fashion Brand t shirt men new DIY",
+  "PRICE": {
+    "$numberDecimal": "12.38"
+  },
+  "PRODUCTCODE": "ief793240796Wo",
+  "SOLDOUT": false,
+  "SELLERID": "e22cf06c-bfc2-4720-99c6-b476ef2b28c9",
+  "SELLERNAME": "Amanda Ford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb6"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722642149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723419749000"
+    }
+  },
+  "ID": 15,
+  "NAME": "P2P WIFI SPY Hidden Video Camera Night Vision Clock MINI DV DVR IOS IP 140 Degre",
+  "PRICE": {
+    "$numberDecimal": "130.47"
+  },
+  "PRODUCTCODE": "ief809446084Wo",
+  "SOLDOUT": true,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb7"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722642149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723506149000"
+    }
+  },
+  "ID": 16,
+  "NAME": "Back Cover Mobile Phone Case for Huawei Honor 8Lite with 360 Degree Combo Design",
+  "PRICE": {
+    "$numberDecimal": "4.98"
+  },
+  "PRODUCTCODE": "ten809364705Ki",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb8"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722728549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723592549000"
+    }
+  },
+  "ID": 17,
+  "NAME": "3Pcs necklace connector Charms For Jewelry Necklace Making",
+  "PRICE": {
+    "$numberDecimal": "2.99"
+  },
+  "PRODUCTCODE": "ten809408225Ki",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fb9"
+  },
+  "CATEGORY": "Computers & Peripherals",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722728549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723678949000"
+    }
+  },
+  "ID": 18,
+  "NAME": "Han wind spell color  wristband HUAWEI glory 8 youth version of nova/ enjo",
+  "PRICE": {
+    "$numberDecimal": "21"
+  },
+  "PRODUCTCODE": "per809446215Wo",
+  "SOLDOUT": true,
+  "SELLERID": "e6d58c35-0d86-4b27-8774-b4a85da979ad",
+  "SELLERNAME": "Steven Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fba"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722901349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723765349000"
+    }
+  },
+  "ID": 19,
+  "NAME": "Swarovski Crystal Gold Plated Fashion Long Chain Necklaces",
+  "PRICE": {
+    "$numberDecimal": "5.14"
+  },
+  "PRODUCTCODE": "per809446365Wo",
+  "SOLDOUT": false,
+  "SELLERID": "a2296835-4317-4c51-aec1-5172b4501d37",
+  "SELLERNAME": "Michael Arias"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fbb"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1722987749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723851749000"
+    }
+  },
+  "ID": 20,
+  "NAME": "Women Long Sleeve Knitted Cardigan Loose Sweater Outwear Coat Casual Sweater",
+  "PRICE": {
+    "$numberDecimal": "10.68"
+  },
+  "PRODUCTCODE": "ess1549975Bl",
+  "SOLDOUT": false,
+  "SELLERID": "c4350c41-749e-408b-bff1-fdff91a87ffd",
+  "SELLERNAME": "Connor Cole"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fbc"
+  },
+  "CATEGORY": "Miscellaneous ",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723074149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1723938149000"
+    }
+  },
+  "ID": 21,
+  "NAME": "DK Eyewitness Travel Guide Ireland",
+  "PRICE": {
+    "$numberDecimal": "35.59"
+  },
+  "PRODUCTCODE": "ess1578584Bl",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fbd"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723160549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724024549000"
+    }
+  },
+  "ID": 22,
+  "NAME": "SXXL White Navy Women Shirt Polka Dots Chiffon Vintage Blouse Long Sleeve Dots",
+  "PRICE": {
+    "$numberDecimal": "5.17"
+  },
+  "PRODUCTCODE": "ulb1166505Ou",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fbe"
+  },
+  "CATEGORY": "Miscellaneous ",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723246949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724110949000"
+    }
+  },
+  "ID": 23,
+  "NAME": "Men Ice Silk Boxers Solid Color Seamless Underpants",
+  "PRICE": {
+    "$numberDecimal": "4.03"
+  },
+  "PRODUCTCODE": "ulb1166561Ou",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fbf"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723333349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724197349000"
+    }
+  },
+  "ID": 24,
+  "NAME": "Adidas Originals  Superstar  Casual  Mid  Sneakers  Womens  Sports Shoes",
+  "PRICE": {
+    "$numberDecimal": "81.6"
+  },
+  "PRODUCTCODE": "ing868293551Or",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc0"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723419749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724283749000"
+    }
+  },
+  "ID": 25,
+  "NAME": "Chic Tops Lady TShirts New Fashion Street Look Shirt Casual Blouse Comfy Outfit",
+  "PRICE": {
+    "$numberDecimal": "6.9"
+  },
+  "PRODUCTCODE": "ing868298757Or",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc1"
+  },
+  "CATEGORY": "Games & Hobbies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723506149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724370149000"
+    }
+  },
+  "ID": 26,
+  "NAME": "Tweeshop Lego Dimension Fun Pack ",
+  "PRICE": {
+    "$numberDecimal": "32"
+  },
+  "PRODUCTCODE": "ite868417234Or",
+  "SOLDOUT": false,
+  "SELLERID": "0c984a8c-d41b-4d37-83dd-55dcd5237b78",
+  "SELLERNAME": "Brian York"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc2"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723592549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724456549000"
+    }
+  },
+  "ID": 27,
+  "NAME": "Woman fashion long boot knee high boots",
+  "PRICE": {
+    "$numberDecimal": "30"
+  },
+  "PRODUCTCODE": "ite868421248Or",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc3"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723678949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724542949000"
+    }
+  },
+  "ID": 28,
+  "NAME": "Full Square Diamond 5D Embroidery Diy Diamond Painting Rhinestone Frameless",
+  "PRICE": {
+    "$numberDecimal": "20"
+  },
+  "PRODUCTCODE": "ing864678643In",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc4"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723765349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724629349000"
+    }
+  },
+  "ID": 29,
+  "NAME": "MCJH&TWJ backpack canvas backpack school bag Rakuten couple backpack",
+  "PRICE": {
+    "$numberDecimal": "46.06"
+  },
+  "PRODUCTCODE": "ing864801685In",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc5"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723851749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724715749000"
+    }
+  },
+  "ID": 30,
+  "NAME": "Cookie Monster T Shirt Men Funny diy Reservoir Muppets Cotton Short Sleeve mens",
+  "PRICE": {
+    "$numberDecimal": "12.95"
+  },
+  "PRODUCTCODE": "ing864812407In",
+  "SOLDOUT": false,
+  "SELLERID": "0c984a8c-d41b-4d37-83dd-55dcd5237b78",
+  "SELLERNAME": "Brian York"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc6"
+  },
+  "CATEGORY": "Watches",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1723938149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724802149000"
+    }
+  },
+  "ID": 31,
+  "NAME": "Military Mens Waterproof Date Leather Band Analog Sport Wrist Watch Watches",
+  "PRICE": {
+    "$numberDecimal": "4.45"
+  },
+  "PRODUCTCODE": "ing874063253Ne",
+  "SOLDOUT": false,
+  "SELLERID": "db7346ff-3223-465d-8dbb-ea0d7cdb0156",
+  "SELLERNAME": "Carlos Carter"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc7"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724024549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724888549000"
+    }
+  },
+  "ID": 32,
+  "NAME": "Womens Link Chain Charm Pendant Necklace",
+  "PRICE": {
+    "$numberDecimal": "0.63"
+  },
+  "PRODUCTCODE": "ing874066799Ne",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc8"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724110949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1724974949000"
+    }
+  },
+  "ID": 33,
+  "NAME": "Coach shoulder bag",
+  "PRICE": {
+    "$numberDecimal": "200"
+  },
+  "PRODUCTCODE": "ble868264273Ne",
+  "SOLDOUT": false,
+  "SELLERID": "bcb07617-10d2-48cb-8a74-3858b24377b1",
+  "SELLERNAME": "Robert Holt"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fc9"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724197349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725061349000"
+    }
+  },
+  "ID": 34,
+  "NAME": "ZANZEA Women Tank Tops Vest Sleeveless Casual Loose Shirt Blouse Cami",
+  "PRICE": {
+    "$numberDecimal": "6.1"
+  },
+  "PRODUCTCODE": "ble868270887Ne",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fca"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724283749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725147749000"
+    }
+  },
+  "ID": 35,
+  "NAME": "Nike Huareche  Fashion Runing Shoes",
+  "PRICE": {
+    "$numberDecimal": "68.1"
+  },
+  "PRODUCTCODE": "ens868606162Ne",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fcb"
+  },
+  "CATEGORY": "Design & Crafts",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724370149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725234149000"
+    }
+  },
+  "ID": 36,
+  "NAME": "Patterns Metal Stencils DIY Craft Scrapbook Paper Card Scrapbooking",
+  "PRICE": {
+    "$numberDecimal": "4.87"
+  },
+  "PRODUCTCODE": "ens868609496Ne",
+  "SOLDOUT": false,
+  "SELLERID": "9c1a18bf-60c3-4aa0-b0d3-d2a3a0c63c87",
+  "SELLERNAME": "Tyler Young"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fcc"
+  },
+  "CATEGORY": "Home Appliances",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724456549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725320549000"
+    }
+  },
+  "ID": 37,
+  "NAME": "Largeeye Stitching Needles Hand Sewing Needles Leather ProjectsClear Bottle",
+  "PRICE": {
+    "$numberDecimal": "1.9"
+  },
+  "PRODUCTCODE": "ing868520543Or",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fcd"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724542949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725406949000"
+    }
+  },
+  "ID": 38,
+  "NAME": "Free Ring HolderAdidas matte Case For Huawei MATE S",
+  "PRICE": {
+    "$numberDecimal": "4.99"
+  },
+  "PRODUCTCODE": "ing868526863Or",
+  "SOLDOUT": false,
+  "SELLERID": "f201da82-3120-4c56-9260-41806e4ff742",
+  "SELLERNAME": "Tara Morrison"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fce"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724629349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725493349000"
+    }
+  },
+  "ID": 39,
+  "NAME": "Z. MO Titanium Steel   Titanium Steel Anklet",
+  "PRICE": {
+    "$numberDecimal": "13.47"
+  },
+  "PRODUCTCODE": "ble874030815Or",
+  "SOLDOUT": false,
+  "SELLERID": "bcb07617-10d2-48cb-8a74-3858b24377b1",
+  "SELLERNAME": "Robert Holt"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fcf"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724715749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725579749000"
+    }
+  },
+  "ID": 40,
+  "NAME": "40Pcs starfish Charms Pendant For Jewelry Necklace Making",
+  "PRICE": {
+    "$numberDecimal": "2.99"
+  },
+  "PRODUCTCODE": "ble874033786Or",
+  "SOLDOUT": false,
+  "SELLERID": "a8a2fdcf-3ded-40f3-8a49-bb0a34eb6c87",
+  "SELLERNAME": "Eric Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd0"
+  },
+  "CATEGORY": "Watches",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724802149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725666149000"
+    }
+  },
+  "ID": 41,
+  "NAME": "BOUNABAY Waterproof WATCH Men Automatic Business Clock",
+  "PRICE": {
+    "$numberDecimal": "14.82"
+  },
+  "PRODUCTCODE": "ing874010964Or",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd1"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724888549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725752549000"
+    }
+  },
+  "ID": 42,
+  "NAME": "tshirt Women Casual T Blouse Loose Sleeve Wings Long Angel Shirt Tops",
+  "PRICE": {
+    "$numberDecimal": "3.25"
+  },
+  "PRODUCTCODE": "ing874013437Or",
+  "SOLDOUT": false,
+  "SELLERID": "cfc4178f-b9bd-4abc-9d8f-2ad74ed8dd66",
+  "SELLERNAME": "Sandra Jones"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd2"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1724974949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725838949000"
+    }
+  },
+  "ID": 43,
+  "NAME": "Chic Tops Lady TShirts New Fashion Street Look Shirt Casual Blouse Comfy Outfit",
+  "PRICE": {
+    "$numberDecimal": "6.9"
+  },
+  "PRODUCTCODE": "Top874021325Or",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd3"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725061349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1725925349000"
+    }
+  },
+  "ID": 44,
+  "NAME": "Soft TPU Back Cover Case for Google Nexus 6P",
+  "PRICE": {
+    "$numberDecimal": "5.9"
+  },
+  "PRODUCTCODE": "Top874024152Or",
+  "SOLDOUT": false,
+  "SELLERID": "a8a2fdcf-3ded-40f3-8a49-bb0a34eb6c87",
+  "SELLERNAME": "Eric Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd4"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725147749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726011749000"
+    }
+  },
+  "ID": 45,
+  "NAME": "Harajuku Velvet thick Hoodie Sweatshirt Tops loose fit",
+  "PRICE": {
+    "$numberDecimal": "11.66"
+  },
+  "PRODUCTCODE": "ens868387427Ne",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd5"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725234149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726098149000"
+    }
+  },
+  "ID": 46,
+  "NAME": "Samsung T550 Painted Tablet Case Protective Sleeve Tablet PC",
+  "PRICE": {
+    "$numberDecimal": "9.38"
+  },
+  "PRODUCTCODE": "ens868402016Ne",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd6"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725320549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726184549000"
+    }
+  },
+  "ID": 47,
+  "NAME": "Casual Dress",
+  "PRICE": {
+    "$numberDecimal": "21.99"
+  },
+  "PRODUCTCODE": "ens868584660Ne",
+  "SOLDOUT": false,
+  "SELLERID": "8537c1db-77d5-4a0c-862e-80ea3bc1f417",
+  "SELLERNAME": "Steven Martin"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd7"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725406949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726270949000"
+    }
+  },
+  "ID": 48,
+  "NAME": "Women Tank Tops Sleeveless Camisole Blouses Mini Dress Tank Clothes",
+  "PRICE": {
+    "$numberDecimal": "7.9"
+  },
+  "PRODUCTCODE": "ens868552758Or",
+  "SOLDOUT": false,
+  "SELLERID": "e6d58c35-0d86-4b27-8774-b4a85da979ad",
+  "SELLERNAME": "Steven Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd8"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725493349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726357349000"
+    }
+  },
+  "ID": 49,
+  "NAME": "Loose Long Trousers Yoga Pants Casual Harem Pants Loose Bloomers Dancing Pant",
+  "PRICE": {
+    "$numberDecimal": "19"
+  },
+  "PRODUCTCODE": "ens868564173Or",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fd9"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725579749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726443749000"
+    }
+  },
+  "ID": 50,
+  "NAME": "For Samsung A3 2017 wallet case Wrist Strap PU leather Credit Card case",
+  "PRICE": {
+    "$numberDecimal": "9"
+  },
+  "PRODUCTCODE": "ing868593953Or",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fda"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725666149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726530149000"
+    }
+  },
+  "ID": 51,
+  "NAME": "Women Crescent Moon Pendant Necklace",
+  "PRICE": {
+    "$numberDecimal": "0.63"
+  },
+  "PRODUCTCODE": "ing868597991Or",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fdb"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725752549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726616549000"
+    }
+  },
+  "ID": 52,
+  "NAME": "Large Size Men Comfy Oxfords Casual Business Oxfords Shoes Soft Sole Oxfords",
+  "PRICE": {
+    "$numberDecimal": "38"
+  },
+  "PRODUCTCODE": "ing868438716Or",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fdc"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725838949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726702949000"
+    }
+  },
+  "ID": 53,
+  "NAME": "ANMYNA",
+  "PRICE": {
+    "$numberDecimal": "35"
+  },
+  "PRODUCTCODE": "ing868442545Or",
+  "SOLDOUT": false,
+  "SELLERID": "7f1a325f-a58c-4e01-9fc6-63b536c08b41",
+  "SELLERNAME": "Penny Wright"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fdd"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1725925349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726789349000"
+    }
+  },
+  "ID": 54,
+  "NAME": "Korean Bestselling Stylish Choker Pendant Necklace",
+  "PRICE": {
+    "$numberDecimal": "24"
+  },
+  "PRODUCTCODE": "bag83945067120",
+  "SOLDOUT": false,
+  "SELLERID": "6444b229-0102-4606-85d4-1634c4c1dfda",
+  "SELLERNAME": "Donald White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fde"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726011749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726875749000"
+    }
+  },
+  "ID": 55,
+  "NAME": "Spring Womens cotton and blending Loose Blouse Tshirt",
+  "PRICE": {
+    "$numberDecimal": "10.7"
+  },
+  "PRODUCTCODE": "bag83945079120",
+  "SOLDOUT": false,
+  "SELLERID": "98c4838f-8d6a-4a84-82d3-0a06480bab65",
+  "SELLERNAME": "Colleen Ramirez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fdf"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726098149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1726962149000"
+    }
+  },
+  "ID": 56,
+  "NAME": "Loose Long Trousers Yoga Pants Casual Harem Pants Loose Bloomers Dancing Pant",
+  "PRICE": {
+    "$numberDecimal": "13.9"
+  },
+  "PRODUCTCODE": "oes77407805720",
+  "SOLDOUT": false,
+  "SELLERID": "0a394b0a-ae96-4fd7-b80a-adff2f397fa0",
+  "SELLERNAME": "Tina Stafford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe0"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726184549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727048549000"
+    }
+  },
+  "ID": 57,
+  "NAME": "Women Tank Tops Sleeveless Camisole Blouses Mini Dress Tank Clothes",
+  "PRICE": {
+    "$numberDecimal": "7.9"
+  },
+  "PRODUCTCODE": "oes77407805920",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe1"
+  },
+  "CATEGORY": "Sports & Outdoors",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726270949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727134949000"
+    }
+  },
+  "ID": 58,
+  "NAME": "300M Durable PE 4 StrandsFishing Line",
+  "PRICE": {
+    "$numberDecimal": "38.86"
+  },
+  "PRODUCTCODE": "ket738617564Ne",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe2"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726357349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727221349000"
+    }
+  },
+  "ID": 59,
+  "NAME": "Free Ring HolderAdidas matte Case For Samsung Galaxy Note Edge",
+  "PRICE": {
+    "$numberDecimal": "4.99"
+  },
+  "PRODUCTCODE": "ket738617799Ne",
+  "SOLDOUT": false,
+  "SELLERID": "e22cf06c-bfc2-4720-99c6-b476ef2b28c9",
+  "SELLERNAME": "Amanda Ford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe3"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726443749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727307749000"
+    }
+  },
+  "ID": 60,
+  "NAME": "Weed Leaf 3D Sweatshirt Clothes Hoodies Women Men Pullovers Hoodie Top",
+  "PRICE": {
+    "$numberDecimal": "26.03"
+  },
+  "PRODUCTCODE": "oes718613266Ca",
+  "SOLDOUT": false,
+  "SELLERID": "73c12b22-b116-4a0c-938b-403fefa6cf6c",
+  "SELLERNAME": "Chris Lee"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe4"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726530149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727394149000"
+    }
+  },
+  "ID": 61,
+  "NAME": "US Nike Mens and Womens Hypervenoms Phelon III AG Cleats Soccer Shoes ",
+  "PRICE": {
+    "$numberDecimal": "63.95"
+  },
+  "PRODUCTCODE": "oes718629621Ca",
+  "SOLDOUT": false,
+  "SELLERID": "4e826db6-509d-4ec3-9e04-67716e248331",
+  "SELLERNAME": "Victoria Bradley"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe5"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726616549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727480549000"
+    }
+  },
+  "ID": 62,
+  "NAME": "Inflation Tiedyed Cotton Tshirt Short Sleeve Tops",
+  "PRICE": {
+    "$numberDecimal": "16.2"
+  },
+  "PRODUCTCODE": "bag83945068220",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe6"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726702949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727566949000"
+    }
+  },
+  "ID": 63,
+  "NAME": "Women Thin Badge Bomber Flying jacket baseball suit Outerwear",
+  "PRICE": {
+    "$numberDecimal": "11.78"
+  },
+  "PRODUCTCODE": "bag83945068320",
+  "SOLDOUT": false,
+  "SELLERID": "0c984a8c-d41b-4d37-83dd-55dcd5237b78",
+  "SELLERNAME": "Brian York"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe7"
+  },
+  "CATEGORY": "Watches",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726789349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727653349000"
+    }
+  },
+  "ID": 64,
+  "NAME": " Cat Pattern Leather Band Analog Quartz Vogue Wrist Watch",
+  "PRICE": {
+    "$numberDecimal": "3.1"
+  },
+  "PRODUCTCODE": "ing23897109No",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe8"
+  },
+  "CATEGORY": "Design & Crafts",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726875749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727739749000"
+    }
+  },
+  "ID": 65,
+  "NAME": "50 x Rivets studs strand Metal Gold color for leather bag DIY",
+  "PRICE": {
+    "$numberDecimal": "1.47"
+  },
+  "PRODUCTCODE": "ing23898134No",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fe9"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1726962149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727826149000"
+    }
+  },
+  "ID": 66,
+  "NAME": "Beau Headband",
+  "PRICE": {
+    "$numberDecimal": "3"
+  },
+  "PRODUCTCODE": "ing37572681No",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fea"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727048549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727912549000"
+    }
+  },
+  "ID": 67,
+  "NAME": "For  iPhoneX/6/6s/7/8plus  All inclusive  soft  case",
+  "PRICE": {
+    "$numberDecimal": "157.92"
+  },
+  "PRODUCTCODE": "ing32735491No",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4feb"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727134949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1727998949000"
+    }
+  },
+  "ID": 68,
+  "NAME": "Women Briefs Panties Lace Underwear Transparent Lingerie Thongs Plus Size",
+  "PRICE": {
+    "$numberDecimal": "2.66"
+  },
+  "PRODUCTCODE": "ing78723069No",
+  "SOLDOUT": false,
+  "SELLERID": "9c1a18bf-60c3-4aa0-b0d3-d2a3a0c63c87",
+  "SELLERNAME": "Tyler Young"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fec"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727221349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728085349000"
+    }
+  },
+  "ID": 69,
+  "NAME": "Kids Baby New Fashion Cute Girl Casual Long Sleeves Party Bridesmaid Dress",
+  "PRICE": {
+    "$numberDecimal": "7.92"
+  },
+  "PRODUCTCODE": "rts425980BN",
+  "SOLDOUT": false,
+  "SELLERID": "cfc4178f-b9bd-4abc-9d8f-2ad74ed8dd66",
+  "SELLERNAME": "Sandra Jones"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fed"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727307749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728171749000"
+    }
+  },
+  "ID": 70,
+  "NAME": "TShirt Bitcoin Mining Miner Printing Man T Shirt Short Sleeve summer casual Tee",
+  "PRICE": {
+    "$numberDecimal": "12.91"
+  },
+  "PRODUCTCODE": "rts729676BN",
+  "SOLDOUT": false,
+  "SELLERID": "db7346ff-3223-465d-8dbb-ea0d7cdb0156",
+  "SELLERNAME": "Carlos Carter"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fee"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727394149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728258149000"
+    }
+  },
+  "ID": 71,
+  "NAME": "home Women Sleepwear Lingerie Nightwear Sleepshirt",
+  "PRICE": {
+    "$numberDecimal": "5.2"
+  },
+  "PRODUCTCODE": "NGS10611918In",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fef"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727480549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728344549000"
+    }
+  },
+  "ID": 72,
+  "NAME": "Women Blouse Elegant Tops Flirty Classy Ladies Dress Flounced Top",
+  "PRICE": {
+    "$numberDecimal": "298.5"
+  },
+  "PRODUCTCODE": "NGS10612375In",
+  "SOLDOUT": false,
+  "SELLERID": "73c12b22-b116-4a0c-938b-403fefa6cf6c",
+  "SELLERNAME": "Chris Lee"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff0"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727566949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728430949000"
+    }
+  },
+  "ID": 73,
+  "NAME": "Cotton Newborn Baby Girl Boy Clothes Bodysuit Romper Jumpsuit Playsuit Outfits",
+  "PRICE": {
+    "$numberDecimal": "4.45"
+  },
+  "PRODUCTCODE": "NGS10612588In",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff1"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727653349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728517349000"
+    }
+  },
+  "ID": 74,
+  "NAME": "2017 Halloween Women Cosplay Witch Sorceress Costume Fancy Dress Outfit",
+  "PRICE": {
+    "$numberDecimal": "64.28"
+  },
+  "PRODUCTCODE": "NGS10612741In",
+  "SOLDOUT": false,
+  "SELLERID": "71959450-b302-4164-9a67-99d216a62f04",
+  "SELLERNAME": "Christopher Henry"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff2"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727739749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728603749000"
+    }
+  },
+  "ID": 75,
+  "NAME": "Men T shirt Weird Bring Me the Horizon DIY Short sleeve Street cool tee mens",
+  "PRICE": {
+    "$numberDecimal": "12.77"
+  },
+  "PRODUCTCODE": "ks)981845718Ad",
+  "SOLDOUT": false,
+  "SELLERID": "6444b229-0102-4606-85d4-1634c4c1dfda",
+  "SELLERNAME": "Donald White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff3"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727826149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728690149000"
+    }
+  },
+  "ID": 76,
+  "NAME": "Women‘s Fashion Jewelry Shine Design Rose Gold Silver Plated Ring 1619mm FM",
+  "PRICE": {
+    "$numberDecimal": "1.74"
+  },
+  "PRODUCTCODE": "ks)1014583015Ad",
+  "SOLDOUT": false,
+  "SELLERID": "0c984a8c-d41b-4d37-83dd-55dcd5237b78",
+  "SELLERNAME": "Brian York"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff4"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727912549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728776549000"
+    }
+  },
+  "ID": 77,
+  "NAME": "Hoodie Sweatshirt Casual Hooded Coat Pullover Pullover Tops",
+  "PRICE": {
+    "$numberDecimal": "6"
+  },
+  "PRODUCTCODE": "tor1041741951Ap",
+  "SOLDOUT": false,
+  "SELLERID": "cfc4178f-b9bd-4abc-9d8f-2ad74ed8dd66",
+  "SELLERNAME": "Sandra Jones"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff5"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1727998949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728862949000"
+    }
+  },
+  "ID": 78,
+  "NAME": "Glitter Rainbow Unicorn Baby Hairband Cat Ear Headband Flower Hair Hoop",
+  "PRICE": {
+    "$numberDecimal": "2.35"
+  },
+  "PRODUCTCODE": "tor1041743233Ap",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff6"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728085349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1728949349000"
+    }
+  },
+  "ID": 79,
+  "NAME": "Womens Business Suit Pencil Skirt Skirt",
+  "PRICE": {
+    "$numberDecimal": "10.05"
+  },
+  "PRODUCTCODE": "ase1037452251Sa",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff7"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728171749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729035749000"
+    }
+  },
+  "ID": 80,
+  "NAME": "hot brand new fashion popular chain necklace jewelry",
+  "PRICE": {
+    "$numberDecimal": "4.97"
+  },
+  "PRODUCTCODE": "ase1039471869Sa",
+  "SOLDOUT": false,
+  "SELLERID": "93d914e7-89eb-485b-90b4-4383c0a5fdd5",
+  "SELLERNAME": "Corey Pugh"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff8"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728258149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729122149000"
+    }
+  },
+  "ID": 81,
+  "NAME": "Bikini Yellow Striped Beach Wear Swim Suit Plus Size With Chest Pad",
+  "PRICE": {
+    "$numberDecimal": "10.99"
+  },
+  "PRODUCTCODE": "een1040486881VI",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ff9"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728344549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729208549000"
+    }
+  },
+  "ID": 82,
+  "NAME": "4.5ml Makeup Cosmetic Black Waterproof Eyeliner Liquid Leopard Eye Liner Pencil",
+  "PRICE": {
+    "$numberDecimal": "14.37"
+  },
+  "PRODUCTCODE": "een1040486882VI",
+  "SOLDOUT": false,
+  "SELLERID": "67fc32d9-00e7-487a-9c06-3ee430365df5",
+  "SELLERNAME": "Tara Barker"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ffa"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728430949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729294949000"
+    }
+  },
+  "ID": 83,
+  "NAME": "swimming suit vintage one pice  Korean style",
+  "PRICE": {
+    "$numberDecimal": "19.68"
+  },
+  "PRODUCTCODE": "ing1032361240Ap",
+  "SOLDOUT": false,
+  "SELLERID": "8537c1db-77d5-4a0c-862e-80ea3bc1f417",
+  "SELLERNAME": "Steven Martin"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ffb"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728517349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729381349000"
+    }
+  },
+  "ID": 84,
+  "NAME": "Toddler Shoes SB14 (Size 12)",
+  "PRICE": {
+    "$numberDecimal": "5"
+  },
+  "PRODUCTCODE": "ing1032386619Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ffc"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728603749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729467749000"
+    }
+  },
+  "ID": 85,
+  "NAME": "Baellerry Transverse Wallet Canvas Credit Card Bifold Purse",
+  "PRICE": {
+    "$numberDecimal": "14"
+  },
+  "PRODUCTCODE": "ing1032402288Ap",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ffd"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728690149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729554149000"
+    }
+  },
+  "ID": 86,
+  "NAME": "(XL-5XL) 2016 Hitz women loose, casual sweater Plus Size",
+  "PRICE": {
+    "$numberDecimal": "26.9"
+  },
+  "PRODUCTCODE": "ing1032462198Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4ffe"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728776549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729640549000"
+    }
+  },
+  "ID": 87,
+  "NAME": "2016 Fashion popular ring",
+  "PRICE": {
+    "$numberDecimal": "9.63"
+  },
+  "PRODUCTCODE": "ing1032511453Ap",
+  "SOLDOUT": false,
+  "SELLERID": "012c10d9-46d6-41b4-b534-0d6ed77bc286",
+  "SELLERNAME": "Katherine Johnson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d4fff"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728862949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729726949000"
+    }
+  },
+  "ID": 88,
+  "NAME": "Balenciaga TripeS Fashion Runing Shoes",
+  "PRICE": {
+    "$numberDecimal": "68.1"
+  },
+  "PRODUCTCODE": "ing1033905361Ap",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5000"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1728949349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729813349000"
+    }
+  },
+  "ID": 89,
+  "NAME": "Women Wallets Ladies Purses",
+  "PRICE": {
+    "$numberDecimal": "21"
+  },
+  "PRODUCTCODE": "ing1033921787Ap",
+  "SOLDOUT": false,
+  "SELLERID": "4e826db6-509d-4ec3-9e04-67716e248331",
+  "SELLERNAME": "Victoria Bradley"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5001"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729035749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729899749000"
+    }
+  },
+  "ID": 90,
+  "NAME": "Womens Lady Gauze Stretchy Ripped Bandage Leggings Skinny Slim Trousers",
+  "PRICE": {
+    "$numberDecimal": "5.5"
+  },
+  "PRODUCTCODE": "ing1033988873Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5002"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729122149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1729986149000"
+    }
+  },
+  "ID": 91,
+  "NAME": "usb flash drive waterproof colorful new style 8GB 16GB 32GB 64GB Mini USB 2.0 Memory Stick Flash Pen",
+  "PRICE": {
+    "$numberDecimal": "3.6"
+  },
+  "PRODUCTCODE": "ing1034003228Ap",
+  "SOLDOUT": false,
+  "SELLERID": "98c4838f-8d6a-4a84-82d3-0a06480bab65",
+  "SELLERNAME": "Colleen Ramirez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5003"
+  },
+  "CATEGORY": "Computers & Peripherals",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729294949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730076149000"
+    }
+  },
+  "ID": 92,
+  "NAME": "Ultra High Speed HDMI V2.0 2160P 4K Cable with 90°270° Adapter",
+  "PRICE": {
+    "$numberDecimal": "3.64"
+  },
+  "PRODUCTCODE": "ing1034050944Ap",
+  "SOLDOUT": false,
+  "SELLERID": "db0cc215-e993-475b-9b64-60028c476222",
+  "SELLERNAME": "Ebony Soto"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5004"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729381349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730162549000"
+    }
+  },
+  "ID": 93,
+  "NAME": "Vintage Women Laceup Casual Brogue Shoes for Women Handmade Shoes",
+  "PRICE": {
+    "$numberDecimal": "19.64"
+  },
+  "PRODUCTCODE": "een1040389464OP",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5005"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729467749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730248949000"
+    }
+  },
+  "ID": 94,
+  "NAME": "2019 New Promotion 1 panel Lotus Leaf Painting Wall Decoration",
+  "PRICE": {
+    "$numberDecimal": "12"
+  },
+  "PRODUCTCODE": "een1040390159OP",
+  "SOLDOUT": false,
+  "SELLERID": "71959450-b302-4164-9a67-99d216a62f04",
+  "SELLERNAME": "Christopher Henry"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5006"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729554149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730335349000"
+    }
+  },
+  "ID": 95,
+  "NAME": "Women flat shoes loafers leather new style round toe ladies shoes",
+  "PRICE": {
+    "$numberDecimal": "21.6"
+  },
+  "PRODUCTCODE": "een1040398112OP",
+  "SOLDOUT": false,
+  "SELLERID": "c4350c41-749e-408b-bff1-fdff91a87ffd",
+  "SELLERNAME": "Connor Cole"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5007"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729640549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730421749000"
+    }
+  },
+  "ID": 96,
+  "NAME": "Flip Leather Painting Case For Samsung Galaxy Note 5",
+  "PRICE": {
+    "$numberDecimal": "3.99"
+  },
+  "PRODUCTCODE": "een1040398754OP",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5008"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729726949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730508149000"
+    }
+  },
+  "ID": 97,
+  "NAME": "Adidas Baby Skin matte Froest Case For LG Nexus 5X",
+  "PRICE": {
+    "$numberDecimal": "4.99"
+  },
+  "PRODUCTCODE": "ase1032354453Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5009"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729813349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730594549000"
+    }
+  },
+  "ID": 98,
+  "NAME": "Fashion Muslim Robe Lace Patchwork Dresses Abaya Kaftan Islamic Clothing Hijab",
+  "PRICE": {
+    "$numberDecimal": "222"
+  },
+  "PRODUCTCODE": "ase1032386383Ap",
+  "SOLDOUT": false,
+  "SELLERID": "bcb07617-10d2-48cb-8a74-3858b24377b1",
+  "SELLERNAME": "Robert Holt"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500a"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729899749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730680949000"
+    }
+  },
+  "ID": 99,
+  "NAME": "Cotton Branded Baseball Cap Adjustable Masculino Trucker Cap",
+  "PRICE": {
+    "$numberDecimal": "9.5"
+  },
+  "PRODUCTCODE": "ase1032401972Ap",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500b"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1729986149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730767349000"
+    }
+  },
+  "ID": 100,
+  "NAME": "casual male T Shirt Novelty cartoon car bus car pattern Mens Short TShirt top",
+  "PRICE": {
+    "$numberDecimal": "12.91"
+  },
+  "PRODUCTCODE": "ing1032462624Ap",
+  "SOLDOUT": false,
+  "SELLERID": "c4350c41-749e-408b-bff1-fdff91a87ffd",
+  "SELLERNAME": "Connor Cole"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500c"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730072549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730853749000"
+    }
+  },
+  "ID": 101,
+  "NAME": "11color S5XL Plus Size 2017 Europe Women Long Sleeve Vneck Loose Chiffon Shirt",
+  "PRICE": {
+    "$numberDecimal": "9"
+  },
+  "PRODUCTCODE": "ing1032511147Ap",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500d"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730158949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1730940149000"
+    }
+  },
+  "ID": 102,
+  "NAME": " Umbrella Flowers Selfstanding Upside Down Car Rain Gear",
+  "PRICE": {
+    "$numberDecimal": "13.16"
+  },
+  "PRODUCTCODE": "ing1033906304Ap",
+  "SOLDOUT": false,
+  "SELLERID": "73c12b22-b116-4a0c-938b-403fefa6cf6c",
+  "SELLERNAME": "Chris Lee"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500e"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730245349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731026549000"
+    }
+  },
+  "ID": 103,
+  "NAME": "VIVO Y51 Y53 360 full case cover with free glass",
+  "PRICE": {
+    "$numberDecimal": "10.27"
+  },
+  "PRODUCTCODE": "ing1033921117Ap",
+  "SOLDOUT": false,
+  "SELLERID": "98c4838f-8d6a-4a84-82d3-0a06480bab65",
+  "SELLERNAME": "Colleen Ramirez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d500f"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730331749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731112949000"
+    }
+  },
+  "ID": 104,
+  "NAME": "Women back hollow perspective evening dress Lowest Price",
+  "PRICE": {
+    "$numberDecimal": "21.83"
+  },
+  "PRODUCTCODE": "ing1033987982Ap",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5010"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730418149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731199349000"
+    }
+  },
+  "ID": 105,
+  "NAME": "Large Size Men Comfy Oxfords Casual Business Oxfords Shoes Soft Sole Oxfords",
+  "PRICE": {
+    "$numberDecimal": "39"
+  },
+  "PRODUCTCODE": "ing1034003604Ap",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5011"
+  },
+  "CATEGORY": "Watches",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730504549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731285749000"
+    }
+  },
+  "ID": 106,
+  "NAME": "Women Fashion Round Elastic Quartz Finger Ring With Watch",
+  "PRICE": {
+    "$numberDecimal": "2.52"
+  },
+  "PRODUCTCODE": "ing1034050681Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5012"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730590949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731372149000"
+    }
+  },
+  "ID": 107,
+  "NAME": "Hole pencil pants Slim pants",
+  "PRICE": {
+    "$numberDecimal": "9.27"
+  },
+  "PRODUCTCODE": "ase1037451915Sa",
+  "SOLDOUT": false,
+  "SELLERID": "4e826db6-509d-4ec3-9e04-67716e248331",
+  "SELLERNAME": "Victoria Bradley"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5013"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730677349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731458549000"
+    }
+  },
+  "ID": 108,
+  "NAME": "Retro Super Heroes Decorative Metal Poster  Batman",
+  "PRICE": {
+    "$numberDecimal": "9.9"
+  },
+  "PRODUCTCODE": "ase1039475176Sa",
+  "SOLDOUT": false,
+  "SELLERID": "3cc92b9b-d743-444b-b7b3-3a8b862bcd26",
+  "SELLERNAME": "Molly Roman"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5014"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730763749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731544949000"
+    }
+  },
+  "ID": 109,
+  "NAME": "DM58 USB2.0 OLED Blood Pressure Monitoring Pedometer Sport Smart Watch",
+  "PRICE": {
+    "$numberDecimal": "44.91"
+  },
+  "PRODUCTCODE": "ase1032401705Ap",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5015"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730850149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731631349000"
+    }
+  },
+  "ID": 110,
+  "NAME": "Girls Princess Party Wedding Bridesmaid Tutu Dress Cheongsam Children Qipao",
+  "PRICE": {
+    "$numberDecimal": "8.72"
+  },
+  "PRODUCTCODE": "ase1032463305Ap",
+  "SOLDOUT": false,
+  "SELLERID": "f201da82-3120-4c56-9260-41806e4ff742",
+  "SELLERNAME": "Tara Morrison"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5016"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1730936549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731717749000"
+    }
+  },
+  "ID": 111,
+  "NAME": "fashion luxury shoulder tote leather PU handbag tassel sling style crossbody bag",
+  "PRICE": {
+    "$numberDecimal": "25.98"
+  },
+  "PRODUCTCODE": "ase1032510815Ap",
+  "SOLDOUT": false,
+  "SELLERID": "73c12b22-b116-4a0c-938b-403fefa6cf6c",
+  "SELLERNAME": "Chris Lee"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5017"
+  },
+  "CATEGORY": "Games & Hobbies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731022949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731804149000"
+    }
+  },
+  "ID": 112,
+  "NAME": "L Style  Lipstock",
+  "PRICE": {
+    "$numberDecimal": "10"
+  },
+  "PRODUCTCODE": "ase1033907134Ap",
+  "SOLDOUT": false,
+  "SELLERID": "b1cf6ffa-48d8-47aa-b784-7fc1571e100a",
+  "SELLERNAME": "Bethany David"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5018"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731109349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731890549000"
+    }
+  },
+  "ID": 113,
+  "NAME": "Sela Mens Je Suis Charlie Black Cotton TShirt",
+  "PRICE": {
+    "$numberDecimal": "14"
+  },
+  "PRODUCTCODE": "ase1033921291Ap",
+  "SOLDOUT": false,
+  "SELLERID": "4926bc2f-f421-48b2-bb76-ba0f6a7c2b2c",
+  "SELLERNAME": "Johnny Bernard"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5019"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731195749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1731976949000"
+    }
+  },
+  "ID": 114,
+  "NAME": "New Summer Cotton Mens T Shirt Skyrim Fashion mens tees Short Sleeve Cool Tees",
+  "PRICE": {
+    "$numberDecimal": "12.23"
+  },
+  "PRODUCTCODE": "ase1033986591Ap",
+  "SOLDOUT": false,
+  "SELLERID": "86944d42-be96-4b07-8ade-683925cd6d4e",
+  "SELLERNAME": "Natasha Kennedy"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501a"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731282149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732063349000"
+    }
+  },
+  "ID": 115,
+  "NAME": "2in1 Case for Samsung Galaxy J7(2017) with Armor Hybrid TPUPC Combo Kickstand",
+  "PRICE": {
+    "$numberDecimal": "4.98"
+  },
+  "PRODUCTCODE": "ase1034003740Ap",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501b"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731368549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732149749000"
+    }
+  },
+  "ID": 116,
+  "NAME": "1155 Skmei Waterproof Dual Time Digital Sports Watch Shock Resistant PU Strap",
+  "PRICE": {
+    "$numberDecimal": "18.74"
+  },
+  "PRODUCTCODE": "ase1037453358Sa",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501c"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731454949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732236149000"
+    }
+  },
+  "ID": 117,
+  "NAME": "The cool mind T Shirt men Cotton Short sleeve The dark side of the moon Printed",
+  "PRICE": {
+    "$numberDecimal": "12.59"
+  },
+  "PRODUCTCODE": "ase1039474076Sa",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501d"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731541349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732322549000"
+    }
+  },
+  "ID": 118,
+  "NAME": "Cellglo Crystal Eye",
+  "PRICE": {
+    "$numberDecimal": "128"
+  },
+  "PRODUCTCODE": "tor1041728845iP",
+  "SOLDOUT": false,
+  "SELLERID": "4e826db6-509d-4ec3-9e04-67716e248331",
+  "SELLERNAME": "Victoria Bradley"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501e"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731627749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732408949000"
+    }
+  },
+  "ID": 119,
+  "NAME": "8mm Dot Earrings",
+  "PRICE": {
+    "$numberDecimal": "4"
+  },
+  "PRODUCTCODE": "tor1041730791iP",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d501f"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731714149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732495349000"
+    }
+  },
+  "ID": 120,
+  "NAME": "Zanzea Vintage Lace Stitching FloorLength Dress_GS",
+  "PRICE": {
+    "$numberDecimal": "8.17"
+  },
+  "PRODUCTCODE": "een1040415026OP",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5020"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731800549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732581749000"
+    }
+  },
+  "ID": 121,
+  "NAME": "Nike  Air Huarache Mens/Womens Shoes",
+  "PRICE": {
+    "$numberDecimal": "74.75"
+  },
+  "PRODUCTCODE": "een1040415050OP",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5021"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731886949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732668149000"
+    }
+  },
+  "ID": 122,
+  "NAME": "Apple iPad mini 2 3 4 Flat Leather Case Protective Case iPad mini4 Case Falling",
+  "PRICE": {
+    "$numberDecimal": "23.92"
+  },
+  "PRODUCTCODE": "een1040556705iP",
+  "SOLDOUT": false,
+  "SELLERID": "9a19f56e-883a-4752-b535-d27d91a8071d",
+  "SELLERNAME": "Arthur Thomas"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5022"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1731973349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732754549000"
+    }
+  },
+  "ID": 123,
+  "NAME": "Xiaomi Mix 6.4inch 16MP Camera Fingerprint Dual SIM LCD Capacitive Smartphone",
+  "PRICE": {
+    "$numberDecimal": "788.6"
+  },
+  "PRODUCTCODE": "een1040558202iP",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5023"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732059749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732840949000"
+    }
+  },
+  "ID": 124,
+  "NAME": "AZ Alphabet Letter Silver Plated Bead Pendants DIY Bracelet",
+  "PRICE": {
+    "$numberDecimal": "4.6"
+  },
+  "PRODUCTCODE": "ase1037450144iP",
+  "SOLDOUT": false,
+  "SELLERID": "c4350c41-749e-408b-bff1-fdff91a87ffd",
+  "SELLERNAME": "Connor Cole"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5024"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732146149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1732927349000"
+    }
+  },
+  "ID": 125,
+  "NAME": "European American Fashion Women Diamond Lattice Handbag Chain Shoulder Bag",
+  "PRICE": {
+    "$numberDecimal": "23"
+  },
+  "PRODUCTCODE": "ase1039471492iP",
+  "SOLDOUT": false,
+  "SELLERID": "69813dd9-5781-4209-abdd-5cba0aa998c3",
+  "SELLERNAME": "Kelli White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5025"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732232549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733013749000"
+    }
+  },
+  "ID": 126,
+  "NAME": "Mens Long Sleeve Plaid Button Down Casual Shirts",
+  "PRICE": {
+    "$numberDecimal": "17.46"
+  },
+  "PRODUCTCODE": "een1040505788VI",
+  "SOLDOUT": false,
+  "SELLERID": "012c10d9-46d6-41b4-b534-0d6ed77bc286",
+  "SELLERNAME": "Katherine Johnson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5026"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732318949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733100149000"
+    }
+  },
+  "ID": 127,
+  "NAME": "Pregnant womens breastfeeding pure cotton suit pajamas",
+  "PRICE": {
+    "$numberDecimal": "39"
+  },
+  "PRODUCTCODE": "een1040507253VI",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5027"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732405349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733186549000"
+    }
+  },
+  "ID": 128,
+  "NAME": "ZANZEA Womens Jumpsuit Autumn Solid Wide Leg Pants Playsuits Loose Plus Size",
+  "PRICE": {
+    "$numberDecimal": "25"
+  },
+  "PRODUCTCODE": "tor1041814578VI",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5028"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732491749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733272949000"
+    }
+  },
+  "ID": 129,
+  "NAME": "adidas x Rick Owens Mastodon ProMens sports shoeswomens shoes in summerallm",
+  "PRICE": {
+    "$numberDecimal": "57.85"
+  },
+  "PRODUCTCODE": "tor1041818029VI",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5029"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732578149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733359349000"
+    }
+  },
+  "ID": 130,
+  "NAME": "Women Floral Cardigan Embroidered Beachwear Travel Shirt Sunblock Sweater",
+  "PRICE": {
+    "$numberDecimal": "23.9"
+  },
+  "PRODUCTCODE": "ase1032335040NE",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502a"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732664549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733445749000"
+    }
+  },
+  "ID": 131,
+  "NAME": "Free Ring HolderAdidas matte Case For Samsung Galaxy S6 Edge Plus",
+  "PRICE": {
+    "$numberDecimal": "4.99"
+  },
+  "PRODUCTCODE": "ase1032385347NE",
+  "SOLDOUT": false,
+  "SELLERID": "a2296835-4317-4c51-aec1-5172b4501d37",
+  "SELLERNAME": "Michael Arias"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502b"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732750949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733532149000"
+    }
+  },
+  "ID": 132,
+  "NAME": "2018 CM Nike Air Max 2018 Vapormax Flyknit Mens Shoes Womens Shoes2018 CM",
+  "PRICE": {
+    "$numberDecimal": "64"
+  },
+  "PRODUCTCODE": "ase1032401411NE",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502c"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732837349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733618549000"
+    }
+  },
+  "ID": 133,
+  "NAME": "Fannai Men Fitness Quick Dry Sports Short Pants Compression Wear Size M3XL",
+  "PRICE": {
+    "$numberDecimal": "10"
+  },
+  "PRODUCTCODE": "ase1032463835NE",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502d"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1732923749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733704949000"
+    }
+  },
+  "ID": 134,
+  "NAME": "Military Style Unisex  Canvas Belt Web Belt Woven Belt",
+  "PRICE": {
+    "$numberDecimal": "13"
+  },
+  "PRODUCTCODE": "ase1032510532NE",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502e"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733010149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733791349000"
+    }
+  },
+  "ID": 135,
+  "NAME": "Drawstring bag",
+  "PRICE": {
+    "$numberDecimal": "12"
+  },
+  "PRODUCTCODE": "ase1033908624NE",
+  "SOLDOUT": false,
+  "SELLERID": "e22cf06c-bfc2-4720-99c6-b476ef2b28c9",
+  "SELLERNAME": "Amanda Ford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d502f"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733096549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733877749000"
+    }
+  },
+  "ID": 136,
+  "NAME": "Womens Mirrored Lenses Designer Sport Retro Vintage Cat Eye Oversized Sunglasses",
+  "PRICE": {
+    "$numberDecimal": "5.49"
+  },
+  "PRODUCTCODE": "ase1033921521NE",
+  "SOLDOUT": false,
+  "SELLERID": "67fc32d9-00e7-487a-9c06-3ee430365df5",
+  "SELLERNAME": "Tara Barker"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5030"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733182949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1733964149000"
+    }
+  },
+  "ID": 137,
+  "NAME": "Homer Cross DIY cotton short sleeve TShirt summer tee",
+  "PRICE": {
+    "$numberDecimal": "18"
+  },
+  "PRODUCTCODE": "ase1033984890NE",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5031"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733269349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734050549000"
+    }
+  },
+  "ID": 138,
+  "NAME": "Korea Fashion Korean Badge Large Capacity Travel Bag",
+  "PRICE": {
+    "$numberDecimal": "20.38"
+  },
+  "PRODUCTCODE": "ase1034004034NE",
+  "SOLDOUT": false,
+  "SELLERID": "67fc32d9-00e7-487a-9c06-3ee430365df5",
+  "SELLERNAME": "Tara Barker"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5032"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733355749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734136949000"
+    }
+  },
+  "ID": 139,
+  "NAME": "Soft TPU Back Case for Samsung Galaxy Core 2 G355H ",
+  "PRICE": {
+    "$numberDecimal": "3.49"
+  },
+  "PRODUCTCODE": "ase1034051976NE",
+  "SOLDOUT": false,
+  "SELLERID": "f201da82-3120-4c56-9260-41806e4ff742",
+  "SELLERNAME": "Tara Morrison"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5033"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733442149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734223349000"
+    }
+  },
+  "ID": 140,
+  "NAME": "Polari International Prada Prada Shoulder Bag Shoulder Bag 083712",
+  "PRICE": {
+    "$numberDecimal": "210"
+  },
+  "PRODUCTCODE": "ase1037391239iP",
+  "SOLDOUT": false,
+  "SELLERID": "b1cf6ffa-48d8-47aa-b784-7fc1571e100a",
+  "SELLERNAME": "Bethany David"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5034"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733528549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734309749000"
+    }
+  },
+  "ID": 141,
+  "NAME": "Ultrathin Leather Pattern TPU Soft Back Case Cover Protective Shell for Huawei",
+  "PRICE": {
+    "$numberDecimal": "4"
+  },
+  "PRODUCTCODE": "ase1039470961iP",
+  "SOLDOUT": false,
+  "SELLERID": "6444b229-0102-4606-85d4-1634c4c1dfda",
+  "SELLERNAME": "Donald White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5035"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733614949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734396149000"
+    }
+  },
+  "ID": 142,
+  "NAME": "Panties Male Underwear Mens Boxers Striped Cotton",
+  "PRICE": {
+    "$numberDecimal": "3.53"
+  },
+  "PRODUCTCODE": "een1040531246ME",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5036"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733701349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734482549000"
+    }
+  },
+  "ID": 143,
+  "NAME": "Usborne Picture Books",
+  "PRICE": {
+    "$numberDecimal": "8.9"
+  },
+  "PRODUCTCODE": "een1040534060ME",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5037"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733787749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734568949000"
+    }
+  },
+  "ID": 144,
+  "NAME": "Long  sleeved cartoon T  shirt children s clothing",
+  "PRICE": {
+    "$numberDecimal": "27.48"
+  },
+  "PRODUCTCODE": "ase1037451298Sa",
+  "SOLDOUT": false,
+  "SELLERID": "e6d58c35-0d86-4b27-8774-b4a85da979ad",
+  "SELLERNAME": "Steven Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5038"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733874149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734655349000"
+    }
+  },
+  "ID": 145,
+  "NAME": "MULBA PU Leather Bracelet for Women,Casual Bracelet Cuff",
+  "PRICE": {
+    "$numberDecimal": "5.1"
+  },
+  "PRODUCTCODE": "ase1039474644Sa",
+  "SOLDOUT": false,
+  "SELLERID": "71959450-b302-4164-9a67-99d216a62f04",
+  "SELLERNAME": "Christopher Henry"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5039"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1733960549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734741749000"
+    }
+  },
+  "ID": 146,
+  "NAME": "100*58cm/110*60cm 5pcs/Set Promotion Cotton Baby Children Bedding Set",
+  "PRICE": {
+    "$numberDecimal": "12.65"
+  },
+  "PRODUCTCODE": "ver1024855394iP",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503a"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734046949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734828149000"
+    }
+  },
+  "ID": 147,
+  "NAME": "New set of 20 Professional pieces brushes pack complete makeup brushes",
+  "PRICE": {
+    "$numberDecimal": "4.48"
+  },
+  "PRODUCTCODE": "ver1024864164iP",
+  "SOLDOUT": false,
+  "SELLERID": "f201da82-3120-4c56-9260-41806e4ff742",
+  "SELLERNAME": "Tara Morrison"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503b"
+  },
+  "CATEGORY": "Computers & Peripherals",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734133349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1734914549000"
+    }
+  },
+  "ID": 148,
+  "NAME": "4GB/8GB/16GB/32GB/64GB Dead Girls are Skinnier Design Card USB Flash Drive USB Thumb Drive USB Drive",
+  "PRICE": {
+    "$numberDecimal": "5.6"
+  },
+  "PRODUCTCODE": "  ver1024878352ip",
+  "SOLDOUT": false,
+  "SELLERID": "e6d58c35-0d86-4b27-8774-b4a85da979ad",
+  "SELLERNAME": "Steven Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503c"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734219749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735000949000"
+    }
+  },
+  "ID": 149,
+  "NAME": "Casual Women Slim Denim Jackets Punk Style Fashion Slim Fit Jean Jacket",
+  "PRICE": {
+    "$numberDecimal": "68"
+  },
+  "PRODUCTCODE": "ver1024905518iP",
+  "SOLDOUT": false,
+  "SELLERID": "6444b229-0102-4606-85d4-1634c4c1dfda",
+  "SELLERNAME": "Donald White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503d"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734306149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735087349000"
+    }
+  },
+  "ID": 150,
+  "NAME": "Men Soft Suede Flat Outdoor Loafers Comfort Driving Moccasin Casual Flats Shoes",
+  "PRICE": {
+    "$numberDecimal": "27"
+  },
+  "PRODUCTCODE": "ver1024915054iP",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503e"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734392549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735173749000"
+    }
+  },
+  "ID": 151,
+  "NAME": "Abercrombie & Fitch BLACK BASIC ROUND TEE",
+  "PRICE": {
+    "$numberDecimal": "30"
+  },
+  "PRODUCTCODE": "ver1024918901iP",
+  "SOLDOUT": false,
+  "SELLERID": "8537c1db-77d5-4a0c-862e-80ea3bc1f417",
+  "SELLERNAME": "Steven Martin"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d503f"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734478949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735260149000"
+    }
+  },
+  "ID": 152,
+  "NAME": "Kiel James Patrick Anchor Bracelet",
+  "PRICE": {
+    "$numberDecimal": "19.9"
+  },
+  "PRODUCTCODE": "ver1024923687iP",
+  "SOLDOUT": false,
+  "SELLERID": "4a129c4f-e56a-4b2c-bd6b-905e94df9aff",
+  "SELLERNAME": "Christina Christensen"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5040"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734565349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735346549000"
+    }
+  },
+  "ID": 153,
+  "NAME": "Cartoon Bear Apple 6S mobile phone shell iPhone7/6 PLUS creative personality cut",
+  "PRICE": {
+    "$numberDecimal": "6.63"
+  },
+  "PRODUCTCODE": "ver1024966562iP",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5041"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734651749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735432949000"
+    }
+  },
+  "ID": 154,
+  "NAME": "Womens Toe clip Flat Plus size Shoes Bohemian Sandals with Rhinestone",
+  "PRICE": {
+    "$numberDecimal": "14.7"
+  },
+  "PRODUCTCODE": "ver1024990033iP",
+  "SOLDOUT": false,
+  "SELLERID": "67fc32d9-00e7-487a-9c06-3ee430365df5",
+  "SELLERNAME": "Tara Barker"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5042"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734738149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735519349000"
+    }
+  },
+  "ID": 155,
+  "NAME": "Pug Ride Letter Cotton Linen Square Throw Pillow Case Home Decor Cushion Cover",
+  "PRICE": {
+    "$numberDecimal": "2.81"
+  },
+  "PRODUCTCODE": "ver1025008642iP",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5043"
+  },
+  "CATEGORY": "Sports & Outdoors",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734824549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735605749000"
+    }
+  },
+  "ID": 156,
+  "NAME": "Men bike wear perspiration outdoor cycling set",
+  "PRICE": {
+    "$numberDecimal": "27.72"
+  },
+  "PRODUCTCODE": "ver1025016732iP",
+  "SOLDOUT": false,
+  "SELLERID": "73c12b22-b116-4a0c-938b-403fefa6cf6c",
+  "SELLERNAME": "Chris Lee"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5044"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734910949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735692149000"
+    }
+  },
+  "ID": 157,
+  "NAME": "Baoli International Hermes Hermes Tote Lindi12",
+  "PRICE": {
+    "$numberDecimal": "202"
+  },
+  "PRODUCTCODE": "ver1025036796iP",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5045"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1734997349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735778549000"
+    }
+  },
+  "ID": 158,
+  "NAME": "Ready Stock Fashion Phone Case Back Shell Covers For iPhone 6/7/8",
+  "PRICE": {
+    "$numberDecimal": "6"
+  },
+  "PRODUCTCODE": "ver1025047535iP",
+  "SOLDOUT": false,
+  "SELLERID": "3a919ddf-964e-4345-ac34-1351a411c1a6",
+  "SELLERNAME": "Paul Clark"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5046"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735083749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735864949000"
+    }
+  },
+  "ID": 159,
+  "NAME": "Cellglo Crystal Eye",
+  "PRICE": {
+    "$numberDecimal": "128"
+  },
+  "PRODUCTCODE": "ver1025077801iP",
+  "SOLDOUT": false,
+  "SELLERID": "0ecf3b69-c08b-4dcd-96d5-4f20cbfe52d9",
+  "SELLERNAME": "Joanna Armstrong"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5047"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735170149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1735951349000"
+    }
+  },
+  "ID": 160,
+  "NAME": "Nightclub, red light district, dress",
+  "PRICE": {
+    "$numberDecimal": "17.43"
+  },
+  "PRODUCTCODE": "ver1025089088iP",
+  "SOLDOUT": false,
+  "SELLERID": "a6b817b7-2c7a-4249-92f7-044dc5238087",
+  "SELLERNAME": "Megan Weber"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5048"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735256549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736037749000"
+    }
+  },
+  "ID": 161,
+  "NAME": "Embroidered shirt Print fashion shirt long sleeve shirt simple elegant hundred",
+  "PRICE": {
+    "$numberDecimal": "6.01"
+  },
+  "PRODUCTCODE": "ver1025100733iP",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5049"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735342949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736124149000"
+    }
+  },
+  "ID": 162,
+  "NAME": "Acrylic display rack rack rack eyebrow pen pencil lipstick Mascara makeup acces",
+  "PRICE": {
+    "$numberDecimal": "69.61"
+  },
+  "PRODUCTCODE": "ver1025116523iP",
+  "SOLDOUT": false,
+  "SELLERID": "7f1a325f-a58c-4e01-9fc6-63b536c08b41",
+  "SELLERNAME": "Penny Wright"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504a"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735429349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736210549000"
+    }
+  },
+  "ID": 163,
+  "NAME": "Solid Color Shoulder Messenger Mini Envelope Bag for Lady",
+  "PRICE": {
+    "$numberDecimal": "7.5"
+  },
+  "PRODUCTCODE": "ver1025128358iP",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504b"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735515749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736296949000"
+    }
+  },
+  "ID": 164,
+  "NAME": "Nike Mens ACC Mercurial Superfly V FG Cleats Soccer Shoes Black",
+  "PRICE": {
+    "$numberDecimal": "95"
+  },
+  "PRODUCTCODE": "ver1025145354iP",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504c"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735602149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736383349000"
+    }
+  },
+  "ID": 165,
+  "NAME": "Autumn Fashion Women s Casual Cool Long Sleeve Denim Blouson Jacket Coat",
+  "PRICE": {
+    "$numberDecimal": "11.69"
+  },
+  "PRODUCTCODE": "ver1025388067iP",
+  "SOLDOUT": false,
+  "SELLERID": "e22cf06c-bfc2-4720-99c6-b476ef2b28c9",
+  "SELLERNAME": "Amanda Ford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504d"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735688549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736469749000"
+    }
+  },
+  "ID": 166,
+  "NAME": "Metal Key USB 2.0 Flash Memory Drive Stick (B)",
+  "PRICE": {
+    "$numberDecimal": "9.66"
+  },
+  "PRODUCTCODE": "ver1025413035iP",
+  "SOLDOUT": false,
+  "SELLERID": "93d914e7-89eb-485b-90b4-4383c0a5fdd5",
+  "SELLERNAME": "Corey Pugh"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504e"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735774949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736556149000"
+    }
+  },
+  "ID": 167,
+  "NAME": "Merry Christmas Men Cotton Tshirt Short Sleeve Hip Hop Tops",
+  "PRICE": {
+    "$numberDecimal": "14"
+  },
+  "PRODUCTCODE": "ver1025428228iP",
+  "SOLDOUT": false,
+  "SELLERID": "375c75b7-1da4-464d-84c8-6d1748dacb26",
+  "SELLERNAME": "Richard Beck"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d504f"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735861349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736642549000"
+    }
+  },
+  "ID": 168,
+  "NAME": "Men T shirt Keep Calm and Drink Beer design Highquality fitness tee mens tops",
+  "PRICE": {
+    "$numberDecimal": "12.8"
+  },
+  "PRODUCTCODE": "ver1025442881iP",
+  "SOLDOUT": false,
+  "SELLERID": "7aefcd19-b2b3-42f9-8018-6427d5dad517",
+  "SELLERNAME": "Zachary Velasquez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5050"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1735947749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736728949000"
+    }
+  },
+  "ID": 169,
+  "NAME": "Newborn Baby Girls Baby Boys Momscare Double Button Baby Bibs (3 pieces)",
+  "PRICE": {
+    "$numberDecimal": "6.8"
+  },
+  "PRODUCTCODE": "ver1025528736iP",
+  "SOLDOUT": false,
+  "SELLERID": "4a129c4f-e56a-4b2c-bd6b-905e94df9aff",
+  "SELLERNAME": "Christina Christensen"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5051"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736034149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736815349000"
+    }
+  },
+  "ID": 170,
+  "NAME": "Asus zenfone4 3 2 Deluxe Zoom 5 6 Max C Live GO Selfie Phone Case",
+  "PRICE": {
+    "$numberDecimal": "15.27"
+  },
+  "PRODUCTCODE": "ver1025547224iP",
+  "SOLDOUT": false,
+  "SELLERID": "bcb07617-10d2-48cb-8a74-3858b24377b1",
+  "SELLERNAME": "Robert Holt"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5052"
+  },
+  "CATEGORY": "Design & Crafts",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736120549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736901749000"
+    }
+  },
+  "ID": 171,
+  "NAME": "Circle Gold Rose Bouquet  Panda Gift ",
+  "PRICE": {
+    "$numberDecimal": "82.23"
+  },
+  "PRODUCTCODE": "ase1037469100Re",
+  "SOLDOUT": false,
+  "SELLERID": "4a129c4f-e56a-4b2c-bd6b-905e94df9aff",
+  "SELLERNAME": "Christina Christensen"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5053"
+  },
+  "CATEGORY": "Pet Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736206949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1736988149000"
+    }
+  },
+  "ID": 172,
+  "NAME": "pet supplies dog Teddy poodle skirt wedding dress clothes spring and s",
+  "PRICE": {
+    "$numberDecimal": "13"
+  },
+  "PRODUCTCODE": "ase1039472275Re",
+  "SOLDOUT": false,
+  "SELLERID": "db7346ff-3223-465d-8dbb-ea0d7cdb0156",
+  "SELLERNAME": "Carlos Carter"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5054"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736293349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737074549000"
+    }
+  },
+  "ID": 173,
+  "NAME": "1PC Cosmetic Makeup Long Lasting Bright Lipstick Lip Stick Beautiful Colors",
+  "PRICE": {
+    "$numberDecimal": "22"
+  },
+  "PRODUCTCODE": " een1040576305iP",
+  "SOLDOUT": false,
+  "SELLERID": "e6d58c35-0d86-4b27-8774-b4a85da979ad",
+  "SELLERNAME": "Steven Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5055"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736379749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737160949000"
+    }
+  },
+  "ID": 174,
+  "NAME": "Unisex Emoji Backpacks 3D Printing Bags Drawstring Backpack",
+  "PRICE": {
+    "$numberDecimal": "4"
+  },
+  "PRODUCTCODE": "een1040577155iP",
+  "SOLDOUT": false,
+  "SELLERID": "4cde6528-19b1-426a-9b7c-a6bb2ba9e504",
+  "SELLERNAME": "April Richardson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5056"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736466149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737247349000"
+    }
+  },
+  "ID": 175,
+  "NAME": "Men Long Sleeve T Shirt Male O Neck Tshirt Cotton Tees Tops Large Plus Size",
+  "PRICE": {
+    "$numberDecimal": "19.12"
+  },
+  "PRODUCTCODE": "een1040461389VI",
+  "SOLDOUT": false,
+  "SELLERID": "0ed3c750-fb47-4d39-9490-d48ac17644c1",
+  "SELLERNAME": "Kayla Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5057"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736552549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737333749000"
+    }
+  },
+  "ID": 176,
+  "NAME": "Sunday Funday Insulated Lunch Tote With Zipper",
+  "PRICE": {
+    "$numberDecimal": "25.9"
+  },
+  "PRODUCTCODE": "een1040464640VI",
+  "SOLDOUT": false,
+  "SELLERID": "a2296835-4317-4c51-aec1-5172b4501d37",
+  "SELLERNAME": "Michael Arias"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5058"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736638949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737420149000"
+    }
+  },
+  "ID": 177,
+  "NAME": "CELLGLO Crystal Eye ",
+  "PRICE": {
+    "$numberDecimal": "128"
+  },
+  "PRODUCTCODE": "ver1025077956Ap",
+  "SOLDOUT": false,
+  "SELLERID": "9a19f56e-883a-4752-b535-d27d91a8071d",
+  "SELLERNAME": "Arthur Thomas"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5059"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736725349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737506549000"
+    }
+  },
+  "ID": 178,
+  "NAME": "BK124 LED Butterfly Heart Fairy String Curtain Light Valentines Day Wedding",
+  "PRICE": {
+    "$numberDecimal": "10.96"
+  },
+  "PRODUCTCODE": "ver1025088687Ap",
+  "SOLDOUT": false,
+  "SELLERID": "a8a2fdcf-3ded-40f3-8a49-bb0a34eb6c87",
+  "SELLERNAME": "Eric Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505a"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736811749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737592949000"
+    }
+  },
+  "ID": 179,
+  "NAME": "Soft TPU Case for iphone X 5.8 Color Skin Anti Slip Case Cover",
+  "PRICE": {
+    "$numberDecimal": "1.46"
+  },
+  "PRODUCTCODE": "ver1025095784Ap",
+  "SOLDOUT": false,
+  "SELLERID": "a2296835-4317-4c51-aec1-5172b4501d37",
+  "SELLERNAME": "Michael Arias"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505b"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736898149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737679349000"
+    }
+  },
+  "ID": 180,
+  "NAME": "Avene Sun Care SPF 50 Spray for Children 200ml",
+  "PRICE": {
+    "$numberDecimal": "38"
+  },
+  "PRODUCTCODE": "ver1025115761Ap",
+  "SOLDOUT": false,
+  "SELLERID": "93d914e7-89eb-485b-90b4-4383c0a5fdd5",
+  "SELLERNAME": "Corey Pugh"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505c"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1736984549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737765749000"
+    }
+  },
+  "ID": 181,
+  "NAME": "Women elegant backless sleeveless halter dress",
+  "PRICE": {
+    "$numberDecimal": "18"
+  },
+  "PRODUCTCODE": "ver1025128946Ap",
+  "SOLDOUT": false,
+  "SELLERID": "7f1a325f-a58c-4e01-9fc6-63b536c08b41",
+  "SELLERNAME": "Penny Wright"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505d"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737070949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737852149000"
+    }
+  },
+  "ID": 182,
+  "NAME": "men shoes running shoes sport women fashion high quality",
+  "PRICE": {
+    "$numberDecimal": "89"
+  },
+  "PRODUCTCODE": "ver1025144518Ap",
+  "SOLDOUT": false,
+  "SELLERID": "68e4c98f-48c1-4a31-bbb7-362a0093a886",
+  "SELLERNAME": "Elizabeth Vaughn"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505e"
+  },
+  "CATEGORY": "Women's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737157349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1737938549000"
+    }
+  },
+  "ID": 183,
+  "NAME": "Womens shoes leisure shoes",
+  "PRICE": {
+    "$numberDecimal": "20.21"
+  },
+  "PRODUCTCODE": "ver1025174841Ap",
+  "SOLDOUT": false,
+  "SELLERID": "012c10d9-46d6-41b4-b534-0d6ed77bc286",
+  "SELLERNAME": "Katherine Johnson"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d505f"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737243749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738024949000"
+    }
+  },
+  "ID": 184,
+  "NAME": "Women High Neck Long Sleeve Knitted Christmas Pattern Printed Pullover Sweater",
+  "PRICE": {
+    "$numberDecimal": "14.22"
+  },
+  "PRODUCTCODE": "ver1025180801Ap",
+  "SOLDOUT": false,
+  "SELLERID": "a8a2fdcf-3ded-40f3-8a49-bb0a34eb6c87",
+  "SELLERNAME": "Eric Alvarez"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5060"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737330149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738111349000"
+    }
+  },
+  "ID": 185,
+  "NAME": "Women Striped Hooded Long Sleeve Casual Print Hoodie Sweatshirt Pullover",
+  "PRICE": {
+    "$numberDecimal": "10"
+  },
+  "PRODUCTCODE": "ver1025190569Ap",
+  "SOLDOUT": false,
+  "SELLERID": "7f1a325f-a58c-4e01-9fc6-63b536c08b41",
+  "SELLERNAME": "Penny Wright"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5061"
+  },
+  "CATEGORY": "Mobile & Gadgets",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737416549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738197749000"
+    }
+  },
+  "ID": 186,
+  "NAME": "high quality For xiaomi Redmi 4 prime mobile phone Case",
+  "PRICE": {
+    "$numberDecimal": "5.99"
+  },
+  "PRODUCTCODE": "ver1025196205Ap",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5062"
+  },
+  "CATEGORY": "Men's Shoes",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737502949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738284149000"
+    }
+  },
+  "ID": 187,
+  "NAME": "US Hot Sale Nike Huareche  Fashion Runing Shoes ",
+  "PRICE": {
+    "$numberDecimal": "66.45"
+  },
+  "PRODUCTCODE": "ver1025201217Ap",
+  "SOLDOUT": false,
+  "SELLERID": "c18709fa-021a-4969-923c-b527973afb5d",
+  "SELLERNAME": "Courtney Evans"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5063"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737589349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738370549000"
+    }
+  },
+  "ID": 188,
+  "NAME": "Wave Ring Fashion Dainty Simple Thin Jewelry Sterling Silver Women",
+  "PRICE": {
+    "$numberDecimal": "1.36"
+  },
+  "PRODUCTCODE": "ver1025205403Ap",
+  "SOLDOUT": false,
+  "SELLERID": "69813dd9-5781-4209-abdd-5cba0aa998c3",
+  "SELLERNAME": "Kelli White"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5064"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737675749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738456949000"
+    }
+  },
+  "ID": 189,
+  "NAME": "Mens Fashion Summer Bulge Pouch Boxer Shorts Briefs",
+  "PRICE": {
+    "$numberDecimal": "3.79"
+  },
+  "PRODUCTCODE": "ver1025213999Ap",
+  "SOLDOUT": false,
+  "SELLERID": "0a58ca12-9994-42e7-9bd6-4ff233462126",
+  "SELLERNAME": "Caleb Carr"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5065"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737762149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738543349000"
+    }
+  },
+  "ID": 190,
+  "NAME": "Short Sleeve Men Tshirt MUSIC NEVER SLEEPS Lovers Tops",
+  "PRICE": {
+    "$numberDecimal": "16"
+  },
+  "PRODUCTCODE": "ver1025219722Ap",
+  "SOLDOUT": false,
+  "SELLERID": "8537c1db-77d5-4a0c-862e-80ea3bc1f417",
+  "SELLERNAME": "Steven Martin"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5066"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737848549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738629749000"
+    }
+  },
+  "ID": 191,
+  "NAME": "2018 Hip Hop Music Rock Coke Boys Letter Printed Men T Shirt Short sleeve summer",
+  "PRICE": {
+    "$numberDecimal": "12.34"
+  },
+  "PRODUCTCODE": "ver1025226740Ap",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5067"
+  },
+  "CATEGORY": "Men's Wear",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1737934949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738716149000"
+    }
+  },
+  "ID": 192,
+  "NAME": "Outdoor Hiking Pants Quick Drying Breathable Trousers Lovers Climbing Pants",
+  "PRICE": {
+    "$numberDecimal": "177"
+  },
+  "PRODUCTCODE": "ver1025233965Ap",
+  "SOLDOUT": false,
+  "SELLERID": "64c4006b-ee15-4ef2-9e48-4ba78c700b37",
+  "SELLERNAME": "Heather Collins"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5068"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738021349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738802549000"
+    }
+  },
+  "ID": 193,
+  "NAME": "Eleanor in Celestial White ",
+  "PRICE": {
+    "$numberDecimal": "23.9"
+  },
+  "PRODUCTCODE": "ver1025241728Ap",
+  "SOLDOUT": false,
+  "SELLERID": "71959450-b302-4164-9a67-99d216a62f04",
+  "SELLERNAME": "Christopher Henry"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d5069"
+  },
+  "CATEGORY": "Health & Beauty",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738107749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738888949000"
+    }
+  },
+  "ID": 194,
+  "NAME": "homies Levin Kou BB cream nude makeup isolation liquid foundation",
+  "PRICE": {
+    "$numberDecimal": "2.25"
+  },
+  "PRODUCTCODE": "ver1025248310Ap",
+  "SOLDOUT": false,
+  "SELLERID": "9c1a18bf-60c3-4aa0-b0d3-d2a3a0c63c87",
+  "SELLERNAME": "Tyler Young"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506a"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738194149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1738975349000"
+    }
+  },
+  "ID": 195,
+  "NAME": "Hot Sale!Women Long Sleeve Print Loose Casual TShirt Tops",
+  "PRICE": {
+    "$numberDecimal": "6"
+  },
+  "PRODUCTCODE": "ver1025257847Ap",
+  "SOLDOUT": false,
+  "SELLERID": "e22cf06c-bfc2-4720-99c6-b476ef2b28c9",
+  "SELLERNAME": "Amanda Ford"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506b"
+  },
+  "CATEGORY": "Bags & Luggage",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738280549000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1739061749000"
+    }
+  },
+  "ID": 196,
+  "NAME": "Women Fashion  Backpack Bags",
+  "PRICE": {
+    "$numberDecimal": "15.92"
+  },
+  "PRODUCTCODE": "ver1025387184Ap",
+  "SOLDOUT": false,
+  "SELLERID": "db0cc215-e993-475b-9b64-60028c476222",
+  "SELLERNAME": "Ebony Soto"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506c"
+  },
+  "CATEGORY": "Toys, Kids & Babies",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738366949000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1739148149000"
+    }
+  },
+  "ID": 197,
+  "NAME": "Piglet Childrens Slippers Home Cave shoes Nonslip Beach Childrens Slippers",
+  "PRICE": {
+    "$numberDecimal": "5.93"
+  },
+  "PRODUCTCODE": "ver1025411979Ap",
+  "SOLDOUT": false,
+  "SELLERID": "b1cf6ffa-48d8-47aa-b784-7fc1571e100a",
+  "SELLERNAME": "Bethany David"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506d"
+  },
+  "CATEGORY": "Women's Apparel",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738453349000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1739234549000"
+    }
+  },
+  "ID": 198,
+  "NAME": "Korean New Fashion Women Casual Loose Summer Dress Party Midi Dress",
+  "PRICE": {
+    "$numberDecimal": "7.7"
+  },
+  "PRODUCTCODE": "ver1025427879Ap",
+  "SOLDOUT": false,
+  "SELLERID": "8537c1db-77d5-4a0c-862e-80ea3bc1f417",
+  "SELLERNAME": "Steven Martin"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506e"
+  },
+  "CATEGORY": "Home & Living",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738539749000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1739320949000"
+    }
+  },
+  "ID": 199,
+  "NAME": "Cute Toy Funny Emoji Design Cushion Poo Shape",
+  "PRICE": {
+    "$numberDecimal": "7.05"
+  },
+  "PRODUCTCODE": "ver1025444022Ap",
+  "SOLDOUT": false,
+  "SELLERID": "9c46a185-2f9a-405c-90d3-a29a33073dc3",
+  "SELLERNAME": "Ernest Maldonado"
+},{
+  "_id": {
+    "$oid": "63ab1db06e4ebb9f740d506f"
+  },
+  "CATEGORY": "Jewellery & Accessories",
+  "DATEOFAVAILABILITY": {
+    "$date": {
+      "$numberLong": "1738626149000"
+    }
+  },
+  "DATEOFWITHDRAWAL": {
+    "$date": {
+      "$numberLong": "1739407349000"
+    }
+  },
+  "ID": 200,
+  "NAME": "Crystal Brooch Woman Corsage Ornaments Decorate Brooch Accessories",
+  "PRICE": {
+    "$numberDecimal": "3.67"
+  },
+  "PRODUCTCODE": "ver1025546514Ap",
+  "SOLDOUT": false,
+  "SELLERID": "f201da82-3120-4c56-9260-41806e4ff742",
+  "SELLERNAME": "Tara Morrison"
+}]

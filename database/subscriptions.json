@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "63c15defa38db063e1031032"
+  },
+  "ID": "63c15defa2e9c54def2a73fe",
+  "PRODUCTID": 1,
+  "USERID": "8565b3cf-bba2-4a68-ba94-4dd009d49121"
+},{
+  "_id": {
+    "$oid": "63c15e22bda5aaf3d406bc23"
+  },
+  "ID": "63c15e22a2e9c54def2a7400",
+  "PRODUCTID": 1,
+  "USERID": "00b1a5b1-4cf6-4c8a-bc92-9616e616db05"
+},{
+  "_id": {
+    "$oid": "63c15e2eb6ed71d5780cd113"
+  },
+  "ID": "63c15e2ea2e9c54def2a7401",
+  "PRODUCTID": 15,
+  "USERID": "00b1a5b1-4cf6-4c8a-bc92-9616e616db05"
+}]

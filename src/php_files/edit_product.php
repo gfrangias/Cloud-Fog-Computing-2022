@@ -1,6 +1,5 @@
 <?php
 
-    include 'db_connect.php';
     include 'transform_dates.php';
 
     session_start();
@@ -11,7 +10,6 @@
         exit();
     }
 
-    $conn = OpenCon();
 
     $product_id = $_POST['id'];
     $name = $_POST['name'];

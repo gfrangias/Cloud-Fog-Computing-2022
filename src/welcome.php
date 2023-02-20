@@ -1,6 +1,5 @@
 <?php 
 
-  include 'php_files/db_connect.php';
   include 'php_files/transform_dates.php';
 
   session_start();
@@ -46,7 +45,7 @@
 </div>
 
 <div class="user_name">
-    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']);?></b>    
+    <b><i class="fa fa-user" aria-hidden="true"></i> <?php printf("%s\n", $_SESSION['name']); echo $_SESSION['oauth_token'];?></b>    
 </div>
 
 <form action="welcome.php" method="post">

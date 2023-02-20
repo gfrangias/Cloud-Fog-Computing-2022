@@ -1,6 +1,5 @@
 <?php
 
-    include 'php_files/db_connect.php';
 
     $url = "http://wilma_data_storage:1027/display_products.php";   
     $ch = curl_init();

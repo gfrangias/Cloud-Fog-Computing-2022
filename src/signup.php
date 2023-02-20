@@ -1,6 +1,5 @@
 <?php
 
-include 'php_files/db_connect.php';
 include 'php_files/http_parse_headers.php';
 include 'php_files/keyrock_connect.php';
 

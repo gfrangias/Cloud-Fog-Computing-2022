@@ -1,6 +1,5 @@
 <?php
     
-    include 'php_files/db_connect.php';
     include 'php_files/http_parse_headers.php';
     include 'php_files/transform_dates.php';
 
@@ -19,8 +18,6 @@
       exit();
 
   }
-
-  $conn = OpenCon();
 
   // If the expiration time of the OAuth token has passed
   if(time() >= $_SESSION['expiration']){
