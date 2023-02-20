@@ -1,37 +1,19 @@
 <?php
+    session_start();
 
-    include 'db_connect.php';
     session_start();
     
     if(!($_SESSION['role'] === "USER")){
         
-        header("Location: no_access.php");
+        header("Location: ../redirections/no_access.php");
         exit();
     }
+    $url = "http://wilma_data_storage:1027/edit_cart.php?product_id=".$_POST['product_id']."&user_id=".$_SESSION['id'];
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer '.$_SESSION['oauth_token']));
+    $result = curl_exec($ch);
+    curl_close($ch);
 
-    $conn = OpenCon();
-
-    $product_id = $_POST['product_id'];
-    $user_id = $_SESSION['id'];
-
-    $query = mysqli_query($conn, "SELECT * FROM carts WHERE carts.PRODUCTID = '$product_id' AND carts.USERID = '$user_id'");
-
-    $cart = mysqli_num_rows($query);
-
-    if($cart >= 1){
-        echo "oops";
-        mysqli_query($conn, "DELETE FROM carts WHERE carts.PRODUCTID = '$product_id' AND carts.USERID = '$user_id'");
-
-    }else{
-
-        $check_max_id = mysqli_query($conn, "SELECT carts.ID FROM carts ORDER BY carts.ID DESC LIMIT 1");
-
-        $row = $check_max_id->fetch_assoc();
-        $id = (int) $row['ID'] + 1;
-        date_default_timezone_set('Europe/Athens');
-        $time = date("Y-m-d H:i:s");
-
-        mysqli_query($conn, "INSERT INTO carts (ID, USERID, PRODUCTID, DATEOFINSERTION) VALUES ('$id', '$user_id', '$product_id', '$time')");
-
-    }
-   ?>
+?>

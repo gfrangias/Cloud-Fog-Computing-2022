@@ -1,11 +1,11 @@
-body {font-family: Trebuchet MS;}
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
 
 body {
   margin: 30px;
 }
 
 input[type=text]{
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;;
   width: 100%;
   padding: none;
   margin: 0px 0;
@@ -24,7 +24,7 @@ input[type=text]{
 }
 
 table {
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   border-collapse: separate;
   border-spacing: 0;
   width: 95%;
@@ -102,14 +102,22 @@ table tr:nth-child(odd):hover{
   }
   
   table td:nth-child(5){
+    width:210px;
+  }
+
+  table td:nth-child(6){
     width:300px;
   }
-  
-  table td:nth-child(6){
+
+  table td:nth-child(7){
+    width:10px;
+  }
+
+  table td:nth-child(8){
     width:80px;
   }
   
-  table td:nth-child(7){
+  table td:nth-child(9){
     width:120px;
   }
 
@@ -128,7 +136,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 
@@ -146,7 +154,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 
@@ -212,3 +220,99 @@ img.logo{
 }
 .add_button:hover{background: #27CA39;
   box-shadow: 2px 2px}
+
+  HTML CSSResult Skip Results Iframe
+EDIT ON
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #3194d62d;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #ffbd00;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.button_logout{
+  margin: 5px;
+  background-color: #3194d6; 
+  color: white; 
+  border: 2px solid #007ebe;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+ }
+ 
+ .user_name{
+  display:inline-block;
+  margin: 5px;
+  color: black; 
+  position: absolute;
+  top: 30px;
+  right: 180px;
+  font-size: 15px;
+ }
+ 
+ .button_logout:hover {
+  background-color: transparent;
+  color: black;
+ }
+
+ .button {
+  padding: 14px 10px;
+  margin: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  width: 6.8%;
+  border-radius: 12px;
+  justify-content: center;
+  font-size: 15px;
+ }

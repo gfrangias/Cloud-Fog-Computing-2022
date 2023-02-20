@@ -1,4 +1,4 @@
-body {font-family: Trebuchet MS;}
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
 
 body {
     margin: 30px;
@@ -6,7 +6,7 @@ body {
   }
 
 table {
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   border-collapse: separate;
   border-spacing: 0;
   width: 80%;
@@ -80,6 +80,19 @@ table tr:nth-child(odd):hover{
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
+}
+
+.total {
+  background-color: #ffbd00;
+  padding: 14px 20px;
+  border: none;
+  text-align: center;
+  width: 8%;
+  height: 50px;
+  border-radius: 12px;
+  font-size: 20px;
+  
+  margin: auto;
 }
 
 img.logo{
@@ -204,3 +217,54 @@ input[type="checkbox"]{
   input:checked + label:after {
     content: "🛒";
   }
+
+  input[type=text]{
+    font-family: 'Helvetica', 'Arial', sans-serif;;
+    width: 100%;
+    padding: none;
+    margin: 0px 0;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: black;
+    border-radius: 12px;
+    font-size: 22px;
+    text-align: center;  
+  }
+
+  .button_logout{
+    margin: 5px;
+    background-color: #3194d6; 
+    color: white; 
+    border: 2px solid #007ebe;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+   }
+   
+   .user_name{
+    display:inline-block;
+    margin: 5px;
+    color: black; 
+    position: absolute;
+    top: 30px;
+    right: 180px;
+    font-size: 15px;
+   }
+   
+   .button_logout:hover {
+    background-color: transparent;
+    color: black;
+   }
+  
+   .button {
+    padding: 14px 10px;
+    margin: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    width: 6.8%;
+    border-radius: 12px;
+    justify-content: center;
+    font-size: 15px;
+   }

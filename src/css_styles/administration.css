@@ -1,11 +1,11 @@
-body {font-family: Trebuchet MS;}
+body {font-family: 'Helvetica', 'Arial', sans-serif;}
 
 body {
   margin: 30px;
 }
 
-input[type=text]{
-  font-family: Trebuchet MS;
+input[type=text], [type=email]{
+  font-family: 'Helvetica', 'Arial', sans-serif;
   width: 100%;
   padding: none;
   margin: 0px 0;
@@ -24,7 +24,7 @@ input[type=text]{
 }
 
 table {
-    font-family: Trebuchet MS;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     border-collapse: separate;
     border-spacing: 0;
     width: 95%;
@@ -89,9 +89,15 @@ table {
       background: #dcdcdc;
     }
 
-    table td:nth-child(6){
-        width:50px;
-    }
+  table td:nth-child(6){
+    width:70px;
+  }
+
+
+  table td:nth-child(7){
+    width:70px;
+  }
+
 
 td > input[type='text']
 {
@@ -108,7 +114,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 
@@ -126,7 +132,7 @@ td > input[type='text']
   font-size: 20px;
   margin: 0px;
   padding: 10px 10px;
-  font-family: Trebuchet MS;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   justify-content: center;
 }
 
@@ -180,7 +186,7 @@ select{
     box-sizing: border-box;
     background-color: transparent;
     border-radius: 12px;  
-    font-family: Trebuchet MS;  
+    font-family: 'Helvetica', 'Arial', sans-serif;  
 }
 
 HTML CSSResult Skip Results Iframe
@@ -242,3 +248,39 @@ EDIT ON
   position: relative;
   top: 2px;
 }
+
+.button_logout{
+  margin: 5px;
+  background-color: #3194d6; 
+  color: white; 
+  border: 2px solid #007ebe;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+ }
+ 
+ .user_name{
+  display:inline-block;
+  margin: 5px;
+  color: black; 
+  position: absolute;
+  top: 30px;
+  right: 180px;
+  font-size: 15px;
+ }
+ 
+ .button_logout:hover {
+  background-color: transparent;
+  color: black;
+ }
+
+ .button {
+  padding: 14px 10px;
+  margin: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  width: 6.8%;
+  border-radius: 12px;
+  justify-content: center;
+  font-size: 15px;
+ }

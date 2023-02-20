@@ -1,6 +1,6 @@
 body {
     background-color: #fff;
-    font-family: Trebuchet MS;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     height: 100%;
 }
@@ -73,9 +73,14 @@ img.cart {
 }
 
 .error {
+  background-color: #e52e2ea4;
+  padding: 9px 20px;
+  width: 25%;
+  border-radius: 12px;
+  border: none;
   text-align: center;
-  color:#E52E2E;
-  margin: 2px 0;
+  color:white;
+  margin: 0px 0px;
 }
 
 .login_head{

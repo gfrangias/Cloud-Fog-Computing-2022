@@ -1,0 +1,16 @@
+FROM php:8.0-apache
+ADD /data_storage/ /var/www/html/
+RUN apt-get update --allow-unauthenticated \
+    && apt-get upgrade -y --allow-unauthenticated \
+    && apt-get install -y --no-install-recommends openssl libssl-dev libcurl4-openssl-dev \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && pecl install mongodb \ 
+    && cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
+    && echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini \
+    && echo "mongo.native_long=0" >> /usr/local/etc/php/php.ini \
+    && apt install -y git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && cd /var/www/html/ \
+    && composer require mongodb/mongodb
+EXPOSE 80

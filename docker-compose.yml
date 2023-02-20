@@ -1,0 +1,182 @@
+version: '3.8'
+services:
+  sql_db:
+    container_name: sql_db
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.2
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./sql_db_data:/var/lib/mysql
+  php_my_admin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      PMA_HOST: sql_db
+    depends_on:
+      - sql_db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.3
+  php_apache_server:
+    container_name: php_apache_server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    links:
+      - mongo_db
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.4
+    ports:
+      - "80:80"
+  mongo_db:
+    container_name: mongo_db
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+      MONGO_INITDB_DATABASE: cloud_quest_db
+    volumes:
+      - ./mongo:/data/db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.5
+    ports:
+      - "27018:27017"
+    expose:
+      - "27017"
+  data_storage:
+    container_name: data_storage
+    build:
+      context: ./
+      dockerfile: Dockerfile2
+    expose:
+      - "80"
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.6
+  keyrock:
+    image: fiware/idm:7.6.0
+    container_name: fiware-keyrock
+    hostname: keyrock
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.7
+    depends_on:
+      - sql_db
+    ports:
+      - "3005:3005"
+    expose:
+      - "3005"
+    environment:
+      - IDM_DB_HOST=sql_db
+      - IDM_HOST=http:/localhost:3005
+      - IDM_PORT=3005
+      - IDM_DB_PASS=keyrock
+      - IDM_DB_USER=keyrock
+      - IDM_ADMIN_USER=gfrangias
+      - IDM_ADMIN_EMAIL=gfrangias@tuc.gr
+      - IDM_ADMIN_PASS=1234
+      - IDM_HTTPS_ENABLED=FALSE
+  wilma_data_storage:
+    image: fiware/pep-proxy:8.0.0
+    container_name: wilma_data_storage
+    hostname: wilma_data_storage
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.8
+    depends_on:
+      - keyrock
+    ports:
+      - "1027:1027"
+    expose:
+      - "1027"
+    environment:
+      #- DEBUG=pep-proxy:*
+      #- PEP_PROXY_DEBUG=true
+      - PEP_PROXY_APP_HOST=data_storage
+      - PEP_PROXY_APP_PORT=80
+      - PEP_PROXY_PORT=1027
+      - PEP_PROXY_IDM_HOST=keyrock
+      - PEP_PROXY_HTTPS_ENABLED=false
+      - PEP_PROXY_AUTH_ENABLED=false
+      - PEP_PROXY_IDM_SSL_ENABLED=false
+      - PEP_PROXY_IDM_PORT=3005
+      - PEP_PROXY_APP_ID=258c4571-aeaa-4194-9984-b22e73c7f869
+      - PEP_PROXY_USERNAME=pep_proxy_9e2fc9b2-2aac-4f12-a737-8a8eb60b9331
+      - PEP_PASSWORD=pep_proxy_dfe50e94-3b36-46c3-b43b-9a2b39b7d81b
+      - PEP_PROXY_PDP=idm
+  mongo_db_orion:
+    container_name: mongo_db_orion
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+      MONGO_INITDB_DATABASE: cloud_quest_db_orion
+    volumes:
+      - ./mongo_orion:/data/db
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.9
+    ports:
+      - "27017:27017"
+    expose:
+      - "27017"
+  orion:
+    container_name: orion
+    image: fiware/orion
+    expose:
+      - "1026"
+    depends_on:
+      - mongo_db_orion
+    command: -dbhost mongo_db_orion -dbuser root -dbpwd 1234
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.10
+  wilma_orion:
+    image: fiware/pep-proxy:8.0.0
+    container_name: wilma_orion
+    hostname: wilma_orion
+    networks:
+      cloud_quest_network:
+        ipv4_address: 172.16.0.11
+    depends_on:
+      - keyrock
+    ports:
+      - "1028:1028"
+    expose:
+      - "1028"
+    environment:
+      #- DEBUG=pep-proxy:*
+      #- PEP_PROXY_DEBUG=true
+      - PEP_PROXY_APP_HOST=orion
+      - PEP_PROXY_APP_PORT=1026
+      - PEP_PROXY_PORT=1028
+      - PEP_PROXY_IDM_HOST=keyrock
+      - PEP_PROXY_HTTPS_ENABLED=false
+      - PEP_PROXY_AUTH_ENABLED=false
+      - PEP_PROXY_IDM_SSL_ENABLED=false
+      - PEP_PROXY_IDM_PORT=3005
+      - PEP_PROXY_APP_ID=258c4571-aeaa-4194-9984-b22e73c7f869
+      - PEP_PROXY_USERNAME=pep_proxy_9e2fc9b2-2aac-4f12-a737-8a8eb60b9331
+      - PEP_PASSWORD=pep_proxy_dfe50e94-3b36-46c3-b43b-9a2b39b7d81b
+      - PEP_PROXY_PDP=idm
+networks:
+  cloud_quest_network:
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
