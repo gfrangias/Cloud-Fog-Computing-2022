@@ -1,3 +1,3 @@
-*.frm linguist-vendored=true
-*.ibd linguist-vendored=true
-*.opt linguist-vendored=true
+*.frm linguist-detectable=false
+*.ibd linguist-detectable=false
+*.opt linguist-detectable=false
