@@ -1,0 +1,3 @@
+*.frm linguist-vendored=true
+*.ibd linguist-vendored=true
+*.opt linguist-vendored=true
