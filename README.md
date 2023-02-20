@@ -34,4 +34,4 @@ Notification items are created automatically when a change is made on a product 
 
 ## Services
 The project is created using Docker and each service is inside a container. All the containers and subsequent services are described in the file [docker-compose.yml](docker-compose.yml). Inside the Docker environment exists an Ingress network where every container/service has its own static IP.
-![](architecture_diagram.png)
+![](src/images/architecture_diagram.png)
