@@ -34,4 +34,4 @@ Notification items are created automatically when a change is made on a product 
 
 ## Services
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](architecture_diagram.png)
